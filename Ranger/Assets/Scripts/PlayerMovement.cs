@@ -26,4 +26,16 @@ public class PlayerMovement : MonoBehaviour
             Controller.Move(moveDir.normalized * Speed * Time.deltaTime);
         }
     }
+
+    private void OnTriggerStay(Collider collider)
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (collider.tag == "plant")
+            {
+                Debug.Log("plant picked up"); //figure out a better way of checking what was picked
+                Destroy(collider.gameObject); // figure out how to send the tag to the inventory
+            }
+        }
+    }
 }
