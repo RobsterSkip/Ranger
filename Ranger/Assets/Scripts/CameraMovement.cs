@@ -24,20 +24,30 @@ public class CameraMovement : MonoBehaviour
     private RaycastHit _camHit;
     private Vector3 _camDist;
 
+    private bool _inventoryOpen;
+
     void Start()
     {
         _camDist = transform.localPosition;
         ZoomDistance = ZoomDefault;
         _camDist.z = ZoomDistance;
 
-        Cursor.visible = false;
+        if(_inventoryOpen == false)
+        {
+         //   Cursor.visible = false;
+        }
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            _inventoryOpen = !_inventoryOpen;
+        }
+
         CameraCenter.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y + OffsetY, Character.transform.position.z);
 
-        var rotation = Quaternion.Euler(CameraCenter.transform.rotation.eulerAngles.x - Input.GetAxis("Mouse Y")*Sensitivity/2,
+        var rotation = Quaternion.Euler(CameraCenter.transform.rotation.eulerAngles.x - Input.GetAxis("Mouse Y") * Sensitivity / 2,
                                         CameraCenter.transform.rotation.eulerAngles.y + Input.GetAxis("Mouse X") * Sensitivity,
                                         CameraCenter.transform.rotation.eulerAngles.z);
 
@@ -50,7 +60,7 @@ public class CameraMovement : MonoBehaviour
             scrollAmount *= ZoomDistance * 0.1f;
             ZoomDistance *= -scrollAmount;
             ZoomDistance = Mathf.Clamp(ZoomDistance,ZoomMin,ZoomMax);
-        
+
 
         if (ZoomDistance < ZoomMin)
         {
@@ -67,9 +77,9 @@ public class CameraMovement : MonoBehaviour
             _camDist.z = Mathf.Lerp(_camDist.z, -ZoomDistance, Time.deltaTime * ScrollDampening);
 
         }
-        
+
         Cam.transform.localPosition = _camDist;
-   
+
         //no clipping into the floor
         GameObject obj = new GameObject();
         obj.transform.SetParent(Cam.transform.parent);
@@ -83,10 +93,10 @@ public class CameraMovement : MonoBehaviour
             Cam.transform.localPosition = localPosition;
         }
 
-        Destroy( obj );
+        Destroy(obj);
 
 
-        if(Cam.transform.localPosition.z > -1f)
+        if (Cam.transform.localPosition.z > -1f)
         {
             Cam.transform.localPosition = new Vector3(Cam.transform.localPosition.x, Cam.transform.localPosition.y, -1f);
         }
