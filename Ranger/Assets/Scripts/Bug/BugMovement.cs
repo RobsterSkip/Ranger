@@ -15,6 +15,9 @@ public class BugMovement : MonoBehaviour
     private float _defaultSpeed = 5f;
     private float _runningSpeed = 10f;
 
+    private float _sightRange = 5f;
+    private bool _playerSpotted;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -23,7 +26,20 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
+        _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
+
         WalkAround();
+
+        if (_playerSpotted )
+        {
+            Agent.speed = _runningSpeed;
+            RunAway();
+        }
+        else
+        {
+            Agent.speed = _defaultSpeed;
+        }
+        
     }
 
     void WalkAround()
@@ -56,5 +72,11 @@ public class BugMovement : MonoBehaviour
         {
             _isSet = true;
         }
+    }
+
+    void RunAway()
+    {
+        _destination = transform.position + (transform.position - Player.transform.position);
+        Agent.SetDestination(_destination);
     }
 }
