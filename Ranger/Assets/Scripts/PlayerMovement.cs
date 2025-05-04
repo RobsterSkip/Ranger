@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_inventoryOpen == false)
         {
-          //  Cursor.lockState = CursorLockMode.Locked;
+           Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
