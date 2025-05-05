@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _inventoryOpen;
 
+    public bool IsCrouching;
     private void Start()
     {
         if(_inventoryOpen == false)
@@ -27,9 +28,10 @@ public class PlayerMovement : MonoBehaviour
         {
            // _inventoryOpen = !_inventoryOpen;
         }
+
+
         Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime, 
-            0f, Input.GetAxisRaw("Vertical") * Speed * Time.deltaTime).normalized;
-        //transform.Rotate(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0);
+                                        0f, Input.GetAxisRaw("Vertical") * Speed * Time.deltaTime).normalized;
 
         if (direction.magnitude >= 0.1f) //smooth turn
         {
@@ -40,5 +42,16 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             Controller.Move(moveDir.normalized * Speed * Time.deltaTime);
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            IsCrouching = true;
+        }
+        else
+        {
+            IsCrouching = false;
+        }
+
+        
     }
 }

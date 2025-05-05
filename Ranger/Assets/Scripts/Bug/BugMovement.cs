@@ -13,33 +13,42 @@ public class BugMovement : MonoBehaviour
     private float _range = 15;
 
     private float _defaultSpeed = 5f;
-    private float _runningSpeed = 10f;
+    private float _runningSpeed = 15f;
 
     private float _sightRange = 5f;
     private bool _playerSpotted;
 
+    public PlayerMovement PlayerMovement;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
+        Player = GameObject.Find("Player");
+        PlayerMovement = Player.GetComponent<PlayerMovement>();
         Agent.speed = _defaultSpeed;
     }
 
     void Update()
     {
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-
+        //Debug.Log(_playerSpotted);
+        
         WalkAround();
 
         if (_playerSpotted )
         {
-            Agent.speed = _runningSpeed;
-            RunAway();
+            if (!PlayerMovement.IsCrouching)
+            {
+                Agent.speed = _runningSpeed;
+                RunAway();
+            }
         }
         else
         {
             Agent.speed = _defaultSpeed;
         }
         
+        Debug.Log(PlayerMovement.IsCrouching);
     }
 
     void WalkAround()
