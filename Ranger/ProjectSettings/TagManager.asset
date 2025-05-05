@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - navmesh
+  - navmesh_ground
+  - navmesh_water
   - player
-  - 
   - 
   - 
   - 

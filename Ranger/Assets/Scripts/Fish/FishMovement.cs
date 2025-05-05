@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BugMovement : MonoBehaviour
+public class FishMovement : MonoBehaviour
 {
     public GameObject Player;
     private NavMeshAgent Agent;
@@ -10,48 +10,23 @@ public class BugMovement : MonoBehaviour
 
     private Vector3 _destination;
     private bool _isSet;
-    private float _range = 15;
+    private float _range = 7f;
 
-    private float _defaultSpeed = 5f;
-    private float _runningSpeed = 15f;
-
-    private float _sightRange = 5f;
-    private bool _playerSpotted;
-
-    public PlayerMovement PlayerMovement;
+    private float _defaultSpeed = 0.5f;
 
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
         Player = GameObject.Find("Player");
-        PlayerMovement = Player.GetComponent<PlayerMovement>();
         Agent.speed = _defaultSpeed;
     }
 
     void Update()
     {
-        _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        //Debug.Log(_playerSpotted);
-        
-        WalkAround();
-
-        if (_playerSpotted )
-        {
-            if (!PlayerMovement.IsCrouching)
-            {
-                Agent.speed = _runningSpeed;
-                RunAway();
-            }
-        }
-        else
-        {
-            Agent.speed = _defaultSpeed;
-        }
-        
-        Debug.Log(PlayerMovement.IsCrouching);
+        SwimAround();
     }
 
-    void WalkAround()
+    void SwimAround()
     {
         if(!_isSet)
         {
@@ -79,11 +54,5 @@ public class BugMovement : MonoBehaviour
         {
             _isSet = true;
         }
-    }
-
-    void RunAway()
-    {
-        _destination = transform.position + (transform.position - Player.transform.position);
-        Agent.SetDestination(_destination);
     }
 }
