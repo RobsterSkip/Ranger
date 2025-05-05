@@ -5,60 +5,52 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] lines;
-    public float textSpeed;
-
-    private int index;
-
-    void Start()
+    public enum IconType
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        Fish,
+        Plant,
+        Bug
+    }
+    [SerializeField] private Sprite _fishIcon;
+    [SerializeField] private Sprite _bugIcon;
+    [SerializeField] private Sprite _plantIcon;
+
+    private SpriteRenderer _backgroundSpriteRenderer;
+    private SpriteRenderer _iconSpriteRenderer;
+    private TextMeshPro _textMeshPro;
+
+    private Vector2 padding = new Vector2(15f, 7f);
+    private void Awake()
+    {
+        _backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
+        _iconSpriteRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
+        _textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
-        }
+        SetUp(IconType.Bug, "feesh aaaaaaaaaaaaaaaaaaaaa");
     }
 
-    void StartDialogue()
+    private void SetUp(IconType icon, string text)
     {
-        index = 0;
-        StartCoroutine(TypeLine());
+        _textMeshPro.SetText(text);
+        _textMeshPro.ForceMeshUpdate();
+        Vector2 textSize = _textMeshPro.GetRenderedValues(false);
+
+        _backgroundSpriteRenderer.size = textSize + padding;
+
+        _iconSpriteRenderer.sprite = GetIconSprite(icon);
     }
 
-    IEnumerator TypeLine()
+    private Sprite GetIconSprite(IconType icon)
     {
-        foreach (char c in lines[index].ToCharArray())
+        switch (icon)
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
-        }
-    }
-
-    void NextLine()
-    {
-        if (index < lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            gameObject.SetActive(false);
+            default: 
+                case IconType.Fish: return _fishIcon;
+                case IconType.Plant: return _plantIcon;
+                case IconType.Bug:return _bugIcon;
         }
     }
 }
