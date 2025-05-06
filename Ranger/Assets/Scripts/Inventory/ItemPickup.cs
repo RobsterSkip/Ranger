@@ -11,12 +11,11 @@ public class ItemPickup : MonoBehaviour
     [SerializeField]
     private GameObject _player;
 
-    private KeyCode _itemPickupCode = KeyCode.E;
     private bool _isInRange;
 
     private void Update()
     {
-        if (_isInRange && Input.GetKeyDown(_itemPickupCode))
+        if (_isInRange && Input.GetKeyDown(KeyCode.E))
         {
            if (_inventory.IsFull() == false)
            {
