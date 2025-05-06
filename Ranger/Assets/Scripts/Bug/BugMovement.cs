@@ -48,7 +48,7 @@ public class BugMovement : MonoBehaviour
             Agent.speed = _defaultSpeed;
         }
         
-        Debug.Log(PlayerMovement.IsCrouching);
+        //Debug.Log(PlayerMovement.IsCrouching);
     }
 
     void WalkAround()
