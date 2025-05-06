@@ -57,7 +57,7 @@ public class NPCInteractable : MonoBehaviour
         if (other.tag == "Player")
         {
             _inRange = false;
-            Debug.Log(_inRange);
+            //Debug.Log(_inRange);
         }
     }
 
