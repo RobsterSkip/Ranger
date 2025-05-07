@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 87151803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.93, y: 1.76, z: 0}
+  m_LocalPosition: {x: 7.06, y: 1.76, z: 0}
   m_LocalScale: {x: 0.24284881, y: 0.2428488, z: 0.2428488}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4119,7 +4119,7 @@ GameObject:
   - component: {fileID: 1723599961}
   m_Layer: 2
   m_Name: ChatBubble
-  m_TagString: Untagged
+  m_TagString: ChatBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4157,6 +4157,7 @@ MonoBehaviour:
   _fishIcon: {fileID: 21300000, guid: 5e22de4761c415848b4aa891e7108160, type: 3}
   _bugIcon: {fileID: 21300000, guid: 5d560bb987f68d24ea0f5f69dc3607bf, type: 3}
   _plantIcon: {fileID: 21300000, guid: 7ffabfbd54b0256409e76426b85144a1, type: 3}
+  _questonIcon: {fileID: 21300000, guid: a2489f188e3f74b4ca200f1d5aa6a135, type: 3}
 --- !u!1 &1730871773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3541265546410487635, guid: 2c7b0553456fe264b8d0b156bc529f70, type: 3}
@@ -4680,17 +4681,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107774822}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.15}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1500001}
   m_LocalScale: {x: 0.15276906, y: 0.15276906, z: 0.15276906}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1723599960}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 5.922, y: 1.82}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &2107774825
 MonoBehaviour:
   m_ObjectHideFlags: 0

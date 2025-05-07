@@ -20,45 +20,50 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
 
-    private void Start()
-    {
-        if(_inventoryOpen == false)
-        {
-           Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-           // _inventoryOpen = !_inventoryOpen;
+            _inventoryOpen = !_inventoryOpen;
         }
 
+        if (_inventoryOpen == false)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
-        Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime, 
+        if (_inventoryOpen == false)
+        {
+            Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * Speed * Time.deltaTime).normalized;
 
-        if (direction.magnitude >= 0.1f) //smooth turn
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            if (direction.magnitude >= 0.1f) //smooth turn
+            {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Cam.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            Vector3 velocity = moveDir.normalized * Speed;
-            velocity.y = _ySpeed;  //collider fix
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                Vector3 velocity = moveDir.normalized * Speed;
+                velocity.y = _ySpeed;  //collider fix
 
-            Controller.Move(velocity * Time.deltaTime);
+                Controller.Move(velocity * Time.deltaTime);
+            }
+
+            CheckCrouching();
+            CheckFishing();
+
+           // Debug.Log(CanFish);
         }
 
-        CheckCrouching();
-        CheckFishing();
-
-        Debug.Log(CanFish);
     }
 
-    void CheckFishing()
+
+    private void CheckFishing()
     {
         if(Physics.CheckSphere(transform.position, 2, waterLayer)) //is in range
         {

@@ -4,6 +4,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class NPCInteractable : MonoBehaviour
 {
+    private ChatBubble _chatBubble;
+
     [SerializeField]
     private CharacterController _player;
 
@@ -16,13 +18,10 @@ public class NPCInteractable : MonoBehaviour
 
     private bool _inRange;
     
-    public void Interact()
-    {
-        Debug.Log("Interact");
-    }
-
     private void Start()
     {
+        _chatBubble = GameObject.FindGameObjectWithTag("ChatBubble").GetComponent<ChatBubble>();
+
         _originalRotation = Quaternion.identity;
     }
 
@@ -49,6 +48,8 @@ public class NPCInteractable : MonoBehaviour
                 targetRotation, _rotationSpeedPlayer * Time.deltaTime, 0.0f);
 
             transform.rotation = Quaternion.LookRotation(newRotation);
+
+            Interact();
         }
     }
 
@@ -57,9 +58,20 @@ public class NPCInteractable : MonoBehaviour
         if (other.tag == "Player")
         {
             _inRange = false;
-            //Debug.Log(_inRange);
+
+            _chatBubble.Remove();
         }
     }
+
+    public void Interact()
+    {
+        _chatBubble.Create();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            
+        }
+    }
+
 
     private void OriginalRotation()
     {
