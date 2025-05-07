@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
 
+    public bool IsFishing;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;
 
-            if (direction.magnitude >= 0.1f) //smooth turn
+            if (direction.magnitude >= 0.1f && !IsFishing) //smooth turn
             {
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Cam.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
@@ -58,7 +60,12 @@ public class PlayerMovement : MonoBehaviour
             CheckCrouching();
             CheckFishing();
 
-           //Debug.Log(CanFish);
+            if (IsFishing)
+            {
+                CanFish = false;
+            }
+
+            //Debug.Log(CanFish);
         }
     }
 
@@ -68,8 +75,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
+
+            //Debug.Log(CanFish);
             
-            if (dotProd > 0.1 && dotProd < 0.9) //is facing water
+            if (dotProd > 0.1 && dotProd < 0.95) //is facing water
             {
                 CanFish = true;
             }
@@ -77,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 CanFish = false;
             }
+        }
+        else
+        {
+            CanFish = false;
         }
     }
 

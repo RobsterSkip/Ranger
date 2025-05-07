@@ -8,6 +8,7 @@ TagManager:
   - bug
   - ChatBubble
   - fish
+  - bait
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - navmesh_ground
   - navmesh_water
   - player
-  - 
+  - fishing
   - 
   - 
   - 
