@@ -5,9 +5,10 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController Controller;
     public Transform Cam;
 
-    public float Speed = 7f;
+    private float _defaultSpeed = 7f;
+    private float _crouchingSpeed = 4f;
+    private float _currentSpeed;
     private float _ySpeed = -0.5f;
-    //private float RotationSpeed = 150;
 
     private float _turnSmoothTime = 0.1f;
     private float _turnSmoothVelocity;
@@ -38,8 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (_inventoryOpen == false)
         {
-            Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime,
-                                        0f, Input.GetAxisRaw("Vertical") * Speed * Time.deltaTime).normalized;
+            Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
+                                        0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;
 
             if (direction.magnitude >= 0.1f) //smooth turn
             {
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                Vector3 velocity = moveDir.normalized * Speed;
+                Vector3 velocity = moveDir.normalized * _currentSpeed;
                 velocity.y = _ySpeed;  //collider fix
 
                 Controller.Move(velocity * Time.deltaTime);
@@ -84,10 +85,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             IsCrouching = true;
+            _currentSpeed = _crouchingSpeed;
         }
         else
         {
             IsCrouching = false;
+            _currentSpeed = _defaultSpeed;
         }
     }
 }
