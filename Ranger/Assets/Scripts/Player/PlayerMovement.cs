@@ -57,11 +57,9 @@ public class PlayerMovement : MonoBehaviour
             CheckCrouching();
             CheckFishing();
 
-           // Debug.Log(CanFish);
+           //Debug.Log(CanFish);
         }
-
     }
-
 
     private void CheckFishing()
     {

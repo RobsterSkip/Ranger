@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_test
       objectReference: {fileID: 0}
+    - target: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+      propertyPath: m_TagString
+      value: fish
+      objectReference: {fileID: 0}
     - target: {fileID: 6611802256767566194, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -97,4 +101,3 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  PlayerMovement: {fileID: 0}

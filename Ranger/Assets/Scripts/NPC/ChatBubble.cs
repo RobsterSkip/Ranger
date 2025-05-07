@@ -61,7 +61,7 @@ public class ChatBubble : MonoBehaviour
 
     public void Create()
     {
-        Debug.Log("Created");
+        //Debug.Log("Created");
         _bubbleTime += Time.deltaTime;
         _backgroundSpriteRenderer.enabled = true;
         _iconSpriteRenderer.enabled = true;
@@ -80,7 +80,7 @@ public class ChatBubble : MonoBehaviour
 
     public void Remove()
     {
-        Debug.Log("Called");
+        //Debug.Log("Called");
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
         _textMeshPro.enabled = false;
