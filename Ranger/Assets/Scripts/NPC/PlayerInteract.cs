@@ -17,9 +17,6 @@ public class PlayerInteract : MonoBehaviour
                    npcInteractable.Interact();
                }
            }
-
        }
-
-
     }
 }

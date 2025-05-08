@@ -10,14 +10,13 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Transform _itemsParent;
     [SerializeField] private ItemSlots[] _itemSlots;
     [SerializeField] private GameObject _player;
+    [SerializeField] private List<GameObject> _prefabs;
 
-    public ItemPickup _itemPickup;
-    
+    public bool _isDropped = false;
+
     private void Start()
     {
-        _itemPickup = GetComponent<ItemPickup>();
-
-       for (int i = 0; i < _itemSlots.Length; i++)
+        for (int i = 0; i < _itemSlots.Length; i++)
        {
             _itemSlots[i].OnRightClickEvent += ItemDropped;
        }
@@ -35,7 +34,6 @@ public class Inventory : MonoBehaviour
         {
             _itemSlots = _itemsParent.GetComponentsInChildren<ItemSlots>();
         }
-       // RefreshUI();
     }
 
     private void RefreshUI()
@@ -54,9 +52,10 @@ public class Inventory : MonoBehaviour
 
     private void ItemDropped(Items item)
     {
-        Vector3 dropPosition = new Vector3(_player.transform.localPosition.x, _player.transform.localPosition.y + 3f, 
+        Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + 2f, _player.transform.localPosition.y + 1, 
             _player.transform.localPosition.z + 2f);
-       // Instantiate(_itemPickup._prefab, dropPosition, Quaternion.identity);
+        Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
+        _isDropped = true;
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();

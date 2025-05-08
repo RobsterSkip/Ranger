@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 1be28755adc7fec4fb0bdd961eb43d16
   _itemName: Borzoi2
-  ItemIcon: {fileID: 21300000, guid: 7386029fe6372bf46a0fed93f834fec2, type: 3}
+  _itemIcon: {fileID: 21300000, guid: 7386029fe6372bf46a0fed93f834fec2, type: 3}
+  _itemPrefab: {fileID: 9048567815865415879, guid: 774fcfb0fdc784245b3d2ae864da25e7, type: 3}

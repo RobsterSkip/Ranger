@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5026151360049762068}
   - component: {fileID: 6879673009659573546}
   - component: {fileID: 3553271848572472505}
-  m_Layer: 0
+  - component: {fileID: -4824630025118648828}
+  m_Layer: 2
   m_Name: PlantTest2
-  m_TagString: Untagged
+  m_TagString: PlantDropped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +103,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -110,3 +111,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-4824630025118648828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541265546410487635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _item: {fileID: 11400000, guid: bb2e28f50c9fed249a4bcc5d40a43d20, type: 2}
+  _inventory: {fileID: 0}
+  _pickupPanel: {fileID: 0}
+  _player: {fileID: 0}

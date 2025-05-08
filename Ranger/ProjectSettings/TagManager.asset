@@ -9,6 +9,9 @@ TagManager:
   - ChatBubble
   - fish
   - bait
+  - Inventory
+  - Panel
+  - PlantDropped
   layers:
   - Default
   - TransparentFX

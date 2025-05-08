@@ -23,7 +23,7 @@ public class ItemSlots : MonoBehaviour, IPointerClickHandler
             }
             else
             {
-                _image.sprite = _item.ItemIcon;
+                _image.sprite = _item._itemIcon;
                 _image.enabled = true;
             }
         }

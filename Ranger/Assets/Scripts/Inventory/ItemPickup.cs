@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ItemPickup : MonoBehaviour
 {
@@ -12,7 +14,6 @@ public class ItemPickup : MonoBehaviour
     private GameObject _player;
 
     private bool _isInRange;
-
     private void Update()
     {
         if (_isInRange && Input.GetKeyDown(KeyCode.E))
