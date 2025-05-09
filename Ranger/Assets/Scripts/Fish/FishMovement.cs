@@ -24,21 +24,23 @@ public class FishMovement : MonoBehaviour
     public bool IsCaught;
     private int _counter;
     private int _num;
-    private int _numPrev;
-    private int _cooldown;
 
-    private Inventory _inventoryClass;
-    public GameObject _inventory;
-
-    private Items _items;
+    public GameObject Inventory;
+    public InventoryManager Manager;
 
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
+        Agent.speed = _defaultSpeed;
+
         Player = GameObject.Find("Player");
         PlayerMovement = Player.GetComponent<PlayerMovement>();
+
         Fishing = Player.GetComponent<Fishing>();
-        Agent.speed = _defaultSpeed;
+
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
+
         IsCaught = false;
 
         _inventory = GameObject.FindGameObjectWithTag("Inventory");
@@ -96,7 +98,6 @@ public class FishMovement : MonoBehaviour
         {
             IsCaught = true;
             _counter = 5;
-            _cooldown = 0;
             _num = Random.Range(0, 2);
             Destroy(other.gameObject);
         }

@@ -7,36 +7,43 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] 
     private Items _item;
     [SerializeField]
-    private Inventory _inventory;
-    [SerializeField]
-    private GameObject _pickupPanel;
-    [SerializeField]
-    private GameObject _player;
+    public GameObject Player;
+
+    public GameObject Inventory;
+    public InventoryManager Manager;
 
     private bool _isInRange;
+
+    private void Start()
+    {
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     private void Update()
     {
         if (_isInRange && Input.GetKeyDown(KeyCode.E))
         {
-           if (_inventory.IsFull() == false)
+           if (Manager.InventoryScript.IsFull() == false)
            {
-                _inventory.AddItem(Instantiate(_item));
+                Manager.InventoryScript.AddItem(Instantiate(_item));
                 Destroy(gameObject);
-                _pickupPanel.SetActive(false);
+                Manager.PickupPanel.SetActive(false);
            }
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == _player)
+        if (other.gameObject == Player)
         {
             _isInRange = true;
-            _pickupPanel.SetActive(true);
+            Manager.PickupPanel.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         _isInRange = false;
-        _pickupPanel.SetActive(false);
+        Manager.PickupPanel.SetActive(false);
     }
 }

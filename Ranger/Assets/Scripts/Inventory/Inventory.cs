@@ -16,6 +16,9 @@ public class Inventory : MonoBehaviour
 
     private GameObject _panel;
 
+    private Inventory _inventoryClass;
+    public GameObject _inventory;
+
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
