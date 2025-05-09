@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using Unity.VisualScripting;
 
 public class ChatBubble : MonoBehaviour
 {
@@ -21,38 +23,25 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer _iconSpriteRenderer;
     private TextMeshPro _textMeshPro;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     private float _bubbleTimerCount = 1f;
     private float _bubbleTime;
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
     public GameObject Inventory;
     public InventoryManager Manager; 
     //private Inventory _inventoryClass;
+
+    [SerializeField] GameObject _inventory;
+    private Inventory _inventoryClass;
+
     private CameraMovement _cameraMovement;
     [SerializeField]
     private GameObject _camera;
     private Items _items;
->>>>>>> Stashed changes
 
     private Vector2 padding = new Vector2(-1f, 7f);
+
+    private bool _itemGiving;
+
     private void Awake()
     {
         _backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
@@ -62,8 +51,6 @@ public class ChatBubble : MonoBehaviour
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
         _textMeshPro.enabled = false;
-<<<<<<< Updated upstream
-=======
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
@@ -71,25 +58,9 @@ public class ChatBubble : MonoBehaviour
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
         //_inventory.SetActive(false);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+        _inventory = GameObject.FindGameObjectWithTag("Inventory");
+        _inventoryClass = _inventory.GetComponent<Inventory>();
+        _inventory.SetActive(false);
     }
 
     private void SetUp(IconType icon, string text)
@@ -117,23 +88,34 @@ public class ChatBubble : MonoBehaviour
 
     public void Create()
     {
-        //Debug.Log("Created");
-        _bubbleTime += Time.deltaTime;
         _backgroundSpriteRenderer.enabled = true;
         _iconSpriteRenderer.enabled = true;
         _textMeshPro.enabled = true;
         SetUp(IconType.Question, "Hello Ranger! \nDo you have anything for me?");
+    }
 
-        if (_bubbleTime > _bubbleTimerCount)
+    public void ItemGiven()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
         {
-<<<<<<< Updated upstream
+            SetUp(IconType.Question, "Do you have anything to give me?");
+            _textMeshPro.ForceMeshUpdate();
+
+            _inventory.SetActive(true);
+            _cameraMovement._inventoryOpen = true;
+            _itemGiving = true;
+        }
+
+        if(_itemGiving == true)
+        {
+
             //Debug.Log("Destroyed");
             //_backgroundSpriteRenderer.enabled = false;
             //_iconSpriteRenderer.enabled = false;
             //_textMeshPro.enabled = false;
             //_bubbleTime = 0;
         }
-=======
+
             SetUp(IconType.Question, "Do you have anything to give me?");
             _textMeshPro.ForceMeshUpdate();
 
@@ -174,12 +156,42 @@ public class ChatBubble : MonoBehaviour
             }
         }
       //  _itemGiving = false;
->>>>>>> Stashed changes
+
+            if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "bug")
+            {
+                Debug.Log("Dropped1");
+                _inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the fish!!");
+            }
+            else if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "bug")
+            {
+                Debug.Log("Dropped2");
+                _inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the bug!!");
+            }
+            else if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "PlantDropped")
+            {
+                Debug.Log("Dropped3");
+                _inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the plant!!");
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Dropped4");
+                _inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Question, "Goodbye! I hope to see you soon");
+            }
+        }
+      //  _itemGiving = false;
+
     }
 
     public void Remove()
     {
-        //Debug.Log("Called");
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
         _textMeshPro.enabled = false;

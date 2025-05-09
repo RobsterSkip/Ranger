@@ -61,7 +61,6 @@ public class BugMovement : MonoBehaviour
         else
         {
             Agent.speed = _defaultSpeed;
-            //PlantLure();
         }
         
         //Debug.Log(PlayerMovement.IsCrouching);

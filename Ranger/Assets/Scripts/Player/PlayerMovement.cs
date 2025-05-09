@@ -13,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private float _turnSmoothTime = 0.1f;
     private float _turnSmoothVelocity;
 
-    private bool _inventoryOpen;
-
     public bool IsCrouching;
 
     public bool CanFish;
@@ -23,14 +21,20 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsFishing;
 
+    private CameraMovement _cameraMovement;
+    [SerializeField]
+    private GameObject _camera;
+
+    private void Start()
+    {
+        _camera = GameObject.FindGameObjectWithTag("MainCamera");
+        _cameraMovement = _camera.GetComponent<CameraMovement>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            _inventoryOpen = !_inventoryOpen;
-        }
 
-        if (_inventoryOpen == false)
+        if (_cameraMovement._inventoryOpen == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -39,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
 
-        if (_inventoryOpen == false)
+        if (_cameraMovement._inventoryOpen == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;
