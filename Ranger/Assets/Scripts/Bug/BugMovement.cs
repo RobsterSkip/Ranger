@@ -4,11 +4,9 @@ using UnityEngine.AI;
 public class BugMovement : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Inventory;
-    private GameObject Plant;
     private NavMeshAgent Agent;
 
-    [SerializeField] LayerMask groundLayer, playerLayer, plantLayer;
+    [SerializeField] LayerMask groundLayer, playerLayer;// plantLayer;
 
     private Vector3 _destination;
     private bool _isSet;
@@ -22,25 +20,37 @@ public class BugMovement : MonoBehaviour
 
     public PlayerMovement PlayerMovement;
 
-    public Inventory InventoryClass;
+
+    public GameObject Inventory;
+    private GameObject PickupPlant;
+    public Inventory InventoryScript;
     private float _plantRange = 30f;
+    
+    
 
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
-        Inventory = GameObject.FindGameObjectWithTag("Inventory");
+        
         Player = GameObject.FindGameObjectWithTag("Player");
-        Plant = GameObject.FindGameObjectWithTag("PlantDropped");
-        //InventoryClass = Inventory.GetComponent<Inventory>();
         PlayerMovement = Player.GetComponent<PlayerMovement>();
+
         Agent.speed = _defaultSpeed;
+
+        Inventory = GameObject.FindGameObjectWithTag("Inventory");
+        InventoryScript = Inventory.GetComponent<Inventory>();
+        Inventory.SetActive(false);
+        //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
+        //InventoryClass = Inventory.GetComponent<Inventory>();
     }
 
     void Update()
     {
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        //Debug.Log(_playerSpotted);
-        
+        //Debug.Log(InventoryScript);
+        //Inventory.SetActive(true);
+        //InventoryScript = Inventory.GetComponent<Inventory>();
+
         WalkAround();
 
         if (_playerSpotted )
@@ -54,7 +64,6 @@ public class BugMovement : MonoBehaviour
         else
         {
             Agent.speed = _defaultSpeed;
-          //  PlantLure();
         }
         
         //Debug.Log(PlayerMovement.IsCrouching);
@@ -65,6 +74,7 @@ public class BugMovement : MonoBehaviour
         if(!_isSet)
         {
             SearchForDestination();
+            
         }
 
         if(_isSet)
@@ -84,7 +94,9 @@ public class BugMovement : MonoBehaviour
                                     transform.position.y,
                                     transform.position.z + Random.Range(-_range, _range));
 
-        if(Physics.Raycast(_destination, Vector3.down, groundLayer))
+        //Debug.Log(_isSet);
+
+        if (Physics.Raycast(_destination, Vector3.down, groundLayer))
         {
             _isSet = true;
         }
@@ -98,17 +110,17 @@ public class BugMovement : MonoBehaviour
 
     void PlantLure()
     {
-        InventoryClass._isDropped = Physics.CheckSphere(transform.position, _plantRange, plantLayer);
-        if (InventoryClass._isDropped && PlayerMovement.IsCrouching)
+        /*InventoryClass._isDropped = Physics.CheckSphere(transform.position, _plantRange, plantLayer);
+        if (InventoryScript._isDropped && PlayerMovement.IsCrouching)
         {
             Debug.Log("Checked");
             WalkTowardsPlant();
-        }
+        }*/
     }
 
     private void WalkTowardsPlant()
     {
-        _destination = transform.position + (transform.position + Plant.transform.position);
+        //_destination = transform.position + (transform.position + Plant.transform.position);
         Agent.SetDestination(_destination);
     }
 }
