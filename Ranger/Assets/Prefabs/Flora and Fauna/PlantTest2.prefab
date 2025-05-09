@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: bb2e28f50c9fed249a4bcc5d40a43d20, type: 2}
-  _inventory: {fileID: 0}
-  _pickupPanel: {fileID: 0}
   _player: {fileID: 0}
+  Inventory: {fileID: 0}
+  Manager: {fileID: 0}
 --- !u!64 &-478677031573648014
 MeshCollider:
   m_ObjectHideFlags: 0

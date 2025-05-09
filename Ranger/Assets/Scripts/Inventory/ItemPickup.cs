@@ -7,7 +7,7 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] 
     private Items _item;
     [SerializeField]
-    private GameObject _player;
+    public GameObject Player;
 
     public GameObject Inventory;
     public InventoryManager Manager;
@@ -18,6 +18,7 @@ public class ItemPickup : MonoBehaviour
     {
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -34,7 +35,7 @@ public class ItemPickup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == _player)
+        if (other.gameObject == Player)
         {
             _isInRange = true;
             Manager.PickupPanel.SetActive(true);

@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 1be28755adc7fec4fb0bdd961eb43d16, type: 2}
-  _inventory: {fileID: 1102182263755447710, guid: 34979cbf4850f324d9379dadba36823e, type: 3}
-  _pickupPanel: {fileID: 0}
   _player: {fileID: 0}
+  Inventory: {fileID: 0}
+  Manager: {fileID: 0}
