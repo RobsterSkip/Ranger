@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4188162395634920517}
   - component: {fileID: 737587336536505843}
   - component: {fileID: -7934667027798071265}
-  m_Layer: 2
-  m_Name: PlantTest
+  m_Layer: 10
+  m_Name: PlantCubeDropped
   m_TagString: PlantDropped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 1be28755adc7fec4fb0bdd961eb43d16, type: 2}
-  _player: {fileID: 0}
+  Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}
