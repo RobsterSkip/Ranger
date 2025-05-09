@@ -23,9 +23,12 @@ public class ChatBubble : MonoBehaviour
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     private float _bubbleTimerCount = 1f;
     private float _bubbleTime;
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     public GameObject Inventory;
@@ -57,6 +60,9 @@ public class ChatBubble : MonoBehaviour
         Manager = Inventory.GetComponent<InventoryManager>();
         //_inventory.SetActive(false);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -863,7 +863,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -1231,7 +1235,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -1609,7 +1617,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -1691,7 +1703,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -1916,7 +1932,10 @@ PrefabInstance:
     - target: {fileID: 3341293192210600863, guid: 45ad1f4cdf815884db09217a842f7969, type: 3}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
       propertyPath: m_Enabled
@@ -1924,6 +1943,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3341293192210600863, guid: 45ad1f4cdf815884db09217a842f7969, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2333,7 +2355,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -2557,7 +2583,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -2634,7 +2664,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -2711,7 +2745,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -3726,7 +3764,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.35999995
+=======
+      value: 0
+>>>>>>> Stashed changes
 =======
       value: 0
 >>>>>>> Stashed changes
@@ -4261,7 +4303,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -0.1
+=======
+      value: -0.5
+>>>>>>> Stashed changes
 =======
       value: -0.5
 >>>>>>> Stashed changes
