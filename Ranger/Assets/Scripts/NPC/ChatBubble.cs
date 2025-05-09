@@ -49,7 +49,7 @@ public class ChatBubble : MonoBehaviour
 
         _inventory = GameObject.FindGameObjectWithTag("Inventory");
         _inventoryClass = _inventory.GetComponent<Inventory>();
-        _inventoryClass.enabled = false;
+        _inventory.SetActive(false);
     }
 
     private void SetUp(IconType icon, string text)
@@ -97,8 +97,6 @@ public class ChatBubble : MonoBehaviour
 
         if(_itemGiving == true)
         {
-            _inventoryClass = GetComponent<Inventory>();
-            Debug.Log("True");
             if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "bug")
             {
                 Debug.Log("Dropped1");

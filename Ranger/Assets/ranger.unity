@@ -3206,6 +3206,7 @@ MonoBehaviour:
   _player: {fileID: 1436249822}
   _prefabs: []
   _isDropped: 0
+  _inventory: {fileID: 0}
 --- !u!114 &1768769891
 MonoBehaviour:
   m_ObjectHideFlags: 0
