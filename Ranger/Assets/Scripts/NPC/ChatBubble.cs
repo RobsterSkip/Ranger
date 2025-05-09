@@ -28,10 +28,6 @@ public class ChatBubble : MonoBehaviour
 
     public GameObject Inventory;
     public InventoryManager Manager; 
-    //private Inventory _inventoryClass;
-
-    [SerializeField] GameObject _inventory;
-    private Inventory _inventoryClass;
 
     private CameraMovement _cameraMovement;
     [SerializeField]
@@ -57,10 +53,6 @@ public class ChatBubble : MonoBehaviour
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
-        //_inventory.SetActive(false);
-        _inventory = GameObject.FindGameObjectWithTag("Inventory");
-        _inventoryClass = _inventory.GetComponent<Inventory>();
-        _inventory.SetActive(false);
     }
 
     private void SetUp(IconType icon, string text)
@@ -100,15 +92,13 @@ public class ChatBubble : MonoBehaviour
         {
             SetUp(IconType.Question, "Do you have anything to give me?");
             _textMeshPro.ForceMeshUpdate();
-
-            _inventory.SetActive(true);
+            Manager.Inventory.SetActive(true);
             _cameraMovement._inventoryOpen = true;
             _itemGiving = true;
         }
 
         if(_itemGiving == true)
         {
-
             //Debug.Log("Destroyed");
             //_backgroundSpriteRenderer.enabled = false;
             //_iconSpriteRenderer.enabled = false;
@@ -119,12 +109,11 @@ public class ChatBubble : MonoBehaviour
             SetUp(IconType.Question, "Do you have anything to give me?");
             _textMeshPro.ForceMeshUpdate();
 
-            Manager.Inventory.SetActive(true);
-            _cameraMovement._inventoryOpen = true;
+            //Manager.Inventory.SetActive(true);
+            //_cameraMovement._inventoryOpen = true; //////////////////////////// commented this not sure if it's needed but the game broke with this here
             _itemGiving = true;
-        }
 
-        if(_itemGiving == true)
+        if (_itemGiving == true)
         {
             if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "bug")
             {
@@ -155,41 +144,7 @@ public class ChatBubble : MonoBehaviour
                 SetUp(IconType.Question, "Goodbye! I hope to see you soon");
             }
         }
-      //  _itemGiving = false;
-
-            if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "bug")
-            {
-                Debug.Log("Dropped1");
-                _inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the fish!!");
-            }
-            else if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "bug")
-            {
-                Debug.Log("Dropped2");
-                _inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the bug!!");
-            }
-            else if (Input.GetMouseButtonDown(1) && _inventoryClass._isDropped == true && tag == "PlantDropped")
-            {
-                Debug.Log("Dropped3");
-                _inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the plant!!");
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Debug.Log("Dropped4");
-                _inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Question, "Goodbye! I hope to see you soon");
-            }
-        }
-      //  _itemGiving = false;
-
     }
-
     public void Remove()
     {
         _backgroundSpriteRenderer.enabled = false;

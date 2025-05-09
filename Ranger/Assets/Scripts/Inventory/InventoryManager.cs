@@ -18,6 +18,6 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        
+        //Inventory.SetActive(false);
     }
 }
