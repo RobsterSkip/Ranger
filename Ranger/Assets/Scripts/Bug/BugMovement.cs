@@ -20,8 +20,8 @@ public class BugMovement : MonoBehaviour
 
     public PlayerMovement PlayerMovement;
 
-    private GameObject PickupPlant;
-    private float _plantRange = 30f;
+    //private GameObject PickupPlant;
+    //private float _plantRange = 30f;
 
     public GameObject Inventory;
     public InventoryManager Manager;
