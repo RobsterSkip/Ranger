@@ -15,7 +15,10 @@ public class Inventory : MonoBehaviour
     public bool _isDropped = false;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     private GameObject _panel;
 
 >>>>>>> Stashed changes

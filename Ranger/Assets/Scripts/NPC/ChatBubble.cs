@@ -22,9 +22,12 @@ public class ChatBubble : MonoBehaviour
     private TextMeshPro _textMeshPro;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     private float _bubbleTimerCount = 1f;
     private float _bubbleTime;
 =======
+=======
+>>>>>>> Stashed changes
     public GameObject Inventory;
     public InventoryManager Manager; 
     //private Inventory _inventoryClass;
@@ -53,6 +56,9 @@ public class ChatBubble : MonoBehaviour
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
         //_inventory.SetActive(false);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 
