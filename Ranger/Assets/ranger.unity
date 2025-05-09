@@ -1800,6 +1800,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5845561315961838608, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1436249822}
+    - target: {fileID: -5845561315961838608, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1768769890}
+    - target: {fileID: -5845561315961838608, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: _pickupPanel
+      value: 
+      objectReference: {fileID: 1728441224}
     - target: {fileID: 1531013843455830767, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
       propertyPath: m_LocalPosition.x
       value: -54.041374
@@ -1859,6 +1871,14 @@ PrefabInstance:
     - target: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
       propertyPath: m_Name
       value: Fish_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
       propertyPath: m_IsTrigger
@@ -3188,7 +3208,6 @@ MonoBehaviour:
   _player: {fileID: 1436249822}
   _prefabs: []
   _isDropped: 0
-  _inventory: {fileID: 0}
 --- !u!114 &1768769891
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ public class ChatBubble : MonoBehaviour
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
-
+        
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
     }
