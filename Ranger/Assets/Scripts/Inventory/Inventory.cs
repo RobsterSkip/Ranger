@@ -14,6 +14,11 @@ public class Inventory : MonoBehaviour
 
     public bool _isDropped = false;
 
+<<<<<<< Updated upstream
+=======
+    private GameObject _panel;
+
+>>>>>>> Stashed changes
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)

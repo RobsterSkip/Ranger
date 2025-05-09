@@ -20,13 +20,11 @@ public class BugMovement : MonoBehaviour
 
     public PlayerMovement PlayerMovement;
 
+    private GameObject PickupPlant;
+    private float _plantRange = 30f;
 
     public GameObject Inventory;
-    private GameObject PickupPlant;
-    public Inventory InventoryScript;
-    private float _plantRange = 30f;
-    
-    
+    public InventoryManager Manager;
 
     void Start()
     {
@@ -37,9 +35,8 @@ public class BugMovement : MonoBehaviour
 
         Agent.speed = _defaultSpeed;
 
-        Inventory = GameObject.FindGameObjectWithTag("Inventory");
-        InventoryScript = Inventory.GetComponent<Inventory>();
-        Inventory.SetActive(false);
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
         //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
         //InventoryClass = Inventory.GetComponent<Inventory>();
     }

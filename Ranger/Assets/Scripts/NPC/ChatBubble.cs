@@ -21,8 +21,18 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer _iconSpriteRenderer;
     private TextMeshPro _textMeshPro;
 
+<<<<<<< Updated upstream
     private float _bubbleTimerCount = 1f;
     private float _bubbleTime;
+=======
+    public GameObject Inventory;
+    public InventoryManager Manager; 
+    //private Inventory _inventoryClass;
+    private CameraMovement _cameraMovement;
+    [SerializeField]
+    private GameObject _camera;
+    private Items _items;
+>>>>>>> Stashed changes
 
     private Vector2 padding = new Vector2(-1f, 7f);
     private void Awake()
@@ -34,6 +44,16 @@ public class ChatBubble : MonoBehaviour
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
         _textMeshPro.enabled = false;
+<<<<<<< Updated upstream
+=======
+
+        _camera = GameObject.FindGameObjectWithTag("MainCamera");
+        _cameraMovement = _camera.GetComponent<CameraMovement>();
+
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
+        //_inventory.SetActive(false);
+>>>>>>> Stashed changes
     }
 
     private void SetUp(IconType icon, string text)
@@ -70,12 +90,55 @@ public class ChatBubble : MonoBehaviour
 
         if (_bubbleTime > _bubbleTimerCount)
         {
+<<<<<<< Updated upstream
             //Debug.Log("Destroyed");
             //_backgroundSpriteRenderer.enabled = false;
             //_iconSpriteRenderer.enabled = false;
             //_textMeshPro.enabled = false;
             //_bubbleTime = 0;
         }
+=======
+            SetUp(IconType.Question, "Do you have anything to give me?");
+            _textMeshPro.ForceMeshUpdate();
+
+            Manager.Inventory.SetActive(true);
+            _cameraMovement._inventoryOpen = true;
+            _itemGiving = true;
+        }
+
+        if(_itemGiving == true)
+        {
+            if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "bug")
+            {
+                Debug.Log("Dropped1");
+                Manager.Inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the fish!!");
+            }
+            else if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "bug")
+            {
+                Debug.Log("Dropped2");
+                Manager.Inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the bug!!");
+            }
+            else if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "PlantDropped")
+            {
+                Debug.Log("Dropped3");
+                Manager.Inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Fish, "Thank you for the plant!!");
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Dropped4");
+                Manager.Inventory.SetActive(false);
+                _cameraMovement._inventoryOpen = false;
+                SetUp(IconType.Question, "Goodbye! I hope to see you soon");
+            }
+        }
+      //  _itemGiving = false;
+>>>>>>> Stashed changes
     }
 
     public void Remove()
