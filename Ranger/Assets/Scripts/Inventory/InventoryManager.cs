@@ -11,7 +11,6 @@ public class InventoryManager : MonoBehaviour
         Inventory = GameObject.FindGameObjectWithTag("Inventory");
         PickupPanel = GameObject.FindGameObjectWithTag("Panel");
         PickupPanel.SetActive(false);
-        //Debug.Log(Inventory);
         InventoryScript = Inventory.GetComponent<Inventory>();
         Inventory.SetActive(false);
     }

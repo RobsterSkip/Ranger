@@ -70,6 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 803cd3fbf53a37f4c9af9182605ba0cb, type: 2}
     m_RemovedComponents:
     - {fileID: 5490963166290680338, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+    - {fileID: -8900612930985073044, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -110,7 +111,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   IsCaught: 0
-  _inventory: {fileID: 0}
+  Inventory: {fileID: 0}
+  Manager: {fileID: 0}
 --- !u!114 &-5845561315961838608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: fd130653d1a011e469b3d1915ca8a3f8, type: 2}
-  _inventory: {fileID: 0}
-  _pickupPanel: {fileID: 0}
-  _player: {fileID: 0}
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
+  Manager: {fileID: 0}

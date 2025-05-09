@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -57,12 +57,12 @@ public class Inventory : MonoBehaviour
 
     private void ItemDropped(Items item)
     {
-        Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + 2f, _player.transform.localPosition.y + 1, 
-            _player.transform.localPosition.z + 2f);
+        float spawnPointX = Random.Range(-4f, 0);
+        float spawnPointZ = Random.Range(-4f, 0);
+
+        Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
+            _player.transform.localPosition.z + spawnPointZ);
         Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
-       //item.
-       // _isDropped = true;
-       
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();

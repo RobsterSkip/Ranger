@@ -23,20 +23,23 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer _iconSpriteRenderer;
     private TextMeshPro _textMeshPro;
 
-    private float _bubbleTimerCount = 1f;
-    private float _bubbleTime;
-
     public GameObject Inventory;
     public InventoryManager Manager; 
-
+    public Journal Journal;
+    private Items _items;
     private CameraMovement _cameraMovement;
+
     [SerializeField]
     private GameObject _camera;
-    private Items _items;
+    public GameObject _journal;
+
+    [SerializeField]
+    private LayerMask _playerMask;
 
     private Vector2 padding = new Vector2(-1f, 7f);
 
     private bool _itemGiving;
+    public bool _npcInventory;
 
     private void Awake()
     {
@@ -50,6 +53,9 @@ public class ChatBubble : MonoBehaviour
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
+
+        _journal = GameObject.FindGameObjectWithTag("Journal");
+        Journal = _journal.GetComponent<Journal>();
         
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
@@ -90,58 +96,72 @@ public class ChatBubble : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SetUp(IconType.Question, "Do you have anything to give me?");
-            _textMeshPro.ForceMeshUpdate();
             Manager.Inventory.SetActive(true);
             _cameraMovement._inventoryOpen = true;
             _itemGiving = true;
+            _npcInventory = true;
         }
-
-        if(_itemGiving == true)
+        
+        if(Physics.CheckSphere(transform.parent.transform.position, 5f, _playerMask) && _itemGiving == true)
         {
-            //Debug.Log("Destroyed");
-            //_backgroundSpriteRenderer.enabled = false;
-            //_iconSpriteRenderer.enabled = false;
-            //_textMeshPro.enabled = false;
-            //_bubbleTime = 0;
-        }
+            Collider[] hitColliders = Physics.OverlapSphere(transform.parent.position, 5f);
+            foreach (Collider col in hitColliders)
+            {
+                GameObject droppedItem = col.gameObject;
 
-            SetUp(IconType.Question, "Do you have anything to give me?");
-            _textMeshPro.ForceMeshUpdate();
+               if (droppedItem.CompareTag("fish"))
+               {
+                  Manager.Inventory.SetActive(false);
+                  _cameraMovement._inventoryOpen = false;
+                  _npcInventory = false;
 
-            //Manager.Inventory.SetActive(true);
-            //_cameraMovement._inventoryOpen = true; //////////////////////////// commented this not sure if it's needed but the game broke with this here
-            _itemGiving = true;
+                  SetUp(IconType.Fish, "Thank you for the fish!!");
+                  _textMeshPro.ForceMeshUpdate();
 
-        if (_itemGiving == true)
-        {
-            if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "bug")
-            {
-                Debug.Log("Dropped1");
-                Manager.Inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the fish!!");
-            }
-            else if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "bug")
-            {
-                Debug.Log("Dropped2");
-                Manager.Inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the bug!!");
-            }
-            else if (Input.GetMouseButtonDown(1) && Manager.InventoryScript._isDropped == true && tag == "PlantDropped")
-            {
-                Debug.Log("Dropped3");
-                Manager.Inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Fish, "Thank you for the plant!!");
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Debug.Log("Dropped4");
-                Manager.Inventory.SetActive(false);
-                _cameraMovement._inventoryOpen = false;
-                SetUp(IconType.Question, "Goodbye! I hope to see you soon");
+                    Journal.ItemToJournal(droppedItem);
+                    Destroy(droppedItem.gameObject);
+                    _itemGiving = false;
+                }
+
+               else if (droppedItem.CompareTag("bug"))
+               {
+                    Manager.Inventory.SetActive(false);
+                   _cameraMovement._inventoryOpen = false;
+                   _npcInventory = false;
+
+                   SetUp(IconType.Bug, "Thank you for the bug!!");
+                   _textMeshPro.ForceMeshUpdate();
+
+                    Journal.ItemToJournal(droppedItem);
+                    Destroy(droppedItem.gameObject);
+                    _itemGiving = false;
+                }
+
+               else if (droppedItem.CompareTag("PlantDropped"))
+               {
+                    Manager.Inventory.SetActive(false);
+                   _cameraMovement._inventoryOpen = false;
+                   _npcInventory = false;
+
+                   SetUp(IconType.Plant, "Thank you for the plant!!");
+                   _textMeshPro.ForceMeshUpdate();
+
+                    Journal.ItemToJournal(droppedItem);
+                    Destroy(droppedItem.gameObject);
+                    _itemGiving = false;
+
+                }
+               else if (Input.GetKeyDown(KeyCode.Escape))
+               {
+                   Manager.Inventory.SetActive(false);
+                   _cameraMovement._inventoryOpen = false;
+                   _npcInventory = false;
+
+                   SetUp(IconType.Question, "Goodbye! See you soon!");
+                   _textMeshPro.ForceMeshUpdate();
+
+                    _itemGiving = false;
+                }
             }
         }
     }
