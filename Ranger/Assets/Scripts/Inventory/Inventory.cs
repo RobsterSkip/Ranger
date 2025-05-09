@@ -14,10 +14,9 @@ public class Inventory : MonoBehaviour
 
     public bool _isDropped = false;
 
+    private GameObject _panel;
     private Inventory _inventoryClass;
     public GameObject _inventory;
-
-    private GameObject _panel;
 
     private void Start()
     {
