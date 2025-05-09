@@ -12,6 +12,7 @@ TagManager:
   - Inventory
   - Panel
   - PlantDropped
+  - quicktime
   layers:
   - Default
   - TransparentFX

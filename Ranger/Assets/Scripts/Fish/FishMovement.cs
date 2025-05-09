@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,6 +7,7 @@ public class FishMovement : MonoBehaviour
 {
     public GameObject Player;
     public PlayerMovement PlayerMovement;
+    public Fishing Fishing;
     private NavMeshAgent Agent;
 
     [SerializeField] LayerMask groundLayer, playerLayer, fishingLayer;
@@ -21,6 +24,8 @@ public class FishMovement : MonoBehaviour
     public bool IsCaught;
     private int _counter;
     private int _num;
+    private int _numPrev;
+    private int _cooldown;
 
 
     void Start()
@@ -28,6 +33,7 @@ public class FishMovement : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         Player = GameObject.Find("Player");
         PlayerMovement = Player.GetComponent<PlayerMovement>();
+        Fishing = Player.GetComponent<Fishing>();
         Agent.speed = _defaultSpeed;
         IsCaught = false;
     }
@@ -83,9 +89,15 @@ public class FishMovement : MonoBehaviour
         {
             IsCaught = true;
             _counter = 5;
-            _num = Random.Range(0, 3);
+            _cooldown = 0;
+            _num = Random.Range(0, 2);
             Destroy(other.gameObject);
         }
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(5);
     }
 
     private void CheckCatching()
@@ -93,44 +105,28 @@ public class FishMovement : MonoBehaviour
         if (IsCaught)
         {
             _isSet = true;
+
             if (_counter != 0)
             {
-                if (_num == 0)
-                {
-                    Debug.Log("<--");
-                    if (Input.GetKeyDown(KeyCode.A))
+                StartCoroutine(Wait());
+                    if (Fishing.FishOnce(_num))
                     {
                         _counter--;
                         _num = Random.Range(0, 2);
+                      
                     }
-                }
-
-                if (_num == 1)
-                {
-                    Debug.Log("-->");
-                    if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        _counter--;
-                        _num = Random.Range(0, 2);
-                    }
-                }
-
-                if (_num == 2)
-                {
-                    Debug.Log("pull (S)");
-                    if (Input.GetKeyDown(KeyCode.S))
-                    {
-                        _counter--;
-                        _num = Random.Range(0, 2);
-                    }
-                }
             }
 
             if (_counter == 0)
             {
+                Fishing.DisableQuickTimeUI();
                 Debug.Log("congrats!"); //fish caught
                 PlayerMovement.IsFishing = false;
                 Destroy(gameObject);
+            }
+            else
+            {
+                //Debug.Log("the fish got away!");
             }
         }
     }
