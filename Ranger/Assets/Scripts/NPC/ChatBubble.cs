@@ -49,7 +49,6 @@ public class ChatBubble : MonoBehaviour
 
         _inventory = GameObject.FindGameObjectWithTag("Inventory");
         _inventoryClass = _inventory.GetComponent<Inventory>();
-        _inventory.SetActive(false);
     }
 
     private void SetUp(IconType icon, string text)

@@ -91,7 +91,6 @@ public class CameraMovement : MonoBehaviour
 
             Destroy(obj);
 
-
             if (Cam.transform.localPosition.z > -1f)
             {
                 Cam.transform.localPosition = new Vector3(Cam.transform.localPosition.x, Cam.transform.localPosition.y, -1f);

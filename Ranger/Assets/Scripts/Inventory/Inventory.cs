@@ -14,9 +14,6 @@ public class Inventory : MonoBehaviour
 
     public bool _isDropped = false;
 
-    private Inventory _inventoryClass;
-    public GameObject _inventory;
-
     private GameObject _panel;
 
     private void Start()
@@ -60,7 +57,7 @@ public class Inventory : MonoBehaviour
         Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + 2f, _player.transform.localPosition.y + 1, 
             _player.transform.localPosition.z + 2f);
         Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
-     //   item.
+       //item.
        // _isDropped = true;
        
         _items.Remove(item);

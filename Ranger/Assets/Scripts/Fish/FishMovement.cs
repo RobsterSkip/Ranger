@@ -27,6 +27,10 @@ public class FishMovement : MonoBehaviour
     private int _numPrev;
     private int _cooldown;
 
+    private Inventory _inventoryClass;
+    public GameObject _inventory;
+
+    private Items _items;
 
     void Start()
     {
@@ -36,6 +40,9 @@ public class FishMovement : MonoBehaviour
         Fishing = Player.GetComponent<Fishing>();
         Agent.speed = _defaultSpeed;
         IsCaught = false;
+
+        _inventory = GameObject.FindGameObjectWithTag("Inventory");
+        _inventoryClass = _inventory.GetComponent<Inventory>();
     }
 
     void Update()
@@ -122,7 +129,8 @@ public class FishMovement : MonoBehaviour
                 Fishing.DisableQuickTimeUI();
                 Debug.Log("congrats!"); //fish caught
                 PlayerMovement.IsFishing = false;
-                Destroy(gameObject);
+                Agent.speed = 0;
+                transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
             }
             else
             {
