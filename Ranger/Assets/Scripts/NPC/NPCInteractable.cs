@@ -17,23 +17,25 @@ public class NPCInteractable : MonoBehaviour
     private Quaternion _originalRotation;
 
     private bool _inRange;
+    private bool _inTrigger;
     
     private void Start()
     {
         _chatBubble = GameObject.FindGameObjectWithTag("ChatBubble").GetComponent<ChatBubble>();
-
         _originalRotation = Quaternion.identity;
     }
 
     private void Update()
     {
         OriginalRotation();
+        if (_inTrigger == true)
+        {
+            InTriggerUpdate();
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void InTriggerUpdate()
     {
-        if (other.tag == "Player")
-        {
             _inRange = true;
 
             Vector3 currentDirection = transform.forward;
@@ -44,13 +46,25 @@ public class NPCInteractable : MonoBehaviour
             targetRotation.y = 0;
             targetRotation.Normalize();
 
-            Vector3 newRotation = Vector3.RotateTowards(currentDirection, 
+            Vector3 newRotation = Vector3.RotateTowards(currentDirection,
                 targetRotation, _rotationSpeedPlayer * Time.deltaTime, 0.0f);
 
             transform.rotation = Quaternion.LookRotation(newRotation);
 
-            Interact();
+            _chatBubble.ItemGiven();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            _inTrigger = true;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Interact();
     }
 
     private void OnTriggerExit(Collider other)
@@ -58,7 +72,7 @@ public class NPCInteractable : MonoBehaviour
         if (other.tag == "Player")
         {
             _inRange = false;
-
+            _inTrigger = false;
             _chatBubble.Remove();
         }
     }
@@ -66,10 +80,6 @@ public class NPCInteractable : MonoBehaviour
     public void Interact()
     {
         _chatBubble.Create();
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            
-        }
     }
 
 

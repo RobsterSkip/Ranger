@@ -24,7 +24,7 @@ public class CameraMovement : MonoBehaviour
     private RaycastHit _camHit;
     private Vector3 _camDist;
 
-    private bool _inventoryOpen;
+    public bool _inventoryOpen;
 
     void Start()
     {
