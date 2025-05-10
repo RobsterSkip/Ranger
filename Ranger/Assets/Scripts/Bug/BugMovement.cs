@@ -45,7 +45,7 @@ public class BugMovement : MonoBehaviour
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
-        
+
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
         //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
@@ -54,7 +54,6 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
-
         if(TimeManager.service.isDayTime.Value)
         {
             _currentMultiplier = _daySpeedMultiplier;
@@ -64,8 +63,9 @@ public class BugMovement : MonoBehaviour
             _currentMultiplier = _nightSpeedMultiplier;
         }
         
+
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        _plantSpotted = Physics.CheckSphere(transform.position, 7f, plantLayer);
+        _plantSpotted = Physics.CheckSphere(transform.position, 15f, plantLayer);
         //Debug.Log(_plantSpotted);
         //Inventory.SetActive(true);
         //InventoryScript = Inventory.GetComponent<Inventory>();

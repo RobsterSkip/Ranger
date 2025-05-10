@@ -21,7 +21,6 @@ public class ChatBubble : MonoBehaviour
 
     private SpriteRenderer _backgroundSpriteRenderer;
     private SpriteRenderer _iconSpriteRenderer;
-    [SerializeField]
     private TextMeshPro _textMeshPro;
 
     public GameObject Inventory;

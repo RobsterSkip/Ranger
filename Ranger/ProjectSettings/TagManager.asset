@@ -17,7 +17,6 @@ TagManager:
   - Undefined
   - Journal
   - NPC
-
   - TimeManager
   layers:
   - Default
