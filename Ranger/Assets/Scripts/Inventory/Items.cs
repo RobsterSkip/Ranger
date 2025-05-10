@@ -13,6 +13,7 @@ public class Items : ScriptableObject
 
     [SerializeField] private GameObject _itemPrefab;
     public GameObject ItemPrefab => _itemPrefab;
+    [SerializeField] private string _journalEntry;
     private void OnValidate()
     {
         string path = AssetDatabase.GetAssetPath(this);

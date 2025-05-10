@@ -39,17 +39,12 @@ public class BugMovement : MonoBehaviour
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
-        //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
-        //InventoryClass = Inventory.GetComponent<Inventory>();
     }
 
     void Update()
     {
-
-        
-
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        _plantSpotted = Physics.CheckSphere(transform.position, 15f, plantLayer);
+        _plantSpotted = Physics.CheckSphere(transform.position, 7f, plantLayer);
         //Debug.Log(_plantSpotted);
         //Inventory.SetActive(true);
         //InventoryScript = Inventory.GetComponent<Inventory>();

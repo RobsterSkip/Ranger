@@ -17,6 +17,7 @@ TagManager:
   - Undefined
   - Journal
   - NPC
+  - Image
   layers:
   - Default
   - TransparentFX

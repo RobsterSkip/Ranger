@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
-  m_Name: Plant2
+  m_Name: Plant_Wildflower
   m_EditorClassIdentifier: 
   _id: 1be28755adc7fec4fb0bdd961eb43d16
   _itemName: Wild Flower
   _itemIcon: {fileID: 21300000, guid: 521df6a67424dd1438802bf23abdc064, type: 3}
-  _itemPrefab: {fileID: 9048567815865415879, guid: cea35692fc67fa1468816adf4daebe8b, type: 3}
+  _itemPrefab: {fileID: 3541265546410487635, guid: ad0827a373a6b48459a7c01d0fcdef51, type: 3}
+  _journalEntry: It is gonna get wild!
