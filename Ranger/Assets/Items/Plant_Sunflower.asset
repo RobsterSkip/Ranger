@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
-  m_Name: Bug
+  m_Name: Plant_Sunflower
   m_EditorClassIdentifier: 
-  _id: 1e3edc3a35b04c14b92aba58d6af7faf
-  _itemName: Moth
-  _itemIcon: {fileID: 21300000, guid: 99d73be4e9023d445898e24db3202c11, type: 3}
-  _itemPrefab: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+  _id: bb2e28f50c9fed249a4bcc5d40a43d20
+  _itemName: Sunflower
+  _itemIcon: {fileID: 21300000, guid: 1297fea10e52dca47a689cd74fbf5408, type: 3}
+  _itemPrefab: {fileID: 3541265546410487635, guid: aa4222d86da46f34c818dc7d46409f3f, type: 3}
+  _journalEntry: You are my sunshine

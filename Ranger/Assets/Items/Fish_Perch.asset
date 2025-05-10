@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
-  m_Name: Plant1
+  m_Name: Fish_Perch
   m_EditorClassIdentifier: 
-  _id: bb2e28f50c9fed249a4bcc5d40a43d20
-  _itemName: Sunflower
-  _itemIcon: {fileID: 21300000, guid: 1297fea10e52dca47a689cd74fbf5408, type: 3}
-  _itemPrefab: {fileID: 3541265546410487635, guid: e8074ab3514ca2f4db0c72dcf949e216, type: 3}
+  _id: fb94d847276f5494aadbc2f1ba244b25
+  _itemName: Perch
+  _itemIcon: {fileID: 21300000, guid: 2befd0f8a5302bc4aa02faae14d21cc7, type: 3}
+  _itemPrefab: {fileID: 5698201278719751853, guid: 77e6a8c00a3291946b89cf43328350f5, type: 3}
+  _journalEntry: Thats not a bird though?
