@@ -18,5 +18,6 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         //Inventory.SetActive(false);
+        //Debug.Log(Time.deltaTime * 0.01);
     }
 }

@@ -83,7 +83,7 @@ public class Fishing : MonoBehaviour
 
         if (num == 0)
         {
-            Debug.Log("<--");
+            //Debug.Log("<--");
             Right.SetActive(false);
             Left.SetActive(true);
             Pull.SetActive(false);
@@ -95,7 +95,7 @@ public class Fishing : MonoBehaviour
         
         if (num == 1)
         {
-            Debug.Log("-->");
+            //Debug.Log("-->");
             Right.SetActive(true);
             Left.SetActive(false);
             Pull.SetActive(false);
@@ -107,7 +107,7 @@ public class Fishing : MonoBehaviour
         
         if (num == 2)
         {
-            Debug.Log("pull (S)");
+            //Debug.Log("pull (S)");
             Right.SetActive(false);
             Left.SetActive(false);
             Pull.SetActive(true);

@@ -45,6 +45,9 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
+
+        
+
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
         _plantSpotted = Physics.CheckSphere(transform.position, 15f, plantLayer);
         //Debug.Log(_plantSpotted);
