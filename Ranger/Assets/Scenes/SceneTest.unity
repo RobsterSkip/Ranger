@@ -1734,6 +1734,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_test (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4531,6 +4539,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_test (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5206,6 +5222,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_test (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5230,7 +5254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5681946710703508695, guid: 2c7b0553456fe264b8d0b156bc529f70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.338932
+      value: 42.17
       objectReference: {fileID: 0}
     - target: {fileID: 5681946710703508695, guid: 2c7b0553456fe264b8d0b156bc529f70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5844,6 +5868,14 @@ PrefabInstance:
     - target: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
       propertyPath: m_Name
       value: Fish_test (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432100553440675055, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      propertyPath: m_Size.z
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6492,6 +6524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventory: {fileID: 1768769888}
+  _journal: {fileID: 0}
 --- !u!4 &1727524976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4868149718031402743, guid: f4d963073fb07cc4a8cab5d3b01e9e8d, type: 3}
