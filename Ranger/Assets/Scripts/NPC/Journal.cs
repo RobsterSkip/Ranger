@@ -7,8 +7,7 @@ using UnityEngine;
 public class Journal : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _items;
-    [SerializeField] private GameObject _journalUI;
-    [SerializeField] private GameObject _interactPanel;
+    [SerializeField] GameObject _journalUI;
 
     private bool _inTrigger;
     public bool _journalOpen;
@@ -18,11 +17,6 @@ public class Journal : MonoBehaviour
         if(_inTrigger == true)
         {
             OpenInventory();
-            _interactPanel.SetActive(true);
-        }
-        if (_inTrigger == false)
-        {
-            _interactPanel.SetActive(false);
         }
     }
 
@@ -43,6 +37,7 @@ public class Journal : MonoBehaviour
     public void ItemToJournal(GameObject entry)
     {
         _items.Add(entry);
+        Debug.Log(_items);
     }
 
     private void OnTriggerStay(Collider other)
@@ -51,10 +46,5 @@ public class Journal : MonoBehaviour
         {
             _inTrigger = true;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        _inTrigger = false;
     }
 }
