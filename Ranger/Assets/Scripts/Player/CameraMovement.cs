@@ -26,19 +26,31 @@ public class CameraMovement : MonoBehaviour
 
     public bool _inventoryOpen;
 
+    Journal _journalClass;
+    [SerializeField]
+    private GameObject _journal;
+
     void Start()
     {
         _camDist = transform.localPosition;
         ZoomDistance = ZoomDefault;
         _camDist.z = ZoomDistance;
+
+        _journal = GameObject.FindGameObjectWithTag("Journal");
+        _journalClass = _journal.GetComponent<Journal>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
         {
-            _inventoryOpen = !_inventoryOpen;
+            _inventoryOpen = true;
         }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            _inventoryOpen = false;
+        }
+
         if (_inventoryOpen == false)
         {
             CameraCenter.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y + OffsetY, Character.transform.position.z);
