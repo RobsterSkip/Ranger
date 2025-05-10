@@ -3,20 +3,25 @@ using UnityEngine;
 public class InventoryInput : MonoBehaviour
 {
     [SerializeField] GameObject _inventory;
-   // private ChatBubble _chatBubble;
-   // public GameObject _bubble;
 
-   // private void Start()
-   // {
-   //     _bubble = GameObject.FindGameObjectWithTag("ChatBubble");
-   //     _chatBubble = _bubble.GetComponent<ChatBubble>();
-   //     _bubble.SetActive(false);
-   // }
+    Journal _journalClass;
+    [SerializeField]
+    private GameObject _journal;
+
+    private void Start()
+    {
+        _journal = GameObject.FindGameObjectWithTag("Journal");
+        _journalClass = _journal.GetComponent<Journal>();
+    }
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Tab))
+       if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
        {
-           _inventory.SetActive(!_inventory.activeSelf);
+           _inventory.SetActive(true);
+       }
+       else if(Input.GetKeyUp(KeyCode.Escape))
+       {
+           _inventory.SetActive(false);
        }
     }
 }
