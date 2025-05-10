@@ -28,6 +28,9 @@ public class FishMovement : MonoBehaviour
     public GameObject Inventory;
     public InventoryManager Manager;
 
+    public GameObject DayNight;
+    public TimeManager TimeManager;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -40,6 +43,9 @@ public class FishMovement : MonoBehaviour
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
+
+        DayNight = GameObject.FindGameObjectWithTag("TimeManager");
+        TimeManager = DayNight.GetComponent<TimeManager>();
 
         IsCaught = false;
     }
@@ -94,8 +100,15 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "bait")
         {
             IsCaught = true;
-            _counter = 5;
-            _num = Random.Range(0, 2);
+            if (TimeManager.service.isDayTime.Value)
+            {
+                _counter = 5;
+            }
+            else
+            {
+                _counter = 10;
+            }
+            _num = Random.Range(0, 3);
             Destroy(other.gameObject);
         }
     }
@@ -117,7 +130,7 @@ public class FishMovement : MonoBehaviour
                     if (Fishing.FishOnce(_num))
                     {
                         _counter--;
-                        _num = Random.Range(0, 2);
+                        _num = Random.Range(0, 3);
                       
                     }
             }

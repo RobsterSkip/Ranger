@@ -14,6 +14,9 @@ public class BugMovement : MonoBehaviour
 
     private float _defaultSpeed = 5f;
     private float _runningSpeed = 15f;
+    private float _currentMultiplier;
+    private float _daySpeedMultiplier = 1f;
+    private float _nightSpeedMultiplier = 5f;
 
     private float _sightRange = 5f;
     private bool _playerSpotted;
@@ -28,6 +31,9 @@ public class BugMovement : MonoBehaviour
     public GameObject Inventory;
     public InventoryManager Manager;
 
+    public GameObject DayNight;
+    public TimeManager TimeManager;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -35,14 +41,29 @@ public class BugMovement : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         PlayerMovement = Player.GetComponent<PlayerMovement>();
 
-        Agent.speed = _defaultSpeed;
+        Agent.speed = _defaultSpeed * _currentMultiplier;
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
+        
+        DayNight = GameObject.FindGameObjectWithTag("TimeManager");
+        TimeManager = DayNight.GetComponent<TimeManager>();
+        //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
+        //InventoryClass = Inventory.GetComponent<Inventory>();
     }
 
     void Update()
     {
+
+        if(TimeManager.service.isDayTime.Value)
+        {
+            _currentMultiplier = _daySpeedMultiplier;
+        }
+        else
+        {
+            _currentMultiplier = _nightSpeedMultiplier;
+        }
+        
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
         _plantSpotted = Physics.CheckSphere(transform.position, 7f, plantLayer);
         //Debug.Log(_plantSpotted);
@@ -55,13 +76,13 @@ public class BugMovement : MonoBehaviour
         {
             if (!PlayerMovement.IsCrouching)
             {
-                Agent.speed = _runningSpeed;
+                Agent.speed = _runningSpeed * _currentMultiplier;
                 RunAway();
             }
         }
         else
         {
-            Agent.speed = _defaultSpeed;
+            Agent.speed = _defaultSpeed * _currentMultiplier;
         }
 
         if (_plantSpotted)
