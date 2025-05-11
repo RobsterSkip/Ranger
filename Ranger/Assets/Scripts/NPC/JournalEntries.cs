@@ -19,6 +19,8 @@ public class JournalEntries : MonoBehaviour
 
     private Items _items;
 
+    public bool _enable;
+
     private void Start()
     {
         _journal = GameObject.FindGameObjectWithTag("Journal");
@@ -29,6 +31,9 @@ public class JournalEntries : MonoBehaviour
 
         _sprite = _panelImage.GetComponent<Sprite>();
 
+        _title.enabled = false;
+        _entry.enabled = false;
+        _panelImage.SetActive(false);
         gameObject.SetActive(false);
     }
     void Update()
@@ -61,6 +66,12 @@ public class JournalEntries : MonoBehaviour
         switch (_entryIndex)
         {
             case 0:
+                if(_enable == true)
+                {
+                    _title.enabled = true;
+                    _entry.enabled = true;
+                    _panelImage.SetActive(true);
+                }
                 _title.SetText("Moth");
                 _entry.SetText("There is more where that came from.");
                 _sprite = _image[0];

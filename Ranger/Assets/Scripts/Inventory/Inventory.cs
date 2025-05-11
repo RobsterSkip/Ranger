@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private List<GameObject> _prefabs;
 
+    [SerializeField] private List<Items> _collectibles;
+
     public bool _isDropped = false;
 
     private GameObject _panel;
@@ -19,12 +21,18 @@ public class Inventory : MonoBehaviour
     private Inventory _inventoryClass;
     public GameObject _inventory;
 
+    private JournalEntries _journalEntries;
+    private GameObject _journalUI;
+
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
        {
             _itemSlots[i].OnRightClickEvent += ItemDropped;
        }
+
+        _journalUI = GameObject.FindGameObjectWithTag("Finish");
+        _journalEntries = _journalUI.GetComponent<JournalEntries>();
     }
 
     private void Update()
@@ -63,6 +71,12 @@ public class Inventory : MonoBehaviour
         Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
             _player.transform.localPosition.z + spawnPointZ);
         Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
+        if(item = _collectibles[0])
+        {
+            _journalEntries._enable = true;
+        }
+
+
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();

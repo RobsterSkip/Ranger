@@ -32,6 +32,7 @@ public class ChatBubble : MonoBehaviour
     [SerializeField]
     private GameObject _camera;
     public GameObject _journal;
+    [SerializeField] private List<Items> _collectibles;
 
     [SerializeField]
     private LayerMask _playerMask;
@@ -117,6 +118,7 @@ public class ChatBubble : MonoBehaviour
 
                   SetUp(IconType.Fish, "Thank you for the fish!!");
                   _textMeshPro.ForceMeshUpdate();
+
 
                     Journal.ItemToJournal(droppedItem);
                     Destroy(droppedItem.gameObject);
