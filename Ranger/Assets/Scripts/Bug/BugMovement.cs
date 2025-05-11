@@ -18,7 +18,7 @@ public class BugMovement : MonoBehaviour
     private float _daySpeedMultiplier = 1f;
     private float _nightSpeedMultiplier = 5f;
 
-    private float _sightRange = 7f;
+    private float _sightRange = 12f;
     private bool _playerSpotted;
     private bool _plantSpotted;
 
