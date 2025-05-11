@@ -46,7 +46,7 @@ public class CameraMovement : MonoBehaviour
         {
             _inventoryOpen = true;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape))
+        else if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
             _inventoryOpen = false;
         }

@@ -18,10 +18,12 @@ public class InventoryInput : MonoBehaviour
        if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
        {
            _inventory.SetActive(true);
+          _journalClass._journalOpen = true;
        }
-       else if(Input.GetKeyUp(KeyCode.Escape))
+       else if(_journalClass._journalOpen == true && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab)))
        {
            _inventory.SetActive(false);
-       }
+           _journalClass._journalOpen = false;
+        }
     }
 }

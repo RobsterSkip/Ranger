@@ -135,16 +135,22 @@ public class FishMovement : MonoBehaviour
                     }
             }
 
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                _isSet = false;
+                _counter = 0;
+                Fishing.DisableQuickTimeUI();
+                PlayerMovement.IsFishing = false;
+                IsCaught = false;
+                return;
+            }
+
             if (_counter == 0)
             {
                 Fishing.DisableQuickTimeUI();
                 PlayerMovement.IsFishing = false;
                 Agent.speed = 0;
                 transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
-            }
-            else
-            {
-                //Debug.Log("the fish got away!");
             }
         }
     }
