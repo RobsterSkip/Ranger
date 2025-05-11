@@ -104,7 +104,7 @@ public class ChatBubble : MonoBehaviour
 
     public void ItemGiven()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Manager.Inventory.SetActive(true);
             _cameraMovement._inventoryOpen = true;

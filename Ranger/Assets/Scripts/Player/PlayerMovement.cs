@@ -61,9 +61,6 @@ public class PlayerMovement : MonoBehaviour
                 Controller.Move(velocity * Time.deltaTime);
             }
 
-            CheckCrouching();
-            CheckFishing();
-
             if (IsFishing)
             {
                 CanFish = false;
@@ -71,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
 
             //Debug.Log(CanFish);
         }
+        CheckCrouching();
+        CheckFishing();
     }
 
     private void CheckFishing()
