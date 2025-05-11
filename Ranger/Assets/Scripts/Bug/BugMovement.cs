@@ -42,6 +42,7 @@ public class BugMovement : MonoBehaviour
         PlayerMovement = Player.GetComponent<PlayerMovement>();
 
         Agent.speed = _defaultSpeed * _currentMultiplier;
+        
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();

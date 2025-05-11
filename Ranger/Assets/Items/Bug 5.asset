@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
-  m_Name: Bug
+  m_Name: Bug 5
   m_EditorClassIdentifier: 
   _id: 1e3edc3a35b04c14b92aba58d6af7faf
   _itemName: Moth
