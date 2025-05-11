@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject _journal;
 
+    [SerializeField]
+    private BoxCollider _fishingCollider;
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -40,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
         if (_cameraMovement._inventoryOpen == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -91,7 +93,19 @@ public class PlayerMovement : MonoBehaviour
             
             if (dotProd > 0.1 && dotProd < 0.95) //is facing water
             {
-                CanFish = true;
+                Collider[] hitColliders = Physics.OverlapSphere(_fishingCollider.transform.position, 
+                    _fishingCollider.bounds.extents.magnitude);
+                foreach (Collider collider in hitColliders)
+                {
+                    GameObject droppedItem = collider.gameObject;
+                    if(droppedItem.CompareTag("bugDropped"))
+                    {
+                        CanFish = true;
+                        Debug.Log(CanFish);
+                        Debug.Log("Called");
+                        Destroy(droppedItem);
+                    }
+                }
             }
             else
             {

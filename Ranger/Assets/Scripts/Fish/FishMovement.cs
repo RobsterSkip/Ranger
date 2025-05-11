@@ -157,6 +157,7 @@ public class FishMovement : MonoBehaviour
                 Agent.speed = 0;
 
                 transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
+                PlayerMovement.CanFish = false;
             }
         }
     }

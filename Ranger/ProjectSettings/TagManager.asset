@@ -18,6 +18,7 @@ TagManager:
   - Journal
   - NPC
   - TimeManager
+  - bugDropped
   layers:
   - Default
   - TransparentFX

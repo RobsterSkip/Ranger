@@ -18,10 +18,9 @@ public class BugMovement : MonoBehaviour
     private float _daySpeedMultiplier = 1f;
     private float _nightSpeedMultiplier = 5f;
 
-    private float _sightRange = 5f;
+    private float _sightRange = 7f;
     private bool _playerSpotted;
     private bool _plantSpotted;
-
 
     public PlayerMovement PlayerMovement;
 
@@ -66,7 +65,7 @@ public class BugMovement : MonoBehaviour
         
 
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        _plantSpotted = Physics.CheckSphere(transform.position, 10f, plantLayer);
+        _plantSpotted = Physics.CheckSphere(transform.position, 7f, plantLayer);
         //Debug.Log(_plantSpotted);
         //Inventory.SetActive(true);
         //InventoryScript = Inventory.GetComponent<Inventory>();

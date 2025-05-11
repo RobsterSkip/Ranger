@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: 02297359860d396438578752b9c099a3
   _itemName: Catterpillar
   _itemIcon: {fileID: 21300000, guid: e62b74b6b4f96ee4bb799695e0231b49, type: 3}
-  _itemPrefab: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+  _itemPrefab: {fileID: 5967984084064161190, guid: eca81ee1d5eff76478683f13262aa069, type: 3}

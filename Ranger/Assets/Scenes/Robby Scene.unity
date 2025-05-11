@@ -2993,6 +2993,18 @@ PrefabInstance:
       propertyPath: WaterSurface
       value: 
       objectReference: {fileID: 1840294910}
+    - target: {fileID: 255853334585471717, guid: 0e9f0a7e20fe3634f937b47a06e13eda, type: 3}
+      propertyPath: _fishingCollider
+      value: 
+      objectReference: {fileID: 1840294924}
+    - target: {fileID: 255853334585471717, guid: 0e9f0a7e20fe3634f937b47a06e13eda, type: 3}
+      propertyPath: _fishingCollider.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 255853334585471717, guid: 0e9f0a7e20fe3634f937b47a06e13eda, type: 3}
+      propertyPath: '_fishingCollider.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1840294924}
     - target: {fileID: 1158224392965256261, guid: 0e9f0a7e20fe3634f937b47a06e13eda, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3053,7 +3065,8 @@ PrefabInstance:
       propertyPath: BaitPrefab
       value: 
       objectReference: {fileID: 8880945237773511220, guid: 388e7e3899847d34bb89f0c72c1e8a0c, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2162454120339027109, guid: 0e9f0a7e20fe3634f937b47a06e13eda, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8285,6 +8298,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 0.8, z: 10}
   m_Center: {x: 0, y: -0.33, z: 0}
+--- !u!65 &1840294924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840294910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.77, y: 1.644895, z: 10.227802}
+  m_Center: {x: 6.94, y: 0.6830649, z: -0.11390114}
+--- !u!65 &1840294925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840294910}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 9.999999}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1854157706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4868149718031402743, guid: f4d963073fb07cc4a8cab5d3b01e9e8d, type: 3}
@@ -9996,8 +10051,16 @@ PrefabInstance:
       value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       propertyPath: m_Center.x
       value: 4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6813756225855736080, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       propertyPath: m_Name
@@ -10010,6 +10073,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6813756225855736080, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1840294917}
+    - targetCorrespondingSourceObject: {fileID: 6813756225855736080, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840294925}
+    - targetCorrespondingSourceObject: {fileID: 6813756225855736080, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840294924}
   m_SourcePrefab: {fileID: 100100000, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
 --- !u!1001 &7965719705835937001
 PrefabInstance:
