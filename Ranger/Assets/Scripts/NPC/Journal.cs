@@ -7,16 +7,22 @@ using UnityEngine;
 public class Journal : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _items;
-    [SerializeField] GameObject _journalUI;
+    [SerializeField] private GameObject _journalUI;
+    [SerializeField] private GameObject _interactPanel;
 
     private bool _inTrigger;
     public bool _journalOpen;
 
     private void Update()
     {
-        if(_inTrigger == true)
+        if (_inTrigger == true)
         {
             OpenInventory();
+            _interactPanel.SetActive(true);
+        }
+        if (_inTrigger == false)
+        {
+            _interactPanel.SetActive(false);
         }
     }
 
@@ -46,5 +52,9 @@ public class Journal : MonoBehaviour
         {
             _inTrigger = true;
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        _inTrigger = false;
     }
 }

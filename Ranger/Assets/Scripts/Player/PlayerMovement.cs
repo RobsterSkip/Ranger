@@ -25,10 +25,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject _camera;
 
+    Journal _journalClass;
+    [SerializeField]
+    private GameObject _journal;
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
+
+        _journal = GameObject.FindGameObjectWithTag("Journal");
+        _journalClass = _journal.GetComponent<Journal>();
     }
 
     void Update()
@@ -43,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
 
-        if (_cameraMovement._inventoryOpen == false)
+        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;

@@ -51,7 +51,7 @@ public class CameraMovement : MonoBehaviour
             _inventoryOpen = false;
         }
 
-        if (_inventoryOpen == false)
+        if (_inventoryOpen == false && _journalClass._journalOpen == false)
         {
             CameraCenter.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y + OffsetY, Character.transform.position.z);
 

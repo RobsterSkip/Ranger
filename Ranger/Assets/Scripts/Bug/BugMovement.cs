@@ -66,7 +66,7 @@ public class BugMovement : MonoBehaviour
         
 
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
-        _plantSpotted = Physics.CheckSphere(transform.position, 15f, plantLayer);
+        _plantSpotted = Physics.CheckSphere(transform.position, 10f, plantLayer);
         //Debug.Log(_plantSpotted);
         //Inventory.SetActive(true);
         //InventoryScript = Inventory.GetComponent<Inventory>();
