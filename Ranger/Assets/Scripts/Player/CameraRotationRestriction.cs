@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class CameraRotationRestriction : MonoBehaviour
 {
-    private float RestrictionAngle = 15f;
     private bool _inventoryOpen;
+
+    [SerializeField]
+    private Vector2 _cameraClamping = new Vector2(-100, 60);
+    private Vector2 turn;
 
     void Update()
     {
@@ -13,12 +16,7 @@ public class CameraRotationRestriction : MonoBehaviour
         }
         if (_inventoryOpen == false)
         {
-            var rotation = UnityEditor.TransformUtils.GetInspectorRotation(transform);
-
-            if (rotation.x > RestrictionAngle) //restriction for max Y
-            {
-                UnityEditor.TransformUtils.SetInspectorRotation(transform, new Vector3(RestrictionAngle, rotation.y, rotation.z));
-            }
+            turn.y = Mathf.Clamp(turn.y, _cameraClamping.x, _cameraClamping.y);
         }
 
     }

@@ -29,23 +29,24 @@ public class FishMovement : MonoBehaviour
     private int _num;
 
     public GameObject Inventory;
-    public Inventory _inventory;
+    public InventoryManager Manager;
 
     public GameObject DayNight;
     public TimeManager TimeManager;
 
     void Start()
     {
+
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = _defaultSpeed;
+
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
 
         Player = GameObject.Find("Player");
         PlayerMovement = Player.GetComponent<PlayerMovement>();
 
         Fishing = Player.GetComponent<Fishing>();
-
-        Inventory = GameObject.FindGameObjectWithTag("Inventory");
-        _inventory = Inventory.GetComponent<Inventory>();
 
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
@@ -104,7 +105,7 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "bait")
         {
             IsCaught = true;
-            _box.size = new Vector3(4f, 1.85f, 4f);
+            _box.size = new Vector3(4.2f, 1.85f, 4.2f);
             if (TimeManager.service.isDayTime.Value)
             {
                 _counter = 5;
@@ -157,7 +158,6 @@ public class FishMovement : MonoBehaviour
                 Agent.speed = 0;
 
                 transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
-                PlayerMovement.CanFish = false;
             }
         }
     }

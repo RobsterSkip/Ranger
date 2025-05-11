@@ -12,7 +12,6 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Light moon;
     [SerializeField] AnimationCurve lightIntensityCurve;
     [SerializeField] float maxSunIntensity = 1;
-    [SerializeField] float maxMoonIntensity = 0.5f;
 
     [SerializeField] Color dayAmbientLight;
     [SerializeField] Color nightAmbientLight;

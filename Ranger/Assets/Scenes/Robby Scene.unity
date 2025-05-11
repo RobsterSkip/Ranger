@@ -2179,7 +2179,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   maxSunIntensity: 2
-  maxMoonIntensity: 1
   dayAmbientLight: {r: 1, g: 0.98376316, b: 0.87358487, a: 0}
   nightAmbientLight: {r: 0.5088145, g: 0.8756413, b: 0.93962264, a: 0}
   volume: {fileID: 1926108004}
@@ -2796,6 +2795,14 @@ PrefabInstance:
     - target: {fileID: 224849993439488096, guid: 2a56d964713d61c4285cb33035c2e598, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578872314795205601, guid: 2a56d964713d61c4285cb33035c2e598, type: 3}
+      propertyPath: _cameraClamping.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578872314795205601, guid: 2a56d964713d61c4285cb33035c2e598, type: 3}
+      propertyPath: _cameraClamping.y
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3416770513252481985, guid: 2a56d964713d61c4285cb33035c2e598, type: 3}
       propertyPath: m_LocalPosition.x
