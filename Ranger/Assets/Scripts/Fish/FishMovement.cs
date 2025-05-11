@@ -26,7 +26,7 @@ public class FishMovement : MonoBehaviour
     private int _num;
 
     public GameObject Inventory;
-    public InventoryManager Manager;
+    public Inventory _inventory;
 
     public GameObject DayNight;
     public TimeManager TimeManager;
@@ -41,8 +41,8 @@ public class FishMovement : MonoBehaviour
 
         Fishing = Player.GetComponent<Fishing>();
 
-        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
-        Manager = Inventory.GetComponent<InventoryManager>();
+        Inventory = GameObject.FindGameObjectWithTag("Inventory");
+        _inventory = Inventory.GetComponent<Inventory>();
 
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
@@ -52,13 +52,17 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
-        _baitSpotted = Physics.CheckSphere(transform.position, _sightRange, fishingLayer);
-        SwimAround();
-        CheckCatching();
-
-        if (_baitSpotted)
+        if(_inventory._isDropped == false)
         {
-            Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, GameObject.FindGameObjectWithTag("bait").transform.position.z));
+            _baitSpotted = Physics.CheckSphere(transform.position, _sightRange, fishingLayer);
+            SwimAround();
+            CheckCatching();
+
+            if (_baitSpotted)
+            {
+                Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, 
+                    GameObject.FindGameObjectWithTag("bait").transform.position.z));
+            }
         }
     }
 

@@ -46,6 +46,8 @@ public class ChatBubble : MonoBehaviour
     private bool _itemGiving;
     public bool _npcInventory;
 
+    private string _gameObjectName;
+
     private void Awake()
     {
         _backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
@@ -119,12 +121,31 @@ public class ChatBubble : MonoBehaviour
 
                if (droppedItem.CompareTag("fish"))
                {
-                  Manager.Inventory.SetActive(false);
+                    _gameObjectName = droppedItem.ToString();
+                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                    string collectibleNameCarp = _collectibles[6].name.Trim().ToLower();
+                    string collectibleNamePerch = _collectibles[7].name.Trim().ToLower();
+                    string collectibleNameTrout = _collectibles[8].name.Trim().ToLower();
+
+                    Manager.Inventory.SetActive(false);
                   _cameraMovement._inventoryOpen = false;
                   _npcInventory = false;
 
                   SetUp(IconType.Fish, "Thank you for the fish!!");
                   _textMeshPro.ForceMeshUpdate();
+
+                    if (droppedName == collectibleNameCarp)
+                    {
+                        _journalEntries._enable7 = true;
+                    }
+                    else if (droppedName == collectibleNamePerch)
+                    {
+                        _journalEntries._enable8 = true;
+                    }
+                    else if (droppedName == collectibleNameTrout)
+                    {
+                        _journalEntries._enable9 = true;
+                    }
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
@@ -132,29 +153,64 @@ public class ChatBubble : MonoBehaviour
 
                else if (droppedItem.CompareTag("bug"))
                {
+                    _gameObjectName = droppedItem.ToString();
+                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                    string collectibleNameMoth = _collectibles[0].name.Trim().ToLower();
+                    string collectibleNameCatterpillar = _collectibles[1].name.Trim().ToLower();
+                    string collectibleNameLadybug = _collectibles[2].name.Trim().ToLower();
+
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
 
                    SetUp(IconType.Bug, "Thank you for the bug!!");
                    _textMeshPro.ForceMeshUpdate();
-                    if(droppedItem.gameObject == _collectibles[0])
+                    if(droppedName == collectibleNameMoth)
                     {
-                        Debug.Log("Called");
                         _journalEntries._enable1 = true;
                     }
+                    else if (droppedName == collectibleNameLadybug)
+                    {
+                        _journalEntries._enable2 = true;
+                    }
+                    else if(droppedName == collectibleNameCatterpillar)
+                    {
+                        _journalEntries._enable3 = true;
+                    }
+
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
                 }
 
                else if (droppedItem.CompareTag("PlantDropped"))
                {
+                    _gameObjectName = droppedItem.ToString();
+                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                    string collectibleNameWildflower = _collectibles[3].name.Trim().ToLower();
+                    string collectibleNameSunflower = _collectibles[4].name.Trim().ToLower();
+                    string collectibleNameForgetmenot = _collectibles[5].name.Trim().ToLower();
+
+                    Debug.Log(_gameObjectName);
+
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
 
                    SetUp(IconType.Plant, "Thank you for the plant!!");
                    _textMeshPro.ForceMeshUpdate();
+
+                    if (droppedName == collectibleNameWildflower)
+                    {
+                        _journalEntries._enable4 = true;
+                    }
+                    else if (droppedName == collectibleNameSunflower)
+                    {
+                        _journalEntries._enable5 = true;
+                    }
+                    else if (droppedName == collectibleNameForgetmenot)
+                    {
+                        _journalEntries._enable6 = true;
+                    }
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;

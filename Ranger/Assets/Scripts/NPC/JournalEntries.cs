@@ -85,6 +85,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("There is more where that came from.");
                 _sprite = _image[0];
                 break;
+
             case 1:
                 if (_enable2 == true)
                 {
@@ -102,6 +103,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("Looks like a distinguished gentleman to me!");
                 _sprite = _image[1];
                 break;
+
             case 2:
                 if (_enable3 == true)
                 {
@@ -119,6 +121,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("The ever-humble Catterpillar");
                 _sprite = _image[2];
                 break;
+
             case 3:
                 if (_enable4 == true)
                 {
@@ -136,6 +139,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It is gonna get wild!");
                 _sprite = _image[3];
                 break;
+
             case 4:
                 if (_enable5 == true)
                 {
@@ -153,6 +157,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("You are my sunshine");
                 _sprite = _image[4];
                 break;
+
             case 5:
                 if (_enable6 == true)
                 {
@@ -170,6 +175,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("I forgor");
                 _sprite = _image[5];
                 break;
+
             case 6:
                 if (_enable7 == true)
                 {
@@ -187,6 +193,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("Carp? It doesnt look THAT bad.");
                 _sprite = _image[6];
                 break;
+
             case 7:
                 if (_enable8 == true)
                 {
@@ -204,6 +211,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("Thats not a bird though?");
                 _sprite = _image[7];
                 break;
+
             case 8:
                 if (_enable9 == true)
                 {
@@ -221,6 +229,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("I'm very proud of this trout!");
                 _sprite = _image[8];
                 break;
+
         }
     }
 }

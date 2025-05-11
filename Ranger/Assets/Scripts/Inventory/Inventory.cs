@@ -63,6 +63,7 @@ public class Inventory : MonoBehaviour
         Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
             _player.transform.localPosition.z + spawnPointZ);
         Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
+        _isDropped = true;
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();
