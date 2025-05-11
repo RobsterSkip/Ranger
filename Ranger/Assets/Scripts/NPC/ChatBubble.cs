@@ -151,7 +151,7 @@ public class ChatBubble : MonoBehaviour
                     _itemGiving = false;
                 }
 
-               else if (droppedItem.CompareTag("bug"))
+               else if (droppedItem.CompareTag("bugDropped"))
                {
                     _gameObjectName = droppedItem.ToString();
                     string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();

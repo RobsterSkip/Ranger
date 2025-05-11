@@ -47,8 +47,7 @@ public class Fishing : MonoBehaviour
             PlayerMovement.IsFishing = true;
             _bait = Instantiate(BaitPrefab,new Vector3(transform.position.x, transform.position.y+8, transform.position.z) + transform.forward*3, transform.rotation);
             _baitRB = _bait.GetComponent<Rigidbody>();
-            _baitRB.AddForce(_bait.transform.forward * _counter * 1.5f);
-            
+            _baitRB.AddForce(_bait.transform.forward * _counter * 1f);
         }
 
         if (PlayerMovement.CanFish && Input.GetMouseButton(1))

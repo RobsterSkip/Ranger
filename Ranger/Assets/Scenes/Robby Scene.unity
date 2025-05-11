@@ -10259,15 +10259,15 @@ PrefabInstance:
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[0]'
       value: 
-      objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+      objectReference: {fileID: 5967984084064161190, guid: 582fa45823e8a194fa336c92aedbd44c, type: 3}
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[1]'
       value: 
-      objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+      objectReference: {fileID: 5967984084064161190, guid: eca81ee1d5eff76478683f13262aa069, type: 3}
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[2]'
       value: 
-      objectReference: {fileID: 5967984084064161190, guid: 2fe8507329c8e634cac0d20dce5ed360, type: 3}
+      objectReference: {fileID: 5967984084064161190, guid: 487e3601fb09adc4fb26c39b464a391a, type: 3}
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[3]'
       value: 
@@ -10283,15 +10283,15 @@ PrefabInstance:
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[6]'
       value: 
-      objectReference: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+      objectReference: {fileID: 5698201278719751853, guid: 2512daa44166d924981500a63e329516, type: 3}
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[7]'
       value: 
-      objectReference: {fileID: 5698201278719751853, guid: d2c7e9959b20fc8438e100b43b39106f, type: 3}
+      objectReference: {fileID: 5698201278719751853, guid: 2bf247020cd2bf846ba6222eb03438a8, type: 3}
     - target: {fileID: 3673759922131992643, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: '_collectibles.Array.data[8]'
       value: 
-      objectReference: {fileID: 5698201278719751853, guid: 9546020b317b2684dbf4949a1a6e21b1, type: 3}
+      objectReference: {fileID: 5698201278719751853, guid: a8ff752d9c4985f49a209ab734a19784, type: 3}
     - target: {fileID: 7257109528234839983, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
       propertyPath: m_Radius
       value: 5
