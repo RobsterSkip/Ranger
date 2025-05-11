@@ -105,7 +105,7 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "bait")
         {
             IsCaught = true;
-            _box.size = new Vector3(4.2f, 1.85f, 4.2f);
+            _box.size = new Vector3(4.5f, 1.85f, 4.5f);
             if (TimeManager.service.isDayTime.Value)
             {
                 _counter = 5;
