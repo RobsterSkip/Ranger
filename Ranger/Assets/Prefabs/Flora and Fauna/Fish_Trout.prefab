@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: fd130653d1a011e469b3d1915ca8a3f8, type: 2}
+  _item: {fileID: 11400000, guid: 1be28755adc7fec4fb0bdd961eb43d16, type: 2}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}

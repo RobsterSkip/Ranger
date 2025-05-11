@@ -19,6 +19,8 @@ public class ChatBubble : MonoBehaviour
     [SerializeField] private Sprite _plantIcon;
     [SerializeField] private Sprite _questonIcon;
 
+    [SerializeField] private GameObject[] _collectibles;
+
     private SpriteRenderer _backgroundSpriteRenderer;
     private SpriteRenderer _iconSpriteRenderer;
     private TextMeshPro _textMeshPro;
@@ -32,7 +34,9 @@ public class ChatBubble : MonoBehaviour
     [SerializeField]
     private GameObject _camera;
     public GameObject _journal;
-    [SerializeField] private List<Items> _collectibles;
+
+    private JournalEntries _journalEntries;
+    private GameObject _journalEntry;
 
     [SerializeField]
     private LayerMask _playerMask;
@@ -57,6 +61,9 @@ public class ChatBubble : MonoBehaviour
 
         _journal = GameObject.FindGameObjectWithTag("Journal");
         Journal = _journal.GetComponent<Journal>();
+
+        _journalEntry = GameObject.FindGameObjectWithTag("Finish");
+        _journalEntries = _journalEntry.GetComponent<JournalEntries>();
         
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
@@ -119,8 +126,6 @@ public class ChatBubble : MonoBehaviour
                   SetUp(IconType.Fish, "Thank you for the fish!!");
                   _textMeshPro.ForceMeshUpdate();
 
-
-                    Journal.ItemToJournal(droppedItem);
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
                 }
@@ -133,8 +138,11 @@ public class ChatBubble : MonoBehaviour
 
                    SetUp(IconType.Bug, "Thank you for the bug!!");
                    _textMeshPro.ForceMeshUpdate();
-
-                    Journal.ItemToJournal(droppedItem);
+                    if(droppedItem.gameObject == _collectibles[0])
+                    {
+                        Debug.Log("Called");
+                        _journalEntries._enable1 = true;
+                    }
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
                 }
@@ -148,7 +156,6 @@ public class ChatBubble : MonoBehaviour
                    SetUp(IconType.Plant, "Thank you for the plant!!");
                    _textMeshPro.ForceMeshUpdate();
 
-                    Journal.ItemToJournal(droppedItem);
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
 

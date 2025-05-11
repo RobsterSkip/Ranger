@@ -40,12 +40,6 @@ public class Journal : MonoBehaviour
         }
     }
 
-    public void ItemToJournal(GameObject entry)
-    {
-        _items.Add(entry);
-        Debug.Log(_items);
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")

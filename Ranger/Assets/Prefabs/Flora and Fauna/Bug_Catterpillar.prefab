@@ -158,6 +158,8 @@ MonoBehaviour:
   PlayerMovement: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}
+  DayNight: {fileID: 0}
+  TimeManager: {fileID: 0}
 --- !u!114 &-8900612930985073044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 1e3edc3a35b04c14b92aba58d6af7faf, type: 2}
+  _item: {fileID: 11400000, guid: 02297359860d396438578752b9c099a3, type: 2}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}
