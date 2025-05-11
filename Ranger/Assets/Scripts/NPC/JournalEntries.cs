@@ -79,7 +79,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Moth");
-                _entry.SetText("There is more where that came from.");
+                _entry.SetText("There is more-th where that came from");
                 _panelImage.sprite = _sprites[0];
                 break;
 
@@ -97,7 +97,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Ladybug");
-                _entry.SetText("Looks like a distinguished gentleman to me!");
+                _entry.SetText("A distinguished gentleman!");
                 _panelImage.sprite = _sprites[1];
                 break;
 
@@ -115,7 +115,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Catterpillar");
-                _entry.SetText("The ever-humble Catterpillar");
+                _entry.SetText("There are a catter-pile of them");
                 _panelImage.sprite = _sprites[2];
                 break;
 
@@ -133,7 +133,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Wildflower");
-                _entry.SetText("It is gonna get wild!");
+                _entry.SetText("This is wild!");
                 _panelImage.sprite = _sprites[3];
                 break;
 
@@ -151,7 +151,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Sunflower");
-                _entry.SetText("You are my sunshine");
+                _entry.SetText("The sunshine of flowers");
                 _panelImage.sprite = _sprites[4];
                 break;
 
@@ -169,7 +169,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Forget-me-not");
-                _entry.SetText("I forgor");
+                _entry.SetText("I forgot");
                 _panelImage.sprite = _sprites[5];
                 break;
 
@@ -187,7 +187,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Carp");
-                _entry.SetText("Carp? It doesnt look THAT bad.");
+                _entry.SetText("It is not that bad");
                 _panelImage.sprite = _sprites[6];
                 break;
 
@@ -205,7 +205,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Perch");
-                _entry.SetText("Thats not a bird though?");
+                _entry.SetText("It was not a long search");
                 _panelImage.sprite = _sprites[7];
                 break;
 
@@ -223,7 +223,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Trout");
-                _entry.SetText("I'm very proud of this trout!");
+                _entry.SetText("Proud of this trout!");
                 _panelImage.sprite = _sprites[8];
                 break;
 
