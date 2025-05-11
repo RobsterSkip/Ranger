@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: bb2e28f50c9fed249a4bcc5d40a43d20
   _itemName: Perch
   _itemIcon: {fileID: 21300000, guid: 6942928603477b3469bb4e76cb783350, type: 3}
-  _itemPrefab: {fileID: 5698201278719751853, guid: d2c7e9959b20fc8438e100b43b39106f, type: 3}
+  _itemPrefab: {fileID: 5698201278719751853, guid: 2bf247020cd2bf846ba6222eb03438a8, type: 3}

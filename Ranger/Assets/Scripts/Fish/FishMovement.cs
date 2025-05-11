@@ -10,6 +10,9 @@ public class FishMovement : MonoBehaviour
     public Fishing Fishing;
     private NavMeshAgent Agent;
 
+    [SerializeField]
+    private BoxCollider _box;
+
     [SerializeField] LayerMask groundLayer, playerLayer, fishingLayer;
 
     private Vector3 _destination;
@@ -52,8 +55,6 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
-        if(_inventory._isDropped == false)
-        {
             _baitSpotted = Physics.CheckSphere(transform.position, _sightRange, fishingLayer);
             SwimAround();
             CheckCatching();
@@ -63,7 +64,6 @@ public class FishMovement : MonoBehaviour
                 Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, 
                     GameObject.FindGameObjectWithTag("bait").transform.position.z));
             }
-        }
     }
 
     void SwimAround()
@@ -104,6 +104,7 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "bait")
         {
             IsCaught = true;
+            _box.size = new Vector3(4f, 1.85f, 4f);
             if (TimeManager.service.isDayTime.Value)
             {
                 _counter = 5;

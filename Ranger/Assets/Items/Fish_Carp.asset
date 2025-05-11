@@ -15,4 +15,4 @@ MonoBehaviour:
   _id: fd130653d1a011e469b3d1915ca8a3f8
   _itemName: Carp
   _itemIcon: {fileID: 21300000, guid: 16bad52f186246e4882cf6f4b18d67ce, type: 3}
-  _itemPrefab: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+  _itemPrefab: {fileID: 5698201278719751853, guid: 2512daa44166d924981500a63e329516, type: 3}

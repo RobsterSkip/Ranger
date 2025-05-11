@@ -7,9 +7,8 @@ public class JournalEntries : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _title;
     [SerializeField] TextMeshProUGUI _entry;
-    [SerializeField] Sprite[] _image;
-    private Sprite _sprite;
-    [SerializeField] GameObject _panelImage;
+    [SerializeField] Sprite[] _sprites;
+    [SerializeField] Image _panelImage;
 
     [SerializeField]
     private GameObject _ui;
@@ -32,11 +31,9 @@ public class JournalEntries : MonoBehaviour
         _title.SetText("Moth");
         _entry.SetText("0");
 
-        _sprite = _panelImage.GetComponent<Sprite>();
-
         _title.enabled = false;
         _entry.enabled = false;
-        _panelImage.SetActive(false);
+        _panelImage.enabled = false;
         _ui.SetActive(false);
     }
     void Update()
@@ -73,17 +70,17 @@ public class JournalEntries : MonoBehaviour
                 { 
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Moth");
                 _entry.SetText("There is more where that came from.");
-                _sprite = _image[0];
+                _panelImage.sprite = _sprites[0];
                 break;
 
             case 1:
@@ -91,17 +88,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Ladybug");
                 _entry.SetText("Looks like a distinguished gentleman to me!");
-                _sprite = _image[1];
+                _panelImage.sprite = _sprites[1];
                 break;
 
             case 2:
@@ -109,17 +106,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Catterpillar");
                 _entry.SetText("The ever-humble Catterpillar");
-                _sprite = _image[2];
+                _panelImage.sprite = _sprites[2];
                 break;
 
             case 3:
@@ -127,17 +124,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Wildflower");
                 _entry.SetText("It is gonna get wild!");
-                _sprite = _image[3];
+                _panelImage.sprite = _sprites[3];
                 break;
 
             case 4:
@@ -145,17 +142,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Sunflower");
                 _entry.SetText("You are my sunshine");
-                _sprite = _image[4];
+                _panelImage.sprite = _sprites[4];
                 break;
 
             case 5:
@@ -163,17 +160,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Forget-me-not");
                 _entry.SetText("I forgor");
-                _sprite = _image[5];
+                _panelImage.sprite = _sprites[5];
                 break;
 
             case 6:
@@ -181,17 +178,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Carp");
                 _entry.SetText("Carp? It doesnt look THAT bad.");
-                _sprite = _image[6];
+                _panelImage.sprite = _sprites[6];
                 break;
 
             case 7:
@@ -199,17 +196,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Perch");
                 _entry.SetText("Thats not a bird though?");
-                _sprite = _image[7];
+                _panelImage.sprite = _sprites[7];
                 break;
 
             case 8:
@@ -217,17 +214,17 @@ public class JournalEntries : MonoBehaviour
                 {
                     _title.enabled = true;
                     _entry.enabled = true;
-                    _panelImage.SetActive(true);
+                    _panelImage.enabled = true;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
-                    _panelImage.SetActive(false);
+                    _panelImage.enabled = false;
                 }
                 _title.SetText("Trout");
                 _entry.SetText("I'm very proud of this trout!");
-                _sprite = _image[8];
+                _panelImage.sprite = _sprites[8];
                 break;
 
         }

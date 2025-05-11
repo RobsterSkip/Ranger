@@ -60,9 +60,9 @@ public class Inventory : MonoBehaviour
         float spawnPointX = Random.Range(-4f, 0);
         float spawnPointZ = Random.Range(-4f, 0);
 
-        Vector3 dropPosition = new Vector3(_player.transform.localPosition.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
+        Vector3 dropPosition = new Vector3(_player.transform.forward.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
             _player.transform.localPosition.z + spawnPointZ);
-        Instantiate(item.ItemPrefab, dropPosition, Quaternion.identity);
+        Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2), Quaternion.identity);
         _isDropped = true;
         _items.Remove(item);
         Destroy(item);     

@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf5bfd7a7a7330944bb4338878644dbd, type: 2}
+  - {fileID: 2100000, guid: dfa3294eae27ccb4a8c8eb316782084c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   PlayerMovement: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}
+  DayNight: {fileID: 0}
+  TimeManager: {fileID: 0}
 --- !u!114 &-8900612930985073044
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: m_Name
-      value: Fish_Perch
+      value: Fish_TroutDropped
       objectReference: {fileID: 0}
     - target: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: m_TagString
@@ -75,16 +75,13 @@ PrefabInstance:
     - target: {fileID: 6611802256767566194, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: aa03f03fb84b8a54b9ef281b0f87d499, type: 2}
+      objectReference: {fileID: 2100000, guid: 090d95cac184a5944a5df16c2fdcc74c, type: 2}
     m_RemovedComponents:
     - {fileID: 5490963166290680338, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - {fileID: -8900612930985073044, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 4189635304413601217}
     - targetCorrespondingSourceObject: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       insertIndex: -1
       addedObject: {fileID: -5845561315961838608}
@@ -94,36 +91,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
   m_PrefabInstance: {fileID: 2145571842076719883}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4189635304413601217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5698201278719751853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e7f07180bb63b4aa8d397ce2646c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  PlayerMovement: {fileID: 0}
-  Fishing: {fileID: 0}
-  _box: {fileID: 6432100553440675055}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  fishingLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  IsCaught: 0
-  Inventory: {fileID: 0}
-  _inventory: {fileID: 0}
-  DayNight: {fileID: 0}
-  TimeManager: {fileID: 0}
 --- !u!114 &-5845561315961838608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,12 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: bb2e28f50c9fed249a4bcc5d40a43d20, type: 2}
+  _item: {fileID: 11400000, guid: 1be28755adc7fec4fb0bdd961eb43d16, type: 2}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}
---- !u!65 &6432100553440675055 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4937620190599643108, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
-  m_PrefabInstance: {fileID: 2145571842076719883}
-  m_PrefabAsset: {fileID: 0}
