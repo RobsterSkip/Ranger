@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5490963166290680338}
   - component: {fileID: -8900612930985073044}
   m_Layer: 0
-  m_Name: Bug_test
+  m_Name: Bug_Moth
   m_TagString: bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

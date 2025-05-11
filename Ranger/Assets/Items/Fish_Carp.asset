@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
-  m_Name: Bug 5
+  m_Name: Fish_Carp
   m_EditorClassIdentifier: 
-  _id: 1e3edc3a35b04c14b92aba58d6af7faf
-  _itemName: Moth
-  _itemIcon: {fileID: 21300000, guid: 99d73be4e9023d445898e24db3202c11, type: 3}
-  _itemPrefab: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+  _id: fd130653d1a011e469b3d1915ca8a3f8
+  _itemName: Carp
+  _itemIcon: {fileID: 21300000, guid: 16bad52f186246e4882cf6f4b18d67ce, type: 3}
+  _itemPrefab: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
