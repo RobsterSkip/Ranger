@@ -4,9 +4,8 @@ using UnityEngine.UIElements;
 
 public class ItemPickup : MonoBehaviour
 {
-    [SerializeField] 
-    private Items _item;
-    [SerializeField]
+    [SerializeField] private Items _item;
+
     public GameObject Player;
 
     public GameObject Inventory;
@@ -25,12 +24,12 @@ public class ItemPickup : MonoBehaviour
     {
         if (_isInRange && Input.GetKeyDown(KeyCode.E))
         {
-           if (Manager.InventoryScript.IsFull() == false)
-           {
+            if (Manager.InventoryScript.IsFull() == false)
+            {
                 Manager.InventoryScript.AddItem(Instantiate(_item));
                 Destroy(gameObject);
                 Manager.PickupPanel.SetActive(false);
-           }
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

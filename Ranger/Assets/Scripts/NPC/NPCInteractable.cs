@@ -12,7 +12,7 @@ public class NPCInteractable : MonoBehaviour
 
     [SerializeField]
     private float _rotationSpeedPlayer = 1.75f;
-    private float _rotationSpeedOriginal = 1f;
+    private readonly float _rotationSpeedOriginal = 1f;
 
     private Quaternion _targetRotation;
     private Quaternion _originalRotation;
@@ -37,22 +37,21 @@ public class NPCInteractable : MonoBehaviour
 
     private void InTriggerUpdate()
     {
-            _inRange = true;
+        _inRange = true;
 
-            Vector3 currentDirection = transform.forward;
-            currentDirection.y = 0;
-            currentDirection.Normalize();
+        Vector3 currentDirection = transform.forward;
+        currentDirection.y = 0;
+        currentDirection.Normalize();
 
-            Vector3 targetRotation = _player.transform.position - transform.position;
-            targetRotation.y = 0;
-            targetRotation.Normalize();
+        Vector3 targetRotation = _player.transform.position - transform.position;
+        targetRotation.y = 0;
+        targetRotation.Normalize();
 
-            Vector3 newRotation = Vector3.RotateTowards(currentDirection,
-                targetRotation, _rotationSpeedPlayer * Time.deltaTime, 0.0f);
+        Vector3 newRotation = Vector3.RotateTowards(currentDirection, targetRotation, _rotationSpeedPlayer * Time.deltaTime, 0.0f);
 
-            transform.rotation = Quaternion.LookRotation(newRotation);
+        transform.rotation = Quaternion.LookRotation(newRotation);
 
-            _chatBubble.ItemGiven();
+        _chatBubble.ItemGiven();
     }
 
     private void OnTriggerStay(Collider other)
@@ -83,13 +82,11 @@ public class NPCInteractable : MonoBehaviour
         _chatBubble.Create();
     }
 
-
     private void OriginalRotation()
     {
         if(_inRange == false)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, _originalRotation,
-                _rotationSpeedOriginal * Time.deltaTime * 100f);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, _originalRotation, _rotationSpeedOriginal * Time.deltaTime * 100f);
         }
     }
 }

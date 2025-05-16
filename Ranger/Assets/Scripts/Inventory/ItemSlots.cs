@@ -23,7 +23,7 @@ public class ItemSlots : MonoBehaviour, IPointerClickHandler
             }
             else
             {
-                _image.sprite = _item._itemIcon;
+                _image.sprite = _item.ItemIcon;
                 _image.enabled = true;
             }
         }
@@ -44,7 +44,6 @@ public class ItemSlots : MonoBehaviour, IPointerClickHandler
             if (Item != null && OnRightClickEvent != null)
             {
                 OnRightClickEvent(Item);
-            //    Instantiate(Item, )
             }
         }
     }

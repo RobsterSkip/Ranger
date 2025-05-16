@@ -3,7 +3,6 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 [Serializable]
 public class Observer<T>
 {

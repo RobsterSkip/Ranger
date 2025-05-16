@@ -5,23 +5,23 @@ public class InventoryInput : MonoBehaviour
     [SerializeField] GameObject _inventory;
 
     Journal _journalClass;
-    [SerializeField]
-    private GameObject _journal;
+    [SerializeField] private GameObject _journal;
 
     private void Start()
     {
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
     }
+
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
-       {
+        if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
+        {
            _inventory.SetActive(true);
           _journalClass._journalOpen = true;
-       }
-       else if(_journalClass._journalOpen == true && (Input.GetKeyDown(KeyCode.Escape)))
-       {
+        }
+        else if(_journalClass._journalOpen == true && Input.GetKeyDown(KeyCode.Escape) || _journalClass._journalOpen == true && Input.GetKeyDown(KeyCode.Tab))
+        {
            _inventory.SetActive(false);
            _journalClass._journalOpen = false;
         }

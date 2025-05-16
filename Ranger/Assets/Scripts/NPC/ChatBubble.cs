@@ -14,6 +14,7 @@ public class ChatBubble : MonoBehaviour
         Bug,
         Question
     }
+
     [SerializeField] private Sprite _fishIcon;
     [SerializeField] private Sprite _bugIcon;
     [SerializeField] private Sprite _plantIcon;
@@ -24,29 +25,24 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer _backgroundSpriteRenderer;
     private SpriteRenderer _iconSpriteRenderer;
     private TextMeshPro _textMeshPro;
+    private Vector2 padding = new Vector2(-1f, 7f);
 
     public GameObject Inventory;
     public InventoryManager Manager; 
-    public Journal Journal;
-    private Items _items;
-    private CameraMovement _cameraMovement;
 
-    [SerializeField]
-    private GameObject _camera;
+    public Journal Journal;
     public GameObject _journal;
 
     private JournalEntries _journalEntries;
     private GameObject _journalEntry;
 
-    [SerializeField]
-    private LayerMask _playerMask;
+    private CameraMovement _cameraMovement;
+    [SerializeField] private GameObject _camera;
 
-    private Vector2 padding = new Vector2(-1f, 7f);
+    [SerializeField] private LayerMask _playerMask;
 
     private bool _itemGiving;
     public bool _npcInventory;
-
-    private string _gameObjectName;
 
     private void Awake()
     {
@@ -75,10 +71,10 @@ public class ChatBubble : MonoBehaviour
     {
         _textMeshPro.SetText(text);
         _textMeshPro.ForceMeshUpdate();
+
         Vector2 textSize = _textMeshPro.GetRenderedValues(false);
 
         _backgroundSpriteRenderer.size = textSize + padding;
-
         _iconSpriteRenderer.sprite = GetIconSprite(icon);
     }
 
@@ -104,35 +100,46 @@ public class ChatBubble : MonoBehaviour
 
     public void ItemGiven()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (_npcInventory == false && Input.GetKeyDown( KeyCode.E))
         {
             Manager.Inventory.SetActive(true);
             _cameraMovement._inventoryOpen = true;
             _itemGiving = true;
             _npcInventory = true;
         }
-        
-        if(Physics.CheckSphere(transform.parent.transform.position, 5f, _playerMask) && _itemGiving == true)
+        else if (_npcInventory == true && _itemGiving == true && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)))
+        {
+            Manager.Inventory.SetActive(false);
+            _cameraMovement._inventoryOpen = false;
+            _npcInventory = false;
+
+            SetUp(IconType.Question, "Goodbye! See you soon!");
+            _textMeshPro.ForceMeshUpdate();
+
+            _itemGiving = false;
+        }
+
+        if (Physics.CheckSphere(transform.parent.transform.position, 5f, _playerMask) && _itemGiving == true)
         {
             Collider[] hitColliders = Physics.OverlapSphere(transform.parent.position, 5f);
+
             foreach (Collider col in hitColliders)
             {
                 GameObject droppedItem = col.gameObject;
+                string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
 
-               if (droppedItem.CompareTag("fish"))
-               {
-                    _gameObjectName = droppedItem.ToString();
-                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                if (droppedItem.CompareTag("fish"))
+                {
                     string collectibleNameCarp = _collectibles[6].name.Trim().ToLower();
                     string collectibleNamePerch = _collectibles[7].name.Trim().ToLower();
                     string collectibleNameTrout = _collectibles[8].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
-                  _cameraMovement._inventoryOpen = false;
-                  _npcInventory = false;
+                    _cameraMovement._inventoryOpen = false;
+                    _npcInventory = false;
 
-                  SetUp(IconType.Fish, "Thank you for the fish!!");
-                  _textMeshPro.ForceMeshUpdate();
+                    SetUp(IconType.Fish, "Thank you for the fish!");
+                    _textMeshPro.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameCarp)
                     {
@@ -151,10 +158,8 @@ public class ChatBubble : MonoBehaviour
                     _itemGiving = false;
                 }
 
-               else if (droppedItem.CompareTag("bugDropped"))
-               {
-                    _gameObjectName = droppedItem.ToString();
-                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                else if (droppedItem.CompareTag("bugDropped"))
+                {
                     string collectibleNameMoth = _collectibles[0].name.Trim().ToLower();
                     string collectibleNameCatterpillar = _collectibles[1].name.Trim().ToLower();
                     string collectibleNameLadybug = _collectibles[2].name.Trim().ToLower();
@@ -163,7 +168,7 @@ public class ChatBubble : MonoBehaviour
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
 
-                   SetUp(IconType.Bug, "Thank you for the bug!!");
+                   SetUp(IconType.Bug, "Thank you for the bug!");
                    _textMeshPro.ForceMeshUpdate();
                     if(droppedName == collectibleNameMoth)
                     {
@@ -182,21 +187,17 @@ public class ChatBubble : MonoBehaviour
                     _itemGiving = false;
                 }
 
-               else if (droppedItem.CompareTag("PlantDropped"))
-               {
-                    _gameObjectName = droppedItem.ToString();
-                    string droppedName = droppedItem.name.Replace("(Clone)", "").Trim().ToLower();
+                else if (droppedItem.CompareTag("PlantDropped"))
+                {
                     string collectibleNameWildflower = _collectibles[3].name.Trim().ToLower();
                     string collectibleNameSunflower = _collectibles[4].name.Trim().ToLower();
                     string collectibleNameForgetmenot = _collectibles[5].name.Trim().ToLower();
-
-                    Debug.Log(_gameObjectName);
 
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
 
-                   SetUp(IconType.Plant, "Thank you for the plant!!");
+                   SetUp(IconType.Plant, "Thank you for the plant!");
                    _textMeshPro.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameWildflower)
@@ -214,22 +215,11 @@ public class ChatBubble : MonoBehaviour
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
-
-                }
-               else if (Input.GetKeyDown(KeyCode.Escape))
-               {
-                   Manager.Inventory.SetActive(false);
-                   _cameraMovement._inventoryOpen = false;
-                   _npcInventory = false;
-
-                   SetUp(IconType.Question, "Goodbye! See you soon!");
-                   _textMeshPro.ForceMeshUpdate();
-
-                    _itemGiving = false;
                 }
             }
         }
     }
+
     public void Remove()
     {
         _backgroundSpriteRenderer.enabled = false;

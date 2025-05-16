@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 255853334585471717}
   - component: {fileID: 8278014218763110684}
   - component: {fileID: 6571422742695560081}
-  - component: {fileID: 2162454120339027109}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -82,6 +81,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   WaterSurface: {fileID: 0}
+  IsFishing: 0
+  _camera: {fileID: 0}
+  _journal: {fileID: 0}
+  _fishingCollider: {fileID: 0}
+  Inventory: {fileID: 0}
+  Manager: {fileID: 0}
 --- !u!114 &8278014218763110684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMovement: {fileID: 0}
+  BaitPrefab: {fileID: 0}
+  QuickTimeUI: {fileID: 0}
+  Right: {fileID: 0}
+  Left: {fileID: 0}
+  Pull: {fileID: 0}
 --- !u!65 &6571422742695560081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -116,19 +126,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8, y: 3.11, z: 3.76}
   m_Center: {x: 0, y: 1.59, z: 0}
---- !u!114 &2162454120339027109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158224392965256261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c80da57aee5805b46a5d17f64c2a064e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colliders: []
 --- !u!1 &4369487570546952491
 GameObject:
   m_ObjectHideFlags: 0

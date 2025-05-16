@@ -12,13 +12,6 @@ public class CameraMovement : MonoBehaviour
     public float ScrollSensitivity = 5;
     public float ScrollDampening = 6f;
 
-    //zoom
-    //fix it later
-    public float ZoomMin = 3.5f;
-    public float ZoomMax = 15f;
-    public float ZoomDefault = 10f;
-    public float ZoomDistance;
-
     public float CollisionSensitivity = 4.5f;
 
     private RaycastHit _camHit;
@@ -33,8 +26,6 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         _camDist = transform.localPosition;
-        ZoomDistance = ZoomDefault;
-        _camDist.z = ZoomDistance;
 
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
@@ -60,31 +51,6 @@ public class CameraMovement : MonoBehaviour
                                             CameraCenter.transform.rotation.eulerAngles.z);
 
             CameraCenter.transform.rotation = rotation;
-
-            /* //fix it later
-            if(Input.GetAxis("Mouse ScrollWheel") != 0f)
-            {
-                var scrollAmount = Input.GetAxis("Mouse ScrollWheel") * ScrollSensitivity;
-                scrollAmount *= ZoomDistance * 0.1f;
-                ZoomDistance *= -scrollAmount;
-                ZoomDistance = Mathf.Clamp(ZoomDistance,ZoomMin,ZoomMax);
-
-
-            if (ZoomDistance < ZoomMin)
-            {
-                ZoomDistance = ZoomMin + 0.5f;
-            }
-            if (ZoomDistance > ZoomMax)
-            {
-                ZoomDistance = ZoomMax - 0.5f;
-            }
-            }*/
-
-            if (_camDist.z != -ZoomDistance) //fix it later
-            {
-                _camDist.z = Mathf.Lerp(_camDist.z, -ZoomDistance, Time.deltaTime * ScrollDampening);
-
-            }
 
             Cam.transform.localPosition = _camDist;
 

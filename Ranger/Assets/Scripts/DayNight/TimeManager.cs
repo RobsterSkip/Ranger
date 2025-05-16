@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Volume volume;
     [SerializeField] Material skyboxMaterial;
 
-    ColorAdjustments colorAdjustments;
+    readonly ColorAdjustments colorAdjustments;
 
     [SerializeField] TimeSettings timeSettings;
 
@@ -36,7 +36,6 @@ public class TimeManager : MonoBehaviour
         RotateSun();
         UpdateLightSettings();
         UpdateBlend();
-        //Debug.Log(service.isDayTime.Value);
     }
 
     void UpdateBlend()
