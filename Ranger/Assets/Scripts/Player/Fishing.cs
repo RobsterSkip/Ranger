@@ -36,7 +36,7 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
-        if (_isFishing && Input.GetMouseButtonUp(1))
+        if (_isFishing && Input.GetMouseButtonUp(0))
         {
             if (_bait != null)
             {
@@ -49,7 +49,7 @@ public class Fishing : MonoBehaviour
             _baitRB.AddForce(_bait.transform.forward * _counter * 1f);
         }
 
-        if (PlayerMovement.CanFish && Input.GetMouseButton(1))
+        if (PlayerMovement.CanFish && Input.GetMouseButton(0))
         {
             if (_counter >= 220)
             {
@@ -67,7 +67,7 @@ public class Fishing : MonoBehaviour
             _isFishing = false;
         }
 
-        if(PlayerMovement.IsFishing && Input.GetKey(KeyCode.Escape))
+        if(PlayerMovement.IsFishing && (Input.GetKey(KeyCode.Escape) || Input.GetMouseButton(0)))
         {
             _isFishing = false;
             PlayerMovement.IsFishing = false;

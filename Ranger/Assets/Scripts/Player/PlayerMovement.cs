@@ -35,6 +35,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Inventory;
     public InventoryManager Manager;
 
+    private Vector3 _scaleDefault;
+    private Vector3 _scaleCrouch = new Vector3(100, 90, 100);
+    public GameObject _model;
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -45,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
+
+        _scaleDefault = _model.transform.localScale;
     }
 
     void Update()
@@ -120,12 +126,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             IsCrouching = true;
+            _model.transform.localScale = _scaleCrouch;
             _currentSpeed = _crouchingSpeed;
         }
         else
         {
             IsCrouching = false;
+            _model.transform.localScale = _scaleDefault;
             _currentSpeed = _defaultSpeed;
         }
     }
+
 }
