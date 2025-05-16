@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -5,6 +6,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject Inventory;
     public Inventory InventoryScript;
     public GameObject PickupPanel;
+    public TextMeshProUGUI CanFish;
 
     void Start()
     {
@@ -13,11 +15,6 @@ public class InventoryManager : MonoBehaviour
         PickupPanel.SetActive(false);
         InventoryScript = Inventory.GetComponent<Inventory>();
         Inventory.SetActive(false);
-    }
-
-    void Update()
-    {
-        //Inventory.SetActive(false);
-        //Debug.Log(Time.deltaTime * 0.01);
+        CanFish.gameObject.SetActive(false);
     }
 }

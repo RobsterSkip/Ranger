@@ -10,22 +10,20 @@ public class BugMovement : MonoBehaviour
 
     private Vector3 _destination;
     private bool _isSet;
-    private float _range = 15;
+    private readonly float _range = 15;
 
-    private float _defaultSpeed = 5f;
-    private float _runningSpeed = 15f;
+    private readonly float _defaultSpeed = 5f;
+    private readonly float _runningSpeed = 15f;
+    
+    private readonly float _daySpeedMultiplier = 1f;
+    private readonly float _nightSpeedMultiplier = 5f;
     private float _currentMultiplier;
-    private float _daySpeedMultiplier = 1f;
-    private float _nightSpeedMultiplier = 5f;
 
-    private float _sightRange = 12f;
+    private readonly float _sightRange = 12f;
     private bool _playerSpotted;
     private bool _plantSpotted;
 
     public PlayerMovement PlayerMovement;
-
-    //private GameObject PickupPlant;
-    //private float _plantRange = 30f;
 
     public GameObject Inventory;
     public InventoryManager Manager;

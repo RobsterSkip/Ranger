@@ -28,12 +28,12 @@ public class Journal : MonoBehaviour
 
     private void OpenInventory()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(_journalOpen == false && Input.GetKeyDown(KeyCode.E))
         {
             _journalUI.SetActive(true);
             _journalOpen = true;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape))
+        else if(_journalOpen == true && ( Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)))
         {
             _journalUI.SetActive(false);
             _journalOpen = false;

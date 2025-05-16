@@ -17,14 +17,16 @@ public class FishMovement : MonoBehaviour
 
     private Vector3 _destination;
     private bool _isSet;
-    private float _range = 7f;
 
-    private float _defaultSpeed = 0.5f;
+    private readonly float _range = 7f;
 
-    private float _sightRange = 4f;
+    private readonly float _defaultSpeed = 0.5f;
+
+    private readonly float _sightRange = 4f;
     private bool _baitSpotted;
 
     public bool IsCaught;
+
     private int _counter;
     private int _num;
 
@@ -36,7 +38,6 @@ public class FishMovement : MonoBehaviour
 
     void Start()
     {
-
         Agent = GetComponent<NavMeshAgent>();
         Agent.speed = _defaultSpeed;
 
@@ -56,15 +57,15 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
-            _baitSpotted = Physics.CheckSphere(transform.position, _sightRange, fishingLayer);
-            SwimAround();
-            CheckCatching();
+        _baitSpotted = Physics.CheckSphere(transform.position, _sightRange, fishingLayer);
+        SwimAround();
+        CheckCatching();
 
-            if (_baitSpotted)
-            {
-                Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, 
-                    GameObject.FindGameObjectWithTag("bait").transform.position.z));
-            }
+        if (_baitSpotted)
+        {
+            Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, 
+                                             GameObject.FindGameObjectWithTag("bait").transform.position.z));
+        }
     }
 
     void SwimAround()
@@ -133,12 +134,11 @@ public class FishMovement : MonoBehaviour
             if (_counter != 0)
             {
                 StartCoroutine(Wait());
-                    if (Fishing.FishOnce(_num))
-                    {
-                        _counter--;
-                        _num = Random.Range(0, 3);
-                      
-                    }
+                if (Fishing.FishOnce(_num))
+                {
+                    _counter--;
+                    _num = Random.Range(0, 3);
+                }
             }
 
             if (Input.GetKey(KeyCode.Escape))

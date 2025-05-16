@@ -16,12 +16,11 @@ public class JournalEntries : MonoBehaviour
     private GameObject _ui;
 
     private int _entryIndex = 0;
-    private int _maxEntries = 9;
+    
+    private readonly int _maxEntries = 9;
 
     Journal _journalClass;
     private GameObject _journal;
-
-    private Items _items;
 
     public bool _enable1, _enable2, _enable3, _enable4, _enable5, _enable6, _enable7, _enable8, _enable9;
 
@@ -44,6 +43,7 @@ public class JournalEntries : MonoBehaviour
         if (_journalClass._journalOpen == true)
         {
             _pages.SetActive(true);
+            
             if (Input.GetKeyDown(KeyCode.A))
             {
                 _entryIndex--;
@@ -91,7 +91,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("There is more-th where that came from");
                 _panelImage.sprite = _sprites[0];
                 break;
-
             case 1:
                 _pageNumber.SetText("2/9");
                 if (_enable2 == true)
@@ -110,7 +109,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("A distinguished gentleman!");
                 _panelImage.sprite = _sprites[1];
                 break;
-
             case 2:
                 _pageNumber.SetText("3/9");
                 if (_enable3 == true)
@@ -129,7 +127,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("There are a catter-pile of them");
                 _panelImage.sprite = _sprites[2];
                 break;
-
             case 3:
                 _pageNumber.SetText("4/9");
                 if (_enable4 == true)
@@ -167,7 +164,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("The sunshine of flowers");
                 _panelImage.sprite = _sprites[4];
                 break;
-
             case 5:
                 _pageNumber.SetText("6/9");
                 if (_enable6 == true)
@@ -186,7 +182,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("I forgot");
                 _panelImage.sprite = _sprites[5];
                 break;
-
             case 6:
                 _pageNumber.SetText("7/9");
                 if (_enable7 == true)
@@ -205,7 +200,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It is not that bad");
                 _panelImage.sprite = _sprites[6];
                 break;
-
             case 7:
                 _pageNumber.SetText("8/9");
                 if (_enable8 == true)
@@ -224,7 +218,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It was not a long search");
                 _panelImage.sprite = _sprites[7];
                 break;
-
             case 8:
                 _pageNumber.SetText("9/9");
                 if (_enable9 == true)
@@ -243,7 +236,6 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("Proud of this trout!");
                 _panelImage.sprite = _sprites[8];
                 break;
-
         }
     }
 }

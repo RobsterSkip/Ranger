@@ -5,12 +5,12 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController Controller;
     public Transform Cam;
 
-    private float _defaultSpeed = 7f;
-    private float _crouchingSpeed = 4f;
+    private readonly float _ySpeed = -0.5f;
+    private readonly float _defaultSpeed = 7f;
+    private readonly float _crouchingSpeed = 4f;
     private float _currentSpeed;
-    private float _ySpeed = -0.5f;
 
-    private float _turnSmoothTime = 0.1f;
+    private readonly float _turnSmoothTime = 0.1f;
     private float _turnSmoothVelocity;
 
     public bool IsCrouching;
@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private BoxCollider _fishingCollider;
 
+    public GameObject Inventory;
+    public InventoryManager Manager;
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -39,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
 
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
+
+        Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
+        Manager = Inventory.GetComponent<InventoryManager>();
     }
 
     void Update()
@@ -65,8 +71,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 CanFish = false;
             }
-
-            //Debug.Log(CanFish);
         }
         CheckCrouching();
         CheckFishing();
@@ -78,8 +82,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
-
-            //Debug.Log(CanFish);
             
             if (dotProd > 0.1 && dotProd < 0.95) //is facing water
             {
@@ -87,12 +89,15 @@ public class PlayerMovement : MonoBehaviour
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
                 {
+                    if(Input.GetMouseButton(1))
+                    {
+                        Manager.CanFish.gameObject.SetActive(true);
+                    }
+
                     GameObject droppedItem = collider.gameObject;
                     if(droppedItem.CompareTag("bugDropped"))
                     {
                         CanFish = true;
-                        Debug.Log(CanFish);
-                        Debug.Log("Called");
                         Destroy(droppedItem);
                     }
                 }
@@ -100,11 +105,13 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 CanFish = false;
+                Manager.CanFish.gameObject.SetActive(false);
             }
         }
         else
         {
             CanFish = false;
+            Manager.CanFish.gameObject.SetActive(false);
         }
     }
 

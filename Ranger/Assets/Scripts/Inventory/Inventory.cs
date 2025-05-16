@@ -14,24 +14,18 @@ public class Inventory : MonoBehaviour
 
     public bool _isDropped = false;
 
-    private GameObject _panel;
-
-    private Inventory _inventoryClass;
-    public GameObject _inventory;
-
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
-       {
+        {
             _itemSlots[i].OnRightClickEvent += ItemDropped;
-       }
+        }
     }
 
     private void Update()
     {
         RefreshUI();
     }
-
 
     private void OnValidate()
     {
@@ -61,7 +55,7 @@ public class Inventory : MonoBehaviour
         float spawnPointZ = Random.Range(-4f, 0);
 
         Vector3 dropPosition = new Vector3(_player.transform.forward.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
-            _player.transform.localPosition.z + spawnPointZ);
+                                           _player.transform.localPosition.z + spawnPointZ);
         Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2), Quaternion.identity);
         _isDropped = true;
         _items.Remove(item);
@@ -81,6 +75,17 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
+    public bool IsFull()
+    {
+        for (int i = 0; i < _itemSlots.Length; i++)
+        {
+            if (_itemSlots[i].Item == null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     public bool RemoveItem(Items item)
     {
         for (int i = 0; i < _itemSlots.Length;  i++) 
@@ -99,7 +104,7 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < _itemSlots.Length; i++)
         {
             Items item = _itemSlots[i].Item;
-            if(item != null && item._ID == itemID)
+            if(item != null && item.ID == itemID)
             {
                 _itemSlots[i].Item = null;
                 return item;
@@ -107,26 +112,14 @@ public class Inventory : MonoBehaviour
         }
         return null;
     }
-    
-    public bool IsFull()
-    {
-        for (int i = 0; i < _itemSlots.Length;i++)
-        {
-            if (_itemSlots[i].Item == null)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-    
+
     public int ItemCount(string itemID)
     {
         int number = 0;
 
         for (int i = 0; i < _itemSlots.Length; ++i)
         {
-            if (_itemSlots[i].Item._ID == itemID)
+            if (_itemSlots[i].Item.ID == itemID)
             {
                 number++;
             }
