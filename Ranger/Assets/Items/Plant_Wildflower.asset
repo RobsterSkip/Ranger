@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 70b0cf21142ebbc418b7905cbcabd638
   _itemName: Wildflower
-  _itemIcon: {fileID: 21300000, guid: 521df6a67424dd1438802bf23abdc064, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 521df6a67424dd1438802bf23abdc064, type: 3}
   _itemPrefab: {fileID: 3541265546410487635, guid: 35f1f9adf7e2998448bd0ba211a8e677, type: 3}

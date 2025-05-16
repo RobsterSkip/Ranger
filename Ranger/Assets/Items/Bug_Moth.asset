@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 1e3edc3a35b04c14b92aba58d6af7faf
   _itemName: Moth
-  _itemIcon: {fileID: 21300000, guid: 99d73be4e9023d445898e24db3202c11, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 99d73be4e9023d445898e24db3202c11, type: 3}
   _itemPrefab: {fileID: 5967984084064161190, guid: 582fa45823e8a194fa336c92aedbd44c, type: 3}

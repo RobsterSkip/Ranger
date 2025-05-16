@@ -110,14 +110,13 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                CanFish = false;
-                Manager.CanFish.gameObject.SetActive(false);
+                //Manager.CanFish.gameObject.SetActive(false);
             }
         }
         else
         {
             CanFish = false;
-            Manager.CanFish.gameObject.SetActive(false);
+          //  Manager.CanFish.gameObject.SetActive(false);
         }
     }
 

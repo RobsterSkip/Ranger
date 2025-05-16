@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 0516f8ebb0212784f928acd51f0ae9ef
   _itemName: Sunflower
-  _itemIcon: {fileID: 21300000, guid: 1297fea10e52dca47a689cd74fbf5408, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 1297fea10e52dca47a689cd74fbf5408, type: 3}
   _itemPrefab: {fileID: 3541265546410487635, guid: e8074ab3514ca2f4db0c72dcf949e216, type: 3}

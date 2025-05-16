@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 1be28755adc7fec4fb0bdd961eb43d16
   _itemName: Trout
-  _itemIcon: {fileID: 21300000, guid: 8fc108326c19ae3449cbe7cc29d8189a, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 8fc108326c19ae3449cbe7cc29d8189a, type: 3}
   _itemPrefab: {fileID: 5698201278719751853, guid: a8ff752d9c4985f49a209ab734a19784, type: 3}

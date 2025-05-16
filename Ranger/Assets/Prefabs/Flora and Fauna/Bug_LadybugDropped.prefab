@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6611802256767566194}
   - component: {fileID: 4937620190599643108}
   - component: {fileID: -3150650422762739517}
-  - component: {fileID: 5490963166290680338}
   - component: {fileID: -8900612930985073044}
   m_Layer: 0
   m_Name: Bug_LadybugDropped
@@ -133,33 +132,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5490963166290680338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5967984084064161190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c55d7aa06d0824f4f927c9075515f18a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  plantLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  PlayerMovement: {fileID: 0}
-  Inventory: {fileID: 0}
-  Manager: {fileID: 0}
-  DayNight: {fileID: 0}
-  TimeManager: {fileID: 0}
 --- !u!114 &-8900612930985073044
 MonoBehaviour:
   m_ObjectHideFlags: 0

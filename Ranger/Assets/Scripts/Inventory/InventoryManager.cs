@@ -15,6 +15,6 @@ public class InventoryManager : MonoBehaviour
         PickupPanel.SetActive(false);
         InventoryScript = Inventory.GetComponent<Inventory>();
         Inventory.SetActive(false);
-        CanFish.gameObject.SetActive(false);
+        //CanFish.gameObject.SetActive(false);
     }
 }
