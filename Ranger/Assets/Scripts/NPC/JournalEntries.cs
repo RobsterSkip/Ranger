@@ -7,6 +7,8 @@ public class JournalEntries : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _title;
     [SerializeField] TextMeshProUGUI _entry;
+    [SerializeField] TextMeshProUGUI _pageNumber;
+    [SerializeField] GameObject _pages;
     [SerializeField] Sprite[] _sprites;
     [SerializeField] Image _panelImage;
 
@@ -14,7 +16,8 @@ public class JournalEntries : MonoBehaviour
     private GameObject _ui;
 
     private int _entryIndex = 0;
-    private readonly int _maxEntries = 8;
+    
+    private readonly int _maxEntries = 9;
 
     Journal _journalClass;
     private GameObject _journal;
@@ -31,6 +34,7 @@ public class JournalEntries : MonoBehaviour
 
         _title.enabled = false;
         _entry.enabled = false;
+        _pages.SetActive(false);
         _panelImage.enabled = false;
         _ui.SetActive(false);
     }
@@ -38,6 +42,8 @@ public class JournalEntries : MonoBehaviour
     {
         if (_journalClass._journalOpen == true)
         {
+            _pages.SetActive(true);
+            
             if (Input.GetKeyDown(KeyCode.A))
             {
                 _entryIndex--;
@@ -56,6 +62,10 @@ public class JournalEntries : MonoBehaviour
                 _entryIndex = 0;
             }
         }
+        else
+        {
+            _pages.SetActive(false);
+        }
         SetPages();
     }
 
@@ -64,6 +74,7 @@ public class JournalEntries : MonoBehaviour
         switch (_entryIndex)
         {
             case 0:
+                _pageNumber.SetText("1/9");
                 if(_enable1 == true) 
                 { 
                     _title.enabled = true;
@@ -81,6 +92,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[0];
                 break;
             case 1:
+                _pageNumber.SetText("2/9");
                 if (_enable2 == true)
                 {
                     _title.enabled = true;
@@ -98,6 +110,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[1];
                 break;
             case 2:
+                _pageNumber.SetText("3/9");
                 if (_enable3 == true)
                 {
                     _title.enabled = true;
@@ -115,6 +128,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[2];
                 break;
             case 3:
+                _pageNumber.SetText("4/9");
                 if (_enable4 == true)
                 {
                     _title.enabled = true;
@@ -133,6 +147,7 @@ public class JournalEntries : MonoBehaviour
                 break;
 
             case 4:
+                _pageNumber.SetText("5/9");
                 if (_enable5 == true)
                 {
                     _title.enabled = true;
@@ -150,6 +165,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[4];
                 break;
             case 5:
+                _pageNumber.SetText("6/9");
                 if (_enable6 == true)
                 {
                     _title.enabled = true;
@@ -167,6 +183,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[5];
                 break;
             case 6:
+                _pageNumber.SetText("7/9");
                 if (_enable7 == true)
                 {
                     _title.enabled = true;
@@ -184,6 +201,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[6];
                 break;
             case 7:
+                _pageNumber.SetText("8/9");
                 if (_enable8 == true)
                 {
                     _title.enabled = true;
@@ -201,6 +219,7 @@ public class JournalEntries : MonoBehaviour
                 _panelImage.sprite = _sprites[7];
                 break;
             case 8:
+                _pageNumber.SetText("9/9");
                 if (_enable9 == true)
                 {
                     _title.enabled = true;
