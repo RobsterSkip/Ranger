@@ -24,7 +24,7 @@ public class ChatBubble : MonoBehaviour
 
     private SpriteRenderer _backgroundSpriteRenderer;
     private SpriteRenderer _iconSpriteRenderer;
-    private TextMeshPro _textMeshPro;
+    private TextMeshPro _bubbleText;
     private Vector2 padding = new Vector2(-1f, 7f);
 
     public GameObject Inventory;
@@ -43,16 +43,22 @@ public class ChatBubble : MonoBehaviour
 
     private bool _itemGiving;
     public bool _npcInventory;
+    public bool _dialogueChanged;
+    public bool _itemGiven;
+    public bool _inventoryNPCExited;
+
+    private float _chatRandomTimer = 3f;
+    private float _chatRandomTimerCounter;
 
     private void Awake()
     {
         _backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
         _iconSpriteRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
-        _textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
+        _bubbleText = transform.Find("Text").GetComponent<TextMeshPro>();
 
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
-        _textMeshPro.enabled = false;
+        _bubbleText.enabled = false;
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
@@ -69,10 +75,10 @@ public class ChatBubble : MonoBehaviour
 
     private void SetUp(IconType icon, string text)
     {
-        _textMeshPro.SetText(text);
-        _textMeshPro.ForceMeshUpdate();
+        _bubbleText.SetText(text);
+        _bubbleText.ForceMeshUpdate();
 
-        Vector2 textSize = _textMeshPro.GetRenderedValues(false);
+        Vector2 textSize = _bubbleText.GetRenderedValues(false);
 
         _backgroundSpriteRenderer.size = textSize + padding;
         _iconSpriteRenderer.sprite = GetIconSprite(icon);
@@ -90,12 +96,33 @@ public class ChatBubble : MonoBehaviour
         }
     }
 
-    public void Create()
+    public void RandomText()
     {
         _backgroundSpriteRenderer.enabled = true;
         _iconSpriteRenderer.enabled = true;
-        _textMeshPro.enabled = true;
-        SetUp(IconType.Question, "Hello Ranger! \nDo you have anything for me?");
+        _bubbleText.enabled = true;
+        if(_dialogueChanged == false && _inventoryNPCExited == false)
+        {
+            SetUp(IconType.Question, "Hello Ranger! \nDo you have anything for me?");
+        }
+
+
+        String[] _randomTexts = { "I heard that bugs like freshly-picked plants!", "Don't forget to check out the journal!", "Can't go fishing without any bait!" };
+        System.Random randomString = new System.Random();
+        int maxNumber = _randomTexts.Length;
+        int newRandomNumber = randomString.Next(0, maxNumber);
+        string result = _randomTexts[newRandomNumber];
+
+
+        _chatRandomTimerCounter += Time.deltaTime;
+        if (_chatRandomTimerCounter >= _chatRandomTimer && _itemGiven == false && _inventoryNPCExited == false)
+        {
+            _dialogueChanged = true;
+            Debug.Log("Dialogue changed");
+            SetUp(IconType.Question, result);
+            _chatRandomTimerCounter = 0;
+            _bubbleText.ForceMeshUpdate();
+        }
     }
 
     public void ItemGiven()
@@ -114,7 +141,8 @@ public class ChatBubble : MonoBehaviour
             _npcInventory = false;
 
             SetUp(IconType.Question, "Goodbye! See you soon!");
-            _textMeshPro.ForceMeshUpdate();
+            _inventoryNPCExited = true;
+            _bubbleText.ForceMeshUpdate();
 
             _itemGiving = false;
         }
@@ -139,7 +167,7 @@ public class ChatBubble : MonoBehaviour
                     _npcInventory = false;
 
                     SetUp(IconType.Fish, "Thank you for the fish!");
-                    _textMeshPro.ForceMeshUpdate();
+                    _bubbleText.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameCarp)
                     {
@@ -156,6 +184,7 @@ public class ChatBubble : MonoBehaviour
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
+                    _itemGiven = true;
                 }
 
                 else if (droppedItem.CompareTag("bugDropped"))
@@ -169,7 +198,7 @@ public class ChatBubble : MonoBehaviour
                    _npcInventory = false;
 
                    SetUp(IconType.Bug, "Thank you for the bug!");
-                   _textMeshPro.ForceMeshUpdate();
+                   _bubbleText.ForceMeshUpdate();
                     if(droppedName == collectibleNameMoth)
                     {
                         _journalEntries._enable1 = true;
@@ -185,6 +214,7 @@ public class ChatBubble : MonoBehaviour
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
+                    _itemGiven = true;
                 }
 
                 else if (droppedItem.CompareTag("PlantDropped"))
@@ -198,7 +228,7 @@ public class ChatBubble : MonoBehaviour
                    _npcInventory = false;
 
                    SetUp(IconType.Plant, "Thank you for the plant!");
-                   _textMeshPro.ForceMeshUpdate();
+                   _bubbleText.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameWildflower)
                     {
@@ -215,6 +245,7 @@ public class ChatBubble : MonoBehaviour
 
                     Destroy(droppedItem.gameObject);
                     _itemGiving = false;
+                    _itemGiven = true;
                 }
             }
         }
@@ -224,6 +255,6 @@ public class ChatBubble : MonoBehaviour
     {
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
-        _textMeshPro.enabled = false;
+        _bubbleText.enabled = false;
     }
 }

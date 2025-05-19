@@ -60,6 +60,7 @@ public class NPCInteractable : MonoBehaviour
         {
             _inTrigger = true;
         }
+        Interact();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,11 +76,14 @@ public class NPCInteractable : MonoBehaviour
             _inTrigger = false;
             _chatBubble.Remove();
         }
+        _chatBubble._dialogueChanged = false;
+        _chatBubble._inventoryNPCExited = false;
+        _chatBubble._itemGiven = false;
     }
 
     public void Interact()
     {
-        _chatBubble.Create();
+        _chatBubble.RandomText();
     }
 
     private void OriginalRotation()
