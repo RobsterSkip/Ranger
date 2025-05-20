@@ -14,12 +14,24 @@ public class Inventory : MonoBehaviour
 
     public bool _isDropped = false;
 
+    Journal _journalClass;
+    private GameObject _journal;
+
+    private CameraMovement _cameraMovement;
+    private GameObject _camera;
+
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
         {
             _itemSlots[i].OnRightClickEvent += ItemDropped;
         }
+
+        _journal = GameObject.FindGameObjectWithTag("Journal");
+        _journalClass = _journal.GetComponent<Journal>();
+
+        _camera = GameObject.FindGameObjectWithTag("MainCamera");
+        _cameraMovement = _camera.GetComponent<CameraMovement>();
     }
 
     private void Update()
@@ -54,13 +66,17 @@ public class Inventory : MonoBehaviour
         float spawnPointX = Random.Range(-4f, 0);
         float spawnPointZ = Random.Range(-4f, 0);
 
-        Vector3 dropPosition = new Vector3(_player.transform.forward.x + spawnPointX, _player.transform.localPosition.y + 0.5f, 
+        Vector3 dropPosition = new Vector3(_player.transform.forward.x + spawnPointX, _player.transform.position.y + 10f, 
                                            _player.transform.localPosition.z + spawnPointZ);
-        Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2), Quaternion.identity);
+
+        Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2) + transform.up, Quaternion.identity);
         _isDropped = true;
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();
+        _journalClass._journalOpen = false;
+        _cameraMovement.InventoryOpen = false;
+        gameObject.SetActive(false);
     }
 
     public bool AddItem(Items item)

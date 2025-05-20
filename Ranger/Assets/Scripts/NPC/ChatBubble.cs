@@ -130,14 +130,14 @@ public class ChatBubble : MonoBehaviour
         if (_npcInventory == false && Input.GetKeyDown( KeyCode.E))
         {
             Manager.Inventory.SetActive(true);
-            _cameraMovement._inventoryOpen = true;
+            _cameraMovement.InventoryOpen = true;
             _itemGiving = true;
             _npcInventory = true;
         }
         else if (_npcInventory == true && _itemGiving == true && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)))
         {
             Manager.Inventory.SetActive(false);
-            _cameraMovement._inventoryOpen = false;
+            _cameraMovement.InventoryOpen = false;
             _npcInventory = false;
 
             SetUp(IconType.Question, "Goodbye! See you soon!");
@@ -163,7 +163,7 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameTrout = _collectibles[8].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
-                    _cameraMovement._inventoryOpen = false;
+                    _cameraMovement.InventoryOpen = false;
                     _npcInventory = false;
 
                     SetUp(IconType.Fish, "Thank you for the fish!");
@@ -194,7 +194,7 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameLadybug = _collectibles[2].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
-                   _cameraMovement._inventoryOpen = false;
+                   _cameraMovement.InventoryOpen = false;
                    _npcInventory = false;
 
                    SetUp(IconType.Bug, "Thank you for the bug!");
@@ -224,7 +224,7 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameForgetmenot = _collectibles[5].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
-                   _cameraMovement._inventoryOpen = false;
+                   _cameraMovement.InventoryOpen = false;
                    _npcInventory = false;
 
                    SetUp(IconType.Plant, "Thank you for the plant!");

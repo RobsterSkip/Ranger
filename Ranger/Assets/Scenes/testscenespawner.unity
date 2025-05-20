@@ -3807,6 +3807,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917715425}
   m_CullTransparentMesh: 1
+--- !u!1 &949672786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c516929b69b7dc41b6b288e1600954d, type: 3}
+  m_PrefabInstance: {fileID: 1213443892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &949672790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949672786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.078759, y: 3.14, z: 7.73}
+  m_Center: {x: 0.000000059604666, y: -0.12, z: 3.35}
 --- !u!1 &962549111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,7 +5096,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c516929b69b7dc41b6b288e1600954d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 949672790}
   m_SourcePrefab: {fileID: 100100000, guid: 0c516929b69b7dc41b6b288e1600954d, type: 3}
 --- !u!1 &1216682675
 GameObject:
@@ -8754,12 +8783,20 @@ PrefabInstance:
       value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      propertyPath: m_Size.y
+      value: 2.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       propertyPath: m_Center.x
       value: 4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+      propertyPath: m_Center.y
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 4967174281641038978, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
       propertyPath: m_IsTrigger
