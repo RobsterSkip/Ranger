@@ -93,7 +93,15 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+<<<<<<< Updated upstream
     - _Blend: 0.7333653
+=======
+<<<<<<< HEAD
+    - _Blend: 0
+=======
+    - _Blend: 0.7333653
+>>>>>>> c65ac164f6249e1cc287f0e9e0d770fb981f7ebf
+>>>>>>> Stashed changes
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
