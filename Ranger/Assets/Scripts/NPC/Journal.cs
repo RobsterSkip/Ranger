@@ -19,7 +19,7 @@ public class Journal : MonoBehaviour
     public bool _journalOpen;
     private void Start()
     {
-        _npc = GameObject.FindGameObjectWithTag("npc");
+        _npc = GameObject.FindGameObjectWithTag("NPC");
         _npcInteract = _npc.GetComponent<NPCInteractable>();
     }
     private void Update()

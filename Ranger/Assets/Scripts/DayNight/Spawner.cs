@@ -26,6 +26,11 @@ public class Spawner : MonoBehaviour
     private readonly int _maxBug = 5;
     private readonly int _maxPlant = 15;
 
+    public Vector2 BoundsGroundX;
+    public Vector2 BoundsGroundZ;
+    public Vector2 BoundsWaterX;
+    public Vector2 BoundsWaterZ;
+
     void Start()
     {
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
@@ -67,10 +72,11 @@ public class Spawner : MonoBehaviour
     {
         for(int i = 0; i < plantAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(Ground.GetComponent<Collider>().bounds.min.x, Ground.GetComponent<Collider>().bounds.max.x),
+            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y),
                                     1,
-                                    Random.Range(Ground.GetComponent<Collider>().bounds.min.z, Ground.GetComponent<Collider>().bounds.max.z));
+                                    Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
 
+            Debug.Log(Ground.GetComponent<Renderer>().bounds.min.x);
 
             float number = Random.Range(1, 4);
 
@@ -95,9 +101,9 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < bugsAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(Ground.GetComponent<Collider>().bounds.min.x, Ground.GetComponent<Collider>().bounds.max.x),
+            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y),
                                     0.25f,
-                                    Random.Range(Ground.GetComponent<Collider>().bounds.min.z, Ground.GetComponent<Collider>().bounds.max.z));
+                                    Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
 
 
             float number = Random.Range(1, 4);
@@ -123,9 +129,9 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < fishAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(FishArea.GetComponent<Collider>().bounds.min.x, FishArea.GetComponent<Collider>().bounds.max.x),
+            Vector3 destination = new Vector3(Random.Range(BoundsWaterX.x, BoundsWaterX.y),
                                     0.25f,
-                                    Random.Range(FishArea.GetComponent<Collider>().bounds.min.z, FishArea.GetComponent<Collider>().bounds.max.z));
+                                    Random.Range(BoundsWaterZ.x, BoundsWaterZ.y));
 
 
             float number = Random.Range(1, 4);
