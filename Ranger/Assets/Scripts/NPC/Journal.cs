@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Journal : MonoBehaviour
 {
+    private InventoryInput _inventoryInput;
     [SerializeField] private List<GameObject> _items;
     [SerializeField] private GameObject _journalUI;
     [SerializeField] private GameObject _interactPanel;

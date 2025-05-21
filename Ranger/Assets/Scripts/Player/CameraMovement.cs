@@ -23,6 +23,9 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private GameObject _journal;
 
+    [SerializeField]
+    private LayerMask _playerMask;
+
     void Start()
     {
         _camDist = transform.localPosition;
@@ -59,7 +62,7 @@ public class CameraMovement : MonoBehaviour
             obj.transform.SetParent(Cam.transform.parent);
             obj.transform.localPosition = new Vector3(Cam.transform.localPosition.x, Cam.transform.localPosition.y, Cam.transform.localPosition.z - CollisionSensitivity);
 
-            if (Physics.Linecast(CameraCenter.transform.position, obj.transform.position, out _camHit))
+            if (Physics.Linecast(CameraCenter.transform.position, obj.transform.position, out _camHit, ~_playerMask))
             {
                 Cam.transform.position = _camHit.point;
 

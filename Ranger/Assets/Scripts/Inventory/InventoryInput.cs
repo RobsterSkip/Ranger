@@ -7,6 +7,8 @@ public class InventoryInput : MonoBehaviour
     Journal _journalClass;
     [SerializeField] private GameObject _journal;
 
+    public bool _inventoryOpen;
+
     private void Start()
     {
         _journal = GameObject.FindGameObjectWithTag("Journal");
@@ -18,12 +20,12 @@ public class InventoryInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
         {
            _inventory.SetActive(true);
-          _journalClass._journalOpen = true;
+            _inventoryOpen = true;
         }
-        else if(_journalClass._journalOpen == true && Input.GetKeyDown(KeyCode.Escape) || _journalClass._journalOpen == true && Input.GetKeyDown(KeyCode.Tab))
+        else if(_journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Escape) || _journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Tab))
         {
            _inventory.SetActive(false);
-           _journalClass._journalOpen = false;
+            _inventoryOpen = false;
         }
     }
 }

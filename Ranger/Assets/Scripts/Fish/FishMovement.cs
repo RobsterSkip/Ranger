@@ -106,7 +106,6 @@ public class FishMovement : MonoBehaviour
         if (other.gameObject.tag == "bait")
         {
             IsCaught = true;
-            _box.size = new Vector3(4.5f, 1.85f, 4.5f);
             if (TimeManager.service.isDayTime.Value)
             {
                 _counter = 5;
@@ -158,6 +157,8 @@ public class FishMovement : MonoBehaviour
                 Agent.speed = 0;
 
                 transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
+                PlayerMovement.CanFish = false;
+                _box.size = new Vector3(4.5f, 1.85f, 4.5f);
             }
         }
     }

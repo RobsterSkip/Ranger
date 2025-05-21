@@ -8,7 +8,7 @@ public class JournalEntries : MonoBehaviour
     [SerializeField] TextMeshProUGUI _title;
     [SerializeField] TextMeshProUGUI _entry;
     [SerializeField] TextMeshProUGUI _pageNumber;
-    [SerializeField] GameObject _pages;
+    [SerializeField] GameObject _pages, _AButton, _DButton, _journalObject;
     [SerializeField] Sprite[] _sprites;
     [SerializeField] Image _panelImage;
 
@@ -43,6 +43,9 @@ public class JournalEntries : MonoBehaviour
         if (_journalClass._journalOpen == true)
         {
             _pages.SetActive(true);
+            _AButton.SetActive(true);
+            _DButton.SetActive(true);
+            _journalObject.SetActive(true);
             
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -57,7 +60,7 @@ public class JournalEntries : MonoBehaviour
             {
                 _entryIndex = _maxEntries - 1;
             }
-            else if (_entryIndex > _maxEntries)
+            else if (_entryIndex >= _maxEntries)
             {
                 _entryIndex = 0;
             }
@@ -65,6 +68,9 @@ public class JournalEntries : MonoBehaviour
         else
         {
             _pages.SetActive(false);
+            _AButton.SetActive(false);
+            _DButton.SetActive(false);
+            _journalObject.SetActive(false);
         }
         SetPages();
     }
@@ -124,7 +130,7 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.enabled = false;
                 }
                 _title.SetText("Catterpillar");
-                _entry.SetText("There are a catter-pile of them");
+                _entry.SetText("There is a catter-pile of them");
                 _panelImage.sprite = _sprites[2];
                 break;
             case 3:

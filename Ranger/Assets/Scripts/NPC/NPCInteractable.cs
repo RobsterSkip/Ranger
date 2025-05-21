@@ -10,6 +10,9 @@ public class NPCInteractable : MonoBehaviour
     [SerializeField]
     private CharacterController _player;
 
+    public GameObject Inventory;
+    public InventoryManager Manager;
+
     [SerializeField]
     private float _rotationSpeedPlayer = 1.75f;
     private readonly float _rotationSpeedOriginal = 1f;
@@ -32,6 +35,7 @@ public class NPCInteractable : MonoBehaviour
         if (_inTrigger == true)
         {
             InTriggerUpdate();
+         //   Manager.PickupPanel.SetActive(true);
         }
     }
 

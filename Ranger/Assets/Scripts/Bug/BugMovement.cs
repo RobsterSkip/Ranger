@@ -99,7 +99,6 @@ public class BugMovement : MonoBehaviour
         if(!_isSet)
         {
             SearchForDestination();
-            
         }
 
         if(_isSet)
@@ -135,7 +134,7 @@ public class BugMovement : MonoBehaviour
 
     void PlantLure()
     {
-        Collider[] hitPlantsDropped = Physics.OverlapSphere(transform.position, 15f, plantLayer);
+        Collider[] hitPlantsDropped = Physics.OverlapSphere(transform.position, 20f, plantLayer);
         _destination = hitPlantsDropped[0].gameObject.transform.position;
         Agent.SetDestination(_destination);
     }

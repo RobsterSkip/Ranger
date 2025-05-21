@@ -47,7 +47,7 @@ public class ChatBubble : MonoBehaviour
     public bool _itemGiven;
     public bool _inventoryNPCExited;
 
-    private float _chatRandomTimer = 3f;
+    private float _chatRandomTimer = 3.5f;
     private float _chatRandomTimerCounter;
 
     private void Awake()
@@ -107,7 +107,8 @@ public class ChatBubble : MonoBehaviour
         }
 
 
-        String[] _randomTexts = { "I heard that bugs like freshly-picked plants!", "Don't forget to check out the journal!", "Can't go fishing without any bait!" };
+        String[] _randomTexts = { "I heard that bugs like freshly-picked plants!", "Don't forget to check out the journal!",
+            "Can't go fishing without any bait!", "Bugs get scared easily, maybe crouching helps?"};
         System.Random randomString = new System.Random();
         int maxNumber = _randomTexts.Length;
         int newRandomNumber = randomString.Next(0, maxNumber);
