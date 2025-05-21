@@ -2361,7 +2361,7 @@ MonoBehaviour:
   dayAmbientLight: {r: 1, g: 0.98376316, b: 0.87358487, a: 0}
   nightAmbientLight: {r: 0.5088145, g: 0.8756413, b: 0.93962264, a: 0}
   volume: {fileID: 1926108004}
-  skyboxMaterial: {fileID: 2100000, guid: cc57abef9c8bc01499f44c916849fbe0, type: 2}
+  skyboxMaterial: {fileID: -876546973899608171, guid: ce7d68ae50b1dbd4d83c76e1725f569e, type: 3}
   timeSettings: {fileID: 11400000, guid: e541a3f02ded9bb47be1d56cfa345f48, type: 2}
 --- !u!4 &433969249
 Transform:
@@ -7320,6 +7320,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1730871774}
   m_SourcePrefab: {fileID: 100100000, guid: 2c7b0553456fe264b8d0b156bc529f70, type: 3}
+--- !u!1 &1305505945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7273164840026177400, guid: 1f674eddcbec97146b0a114a0db10cf0, type: 3}
+  m_PrefabInstance: {fileID: 8322090294613337036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1313249276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12098,6 +12103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2179571712059080631, guid: 8ecf2c93ace05e54fbccace470789b3f, type: 3}
+      propertyPath: _npc
+      value: 
+      objectReference: {fileID: 1305505945}
     - target: {fileID: 2179571712059080631, guid: 8ecf2c93ace05e54fbccace470789b3f, type: 3}
       propertyPath: _journalUI
       value: 

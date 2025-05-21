@@ -93,6 +93,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - _Blend: 0.7333653
 =======
@@ -102,6 +103,9 @@ Material:
     - _Blend: 0.7333653
 >>>>>>> c65ac164f6249e1cc287f0e9e0d770fb981f7ebf
 >>>>>>> Stashed changes
+=======
+    - _Blend: 0.19861726
+>>>>>>> parent of c65ac16 (item drop UI fix)
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0

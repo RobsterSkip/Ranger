@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
         GameObject[] fish = GameObject.FindGameObjectsWithTag("fish");
 
-        Debug.Log(bugs.Length);
+        //Debug.Log(bugs.Length);
 
         if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "06:00") == 0))
         {

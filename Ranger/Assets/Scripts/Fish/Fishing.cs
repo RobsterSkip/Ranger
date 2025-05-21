@@ -20,7 +20,7 @@ public class Fishing : MonoBehaviour
     public GameObject Left;
     public GameObject Pull;
 
-    private float _quickTimeBuffer = 0.5f;
+    private float _quickTimeBuffer = 0.2f;
     private float _quickTimeBufferCounter;
 
     void Start()
@@ -39,7 +39,6 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(_quickTimeBufferCounter);
         if (_isFishing && Input.GetMouseButtonUp(0))
         {
             if (_bait != null)
@@ -81,42 +80,58 @@ public class Fishing : MonoBehaviour
 
     public bool FishOnce(int num)
     {
+        Debug.Log(num);
         QuickTimeUI.SetActive(true);
-        _quickTimeBufferCounter += Time.deltaTime;
-        if (num == 0 && _quickTimeBufferCounter >= _quickTimeBuffer)
+        
+        if (num == 0)
         {
+            _quickTimeBufferCounter += Time.deltaTime;
             Right.SetActive(false);
-            Left.SetActive(true);
-            Pull.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.A))
+            if(_quickTimeBufferCounter >= _quickTimeBuffer)
             {
-                return true;
+                Left.SetActive(true);
             }
-            _quickTimeBufferCounter = 0;
+            Pull.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.A) && _quickTimeBufferCounter >= _quickTimeBuffer)
+            {
+               _quickTimeBufferCounter = 0;
+                Left.SetActive(false);
+               return true;
+            }
         }
         
-        if (num == 1 && _quickTimeBufferCounter >= _quickTimeBuffer)
+        if (num == 1)
         {
-            Right.SetActive(true);
+            _quickTimeBufferCounter += Time.deltaTime;
+            if (_quickTimeBufferCounter >= _quickTimeBuffer)
+            {
+                Right.SetActive(true);
+            }
             Left.SetActive(false);
             Pull.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) && _quickTimeBufferCounter >= _quickTimeBuffer)
             {
-                return true;
+               _quickTimeBufferCounter = 0;
+                Right.SetActive(false);
+               return true;
             }
-            _quickTimeBufferCounter = 0;
         }
         
-        if (num == 2 && _quickTimeBufferCounter >= _quickTimeBuffer)
+        if (num == 2)
         {
+            _quickTimeBufferCounter += Time.deltaTime;
             Right.SetActive(false);
             Left.SetActive(false);
-            Pull.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.S))
+            if (_quickTimeBufferCounter >= _quickTimeBuffer)
             {
-                return true;
+                Pull.SetActive(true);
             }
-            _quickTimeBufferCounter = 0;
+            if (Input.GetKeyDown(KeyCode.S) && _quickTimeBufferCounter >= _quickTimeBuffer)
+            {
+               _quickTimeBufferCounter = 0;
+                Pull.SetActive(false);
+               return true;
+            }
         }
         return false;
     }

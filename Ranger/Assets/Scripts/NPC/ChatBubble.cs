@@ -108,7 +108,7 @@ public class ChatBubble : MonoBehaviour
 
 
         String[] _randomTexts = { "I heard that bugs like freshly-picked plants!", "Don't forget to check out the journal!",
-            "Can't go fishing without any bait!", "Bugs get scared easily, maybe crouching helps?"};
+            "Can't go fishing without any bait!", "Bugs get scared easily, maybe crouching helps?", "Hello Ranger! \nDo you have anything for me?"};
         System.Random randomString = new System.Random();
         int maxNumber = _randomTexts.Length;
         int newRandomNumber = randomString.Next(0, maxNumber);

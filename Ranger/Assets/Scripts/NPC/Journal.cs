@@ -24,14 +24,10 @@ public class Journal : MonoBehaviour
     }
     private void Update()
     {
-        if (_inTrigger == true || _npcInteract._inTrigger == true)
+        if (_inTrigger == true)
         {
             OpenInventory();
             _interactPanel.SetActive(true);
-        }
-        if (_inTrigger == false || _npcInteract._inTrigger == false)
-        {
-            _interactPanel.SetActive(false);
         }
     }
 
@@ -59,5 +55,6 @@ public class Journal : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _inTrigger = false;
+        _interactPanel.SetActive(false);
     }
 }
