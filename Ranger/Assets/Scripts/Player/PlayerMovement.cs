@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (_cameraMovement.InventoryOpen == false && _journalClass._journalOpen == false)
+        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;

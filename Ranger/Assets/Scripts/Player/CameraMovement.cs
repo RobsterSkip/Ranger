@@ -17,7 +17,7 @@ public class CameraMovement : MonoBehaviour
     private RaycastHit _camHit;
     private Vector3 _camDist;
 
-    public bool InventoryOpen;
+    public bool _inventoryOpen;
 
     Journal _journalClass;
     [SerializeField]
@@ -38,14 +38,14 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
         {
-            InventoryOpen = true;
+            _inventoryOpen = true;
         }
         else if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
-            InventoryOpen = false;
+            _inventoryOpen = false;
         }
 
-        if (InventoryOpen == false && _journalClass._journalOpen == false)
+        if (_inventoryOpen == false && _journalClass._journalOpen == false)
         {
             CameraCenter.transform.position = new Vector3(Character.transform.position.x, Character.transform.position.y + OffsetY, Character.transform.position.z);
 
