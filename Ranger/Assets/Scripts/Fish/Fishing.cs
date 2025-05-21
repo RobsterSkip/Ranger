@@ -20,6 +20,9 @@ public class Fishing : MonoBehaviour
     public GameObject Left;
     public GameObject Pull;
 
+    private float _quickTimeBuffer = 0.5f;
+    private float _quickTimeBufferCounter;
+
     void Start()
     {
         PlayerMovement = GetComponent<PlayerMovement>();
@@ -36,6 +39,7 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(_quickTimeBufferCounter);
         if (_isFishing && Input.GetMouseButtonUp(0))
         {
             if (_bait != null)
@@ -78,8 +82,8 @@ public class Fishing : MonoBehaviour
     public bool FishOnce(int num)
     {
         QuickTimeUI.SetActive(true);
-
-        if (num == 0)
+        _quickTimeBufferCounter += Time.deltaTime;
+        if (num == 0 && _quickTimeBufferCounter >= _quickTimeBuffer)
         {
             Right.SetActive(false);
             Left.SetActive(true);
@@ -88,9 +92,10 @@ public class Fishing : MonoBehaviour
             {
                 return true;
             }
+            _quickTimeBufferCounter = 0;
         }
         
-        if (num == 1)
+        if (num == 1 && _quickTimeBufferCounter >= _quickTimeBuffer)
         {
             Right.SetActive(true);
             Left.SetActive(false);
@@ -99,9 +104,10 @@ public class Fishing : MonoBehaviour
             {
                 return true;
             }
+            _quickTimeBufferCounter = 0;
         }
         
-        if (num == 2)
+        if (num == 2 && _quickTimeBufferCounter >= _quickTimeBuffer)
         {
             Right.SetActive(false);
             Left.SetActive(false);
@@ -110,6 +116,7 @@ public class Fishing : MonoBehaviour
             {
                 return true;
             }
+            _quickTimeBufferCounter = 0;
         }
         return false;
     }

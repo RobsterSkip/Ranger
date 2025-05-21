@@ -6,22 +6,30 @@ using UnityEngine;
 
 public class Journal : MonoBehaviour
 {
+    private NPCInteractable _npcInteract;
+
     private InventoryInput _inventoryInput;
     [SerializeField] private List<GameObject> _items;
     [SerializeField] private GameObject _journalUI;
     [SerializeField] private GameObject _interactPanel;
 
+    public GameObject _npc;
+
     private bool _inTrigger;
     public bool _journalOpen;
-
+    private void Start()
+    {
+        _npc = GameObject.FindGameObjectWithTag("npc");
+        _npcInteract = _npc.GetComponent<NPCInteractable>();
+    }
     private void Update()
     {
-        if (_inTrigger == true)
+        if (_inTrigger == true || _npcInteract._inTrigger == true)
         {
             OpenInventory();
             _interactPanel.SetActive(true);
         }
-        if (_inTrigger == false)
+        if (_inTrigger == false || _npcInteract._inTrigger == false)
         {
             _interactPanel.SetActive(false);
         }

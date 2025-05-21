@@ -72,11 +72,6 @@ public class PlayerMovement : MonoBehaviour
 
                 Controller.Move(velocity * Time.deltaTime);
             }
-
-           // if (IsFishing)
-           // {
-           //     CanFish = false;
-           // }
         }
         CheckCrouching();
         CheckFishing();
@@ -115,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            CanFish = false;
             Manager.CanFish.gameObject.SetActive(false);
         }
     }

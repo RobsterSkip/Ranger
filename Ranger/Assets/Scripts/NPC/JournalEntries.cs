@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class JournalEntries : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _title;
-    [SerializeField] TextMeshProUGUI _entry;
-    [SerializeField] TextMeshProUGUI _pageNumber;
+    [SerializeField] TextMeshProUGUI _title, _entry, _pageNumber, _missingEntry, _talkToRanger;
     [SerializeField] GameObject _pages, _AButton, _DButton, _journalObject;
     [SerializeField] Sprite[] _sprites;
     [SerializeField] Image _panelImage;
@@ -34,6 +32,8 @@ public class JournalEntries : MonoBehaviour
 
         _title.enabled = false;
         _entry.enabled = false;
+        _missingEntry.enabled = false;
+        _talkToRanger.enabled = false;
         _pages.SetActive(false);
         _panelImage.enabled = false;
         _ui.SetActive(false);
@@ -86,12 +86,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Moth");
                 _entry.SetText("There is more-th where that came from");
@@ -104,12 +110,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Ladybug");
                 _entry.SetText("A distinguished gentleman!");
@@ -122,12 +134,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Catterpillar");
                 _entry.SetText("There is a catter-pile of them");
@@ -140,12 +158,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Wildflower");
                 _entry.SetText("This is wild!");
@@ -159,12 +183,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Sunflower");
                 _entry.SetText("The sunshine of flowers");
@@ -177,12 +207,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Forget-me-not");
                 _entry.SetText("I forgot");
@@ -195,12 +231,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Carp");
                 _entry.SetText("It is not that bad");
@@ -213,12 +255,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Perch");
                 _entry.SetText("It was not a long search");
@@ -231,12 +279,18 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
                     _panelImage.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
                 }
                 else
                 {
                     _title.enabled = false;
                     _entry.enabled = false;
                     _panelImage.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
                 }
                 _title.SetText("Trout");
                 _entry.SetText("Proud of this trout!");

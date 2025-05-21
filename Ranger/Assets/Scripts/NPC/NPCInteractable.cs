@@ -11,7 +11,8 @@ public class NPCInteractable : MonoBehaviour
     private CharacterController _player;
 
     public GameObject Inventory;
-    public InventoryManager Manager;
+
+    [SerializeField] private GameObject _interactPanel;
 
     [SerializeField]
     private float _rotationSpeedPlayer = 1.75f;
@@ -21,12 +22,13 @@ public class NPCInteractable : MonoBehaviour
     private Quaternion _originalRotation;
 
     private bool _inRange;
-    private bool _inTrigger;
+    public bool _inTrigger;
     
     private void Start()
     {
         _chatBubble = GameObject.FindGameObjectWithTag("ChatBubble").GetComponent<ChatBubble>();
         _originalRotation = Quaternion.identity;
+      //  _interactPanel.SetActive(false);
     }
 
     private void Update()
@@ -35,7 +37,7 @@ public class NPCInteractable : MonoBehaviour
         if (_inTrigger == true)
         {
             InTriggerUpdate();
-         //   Manager.PickupPanel.SetActive(true);
+            _interactPanel.SetActive(true);
         }
     }
 
@@ -60,15 +62,10 @@ public class NPCInteractable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             _inTrigger = true;
         }
-        Interact();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
         Interact();
     }
 
@@ -83,6 +80,8 @@ public class NPCInteractable : MonoBehaviour
         _chatBubble._dialogueChanged = false;
         _chatBubble._inventoryNPCExited = false;
         _chatBubble._itemGiven = false;
+
+        _interactPanel.SetActive(false);
     }
 
     public void Interact()
