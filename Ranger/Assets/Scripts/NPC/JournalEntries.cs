@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class JournalEntries : MonoBehaviour
 {
+    private CollectionPercentage _collectionPercentage;
+
     [SerializeField] TextMeshProUGUI _title, _entry, _pageNumber, _missingEntry, _talkToRanger;
     [SerializeField] GameObject _pages, _AButton, _DButton, _journalObject;
     [SerializeField] Sprite[] _sprites;
@@ -12,6 +14,8 @@ public class JournalEntries : MonoBehaviour
 
     [SerializeField]
     private GameObject _ui;
+    [SerializeField]
+    private GameObject _collection;
 
     private int _entryIndex = 0;
     
@@ -24,6 +28,8 @@ public class JournalEntries : MonoBehaviour
 
     private void Start()
     {
+        _collectionPercentage = _collection.GetComponent<CollectionPercentage>();
+
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
 
@@ -161,6 +167,8 @@ public class JournalEntries : MonoBehaviour
 
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
+
+                    _collectionPercentage._currentCollected += 1;
                 }
                 else
                 {
