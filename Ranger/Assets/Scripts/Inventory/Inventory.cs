@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private ItemSlots[] _itemSlots;
     [SerializeField] private GameObject _player;
     [SerializeField] private List<GameObject> _prefabs;
+    [SerializeField] private GameObject _itemDroppedText;
 
     public bool _isDropped = false;
 
@@ -20,6 +21,8 @@ public class Inventory : MonoBehaviour
     private CameraMovement _cameraMovement;
     private GameObject _camera;
 
+    private float _itemDroppedTime = 1.5f;
+    private float _itemDroppedTimeCounter;
 
     private void Start()
     {
@@ -64,19 +67,29 @@ public class Inventory : MonoBehaviour
 
     private void ItemDropped(Items item)
     {
-        float spawnPointX = Random.Range(-4f, 0);
-        float spawnPointZ = Random.Range(-4f, 0);
-
-        Vector3 dropPosition = new Vector3(_player.transform.forward.x + spawnPointX, _player.transform.position.y + 10f, 
-                                           _player.transform.localPosition.z + spawnPointZ);
         Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2) + transform.up, Quaternion.identity);
         _isDropped = true;
+
         _items.Remove(item);
         Destroy(item);     
         RefreshUI();
+
         _journalClass._journalOpen = false;
         _cameraMovement._inventoryOpen = false;
         gameObject.SetActive(false);
+
+        //ItemDroppedText();
+    }
+
+    private void ItemDroppedText()
+    {
+        _itemDroppedText.SetActive(true);
+        _itemDroppedTimeCounter += Time.deltaTime;
+        if(_itemDroppedTimeCounter >= _itemDroppedTime)
+        {
+            _itemDroppedText.SetActive(false);
+            _itemDroppedTimeCounter = 0;
+        }
     }
 
     public bool AddItem(Items item)

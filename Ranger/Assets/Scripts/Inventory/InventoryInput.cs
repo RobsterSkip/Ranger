@@ -22,7 +22,7 @@ public class InventoryInput : MonoBehaviour
            _inventory.SetActive(true);
             _inventoryOpen = true;
         }
-        else if(_journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Escape) || _journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Tab))
+        else if(_journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
         {
            _inventory.SetActive(false);
             _inventoryOpen = false;

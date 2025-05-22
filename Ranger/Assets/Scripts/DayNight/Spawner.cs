@@ -72,11 +72,8 @@ public class Spawner : MonoBehaviour
     {
         for(int i = 0; i < plantAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y),
-                                    1,
-                                    Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
-
-            Debug.Log(Ground.GetComponent<Renderer>().bounds.min.x);
+            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y), 1,
+            Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
 
             float number = Random.Range(1, 4);
 
