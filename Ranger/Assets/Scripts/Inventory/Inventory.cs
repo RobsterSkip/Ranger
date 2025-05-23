@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,6 +13,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private List<GameObject> _prefabs;
     [SerializeField] private GameObject _itemDroppedText;
+    [SerializeField] private TextMeshProUGUI _pickupPanelText;
 
     public bool _isDropped = false;
 
@@ -23,6 +25,8 @@ public class Inventory : MonoBehaviour
 
     private float _itemDroppedTime = 1.5f;
     private float _itemDroppedTimeCounter;
+
+    private bool _inventoryFull;
 
     private void Start()
     {
@@ -94,7 +98,7 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Items item)
     {
-        if (IsFull())
+        if (IsFull() && _inventoryFull == true)
         {
             return false;
         }
@@ -110,7 +114,12 @@ public class Inventory : MonoBehaviour
         {
             if (_itemSlots[i].Item == null)
             {
+                _inventoryFull = true;
                 return false;
+            }
+            else
+            {
+                _inventoryFull = false;
             }
         }
         return true;
