@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour
     public GameObject FishArea;
     public GameObject Ground;
 
+    public GameObject CampArea;
+
     public GameObject FishPrefab1;
     public GameObject FishPrefab2;
     public GameObject FishPrefab3;
@@ -36,6 +38,8 @@ public class Spawner : MonoBehaviour
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
 
+        DayNight = GameObject.FindGameObjectWithTag("NPC");
+
         SpawnPlants(_maxPlant);
         SpawnBugs(_maxBug);
         SpawnFish(_maxFish);
@@ -47,7 +51,6 @@ public class Spawner : MonoBehaviour
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
         GameObject[] fish = GameObject.FindGameObjectsWithTag("fish");
 
-        //Debug.Log(bugs.Length);
 
         if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "06:00") == 0))
         {
@@ -74,6 +77,11 @@ public class Spawner : MonoBehaviour
         {
             Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y), 1,
             Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
+
+            if (CampArea.GetComponent<Collider>().bounds.Contains(destination))
+            {
+                continue;
+            }
 
             float number = Random.Range(1, 4);
 

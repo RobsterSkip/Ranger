@@ -36,6 +36,8 @@ public class FishMovement : MonoBehaviour
     public GameObject DayNight;
     public TimeManager TimeManager;
 
+    private GameObject areaWater;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -72,6 +74,11 @@ public class FishMovement : MonoBehaviour
     {
         if (!IsCaught)
         {
+            if (Agent.velocity == Vector3.zero)
+            {
+                _isSet = false;
+            }
+
             if (!_isSet)
             {
                 SearchForDestination();

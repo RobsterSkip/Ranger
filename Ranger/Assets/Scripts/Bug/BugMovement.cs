@@ -39,15 +39,12 @@ public class BugMovement : MonoBehaviour
         PlayerMovement = Player.GetComponent<PlayerMovement>();
 
         Agent.speed = _defaultSpeed * _currentMultiplier;
-        
 
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
 
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
-        //Plant = GameObject.FindGameObjectWithTag("PlantDropped");
-        //InventoryClass = Inventory.GetComponent<Inventory>();
     }
 
     void Update()
@@ -64,9 +61,6 @@ public class BugMovement : MonoBehaviour
 
         _playerSpotted = Physics.CheckSphere(transform.position, _sightRange, playerLayer);
         _plantSpotted = Physics.CheckSphere(transform.position, 7f, plantLayer);
-        //Debug.Log(_plantSpotted);
-        //Inventory.SetActive(true);
-        //InventoryScript = Inventory.GetComponent<Inventory>();
 
         WalkAround();
 
@@ -90,13 +84,16 @@ public class BugMovement : MonoBehaviour
                 PlantLure();
             }
         }
-
-        //Debug.Log(PlayerMovement.IsCrouching);
     }
 
     void WalkAround()
     {
-        if(!_isSet)
+        if (Agent.velocity == Vector3.zero)
+        {
+            _isSet = false;
+        }
+
+        if (!_isSet)
         {
             SearchForDestination();
         }
@@ -117,8 +114,6 @@ public class BugMovement : MonoBehaviour
         _destination = new Vector3( transform.position.x + Random.Range(-_range, _range),
                                     transform.position.y,
                                     transform.position.z + Random.Range(-_range, _range));
-
-        //Debug.Log(_isSet);
 
         if (Physics.Raycast(_destination, Vector3.down, groundLayer))
         {

@@ -19,6 +19,7 @@ TagManager:
   - NPC
   - TimeManager
   - bugDropped
+  - CampArea
   layers:
   - Default
   - TransparentFX
