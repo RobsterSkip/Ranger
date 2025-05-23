@@ -39,7 +39,7 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
-        if (_isFishing && Input.GetMouseButtonUp(0))
+        if (_isFishing && Input.GetMouseButtonUp(0) && PlayerMovement.CanThrowRod == true)
         {
             if (_bait != null)
             {
