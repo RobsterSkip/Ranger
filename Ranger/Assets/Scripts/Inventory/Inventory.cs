@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
     private float _itemDroppedTime = 1.5f;
     private float _itemDroppedTimeCounter;
 
-    private bool _inventoryFull;
+    public bool InventoryFull;
 
     private void Start()
     {
@@ -44,6 +44,8 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+
+
         RefreshUI();
     }
 
@@ -98,7 +100,7 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Items item)
     {
-        if (IsFull() && _inventoryFull == true)
+        if (IsFull() && InventoryFull == true)
         {
             return false;
         }
@@ -114,16 +116,18 @@ public class Inventory : MonoBehaviour
         {
             if (_itemSlots[i].Item == null)
             {
-                _inventoryFull = true;
+                InventoryFull = true;
                 return false;
             }
             else
             {
-                _inventoryFull = false;
+                InventoryFull = false;
             }
         }
+
         return true;
     }
+
     public bool RemoveItem(Items item)
     {
         for (int i = 0; i < _itemSlots.Length;  i++) 
