@@ -71,7 +71,7 @@ public class Inventory : MonoBehaviour
 
     private void ItemDropped(Items item)
     {
-        Instantiate(item.ItemPrefab, _player.transform.position + (transform.forward * 2) + transform.up, Quaternion.identity);
+        Instantiate(item.ItemPrefab, _player.transform.position + _player.transform.forward * 2 + _player.transform.up, Quaternion.identity);
         _isDropped = true;
 
         _items.Remove(item);
