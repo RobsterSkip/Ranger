@@ -17,15 +17,17 @@ public class InventoryInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
+        if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false)
         {
-           _inventory.SetActive(true);
+            _inventory.SetActive(true);
             _inventoryOpen = true;
+            _journalClass._journalOpen = true;
         }
-        else if(_journalClass._journalOpen == false && Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
+        else if(_inventoryOpen == true && (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)))
         {
            _inventory.SetActive(false);
             _inventoryOpen = false;
+            _journalClass._journalOpen = false;
         }
     }
 }
