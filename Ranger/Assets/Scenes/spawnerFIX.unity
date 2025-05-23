@@ -7681,6 +7681,7 @@ MonoBehaviour:
   _player: {fileID: 1436249822}
   _prefabs: []
   _itemDroppedText: {fileID: 934937629}
+  _pickupPanelText: {fileID: 334129230}
   _isDropped: 0
 --- !u!114 &1768769891
 MonoBehaviour:
