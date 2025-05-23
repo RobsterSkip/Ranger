@@ -2030,6 +2030,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6942928603477b3469bb4e76cb783350, type: 3}
   - {fileID: 21300000, guid: 8fc108326c19ae3449cbe7cc29d8189a, type: 3}
   _panelImage: {fileID: 962549113}
+  _journalColour: {fileID: 0}
   _ui: {fileID: 384060574}
   _collection: {fileID: 542129888}
   _enable1: 0
@@ -7696,6 +7697,7 @@ MonoBehaviour:
   _itemDroppedText: {fileID: 934937629}
   _pickupPanelText: {fileID: 334129230}
   _isDropped: 0
+  InventoryFull: 0
 --- !u!114 &1768769891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9378,6 +9380,10 @@ PrefabInstance:
       propertyPath: CanFish
       value: 
       objectReference: {fileID: 802639189}
+    - target: {fileID: 649390012645018484, guid: 390a054004d1ea3428d07f9a8845957a, type: 3}
+      propertyPath: _pickupPanelText
+      value: 
+      objectReference: {fileID: 334129230}
     - target: {fileID: 840557397589634254, guid: 390a054004d1ea3428d07f9a8845957a, type: 3}
       propertyPath: m_Name
       value: InventoryManager
