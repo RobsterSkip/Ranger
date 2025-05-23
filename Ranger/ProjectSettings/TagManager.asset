@@ -20,6 +20,8 @@ TagManager:
   - TimeManager
   - bugDropped
   - CampArea
+  - FishingSlider
+  - Slider
   layers:
   - Default
   - TransparentFX

@@ -93,9 +93,13 @@ public class PlayerMovement : MonoBehaviour
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
                 {
-                    if(Input.GetMouseButton(0))
+                    if(Input.GetMouseButton(0) && !IsFishing && !CanFish)
                     {
                         Manager.CanFish.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        Manager.CanFish.gameObject.SetActive(false);
                     }
 
                     GameObject droppedItem = collider.gameObject;

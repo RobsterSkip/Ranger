@@ -23,6 +23,11 @@ public class Fishing : MonoBehaviour
     private float _quickTimeBuffer = 0.2f;
     private float _quickTimeBufferCounter;
 
+    public GameObject FishingSlider;
+    public GameObject Slider;
+
+    public GameObject DropBug;
+
     void Start()
     {
         PlayerMovement = GetComponent<PlayerMovement>();
@@ -31,6 +36,7 @@ public class Fishing : MonoBehaviour
         Left = QuickTimeUI.transform.GetChild(1).gameObject;
         Pull = QuickTimeUI.transform.GetChild(2).gameObject;
         QuickTimeUI.SetActive(false);
+        FishingSlider.gameObject.SetActive(false);
 
         _counter = 0;
         _isFishing = false;
@@ -54,6 +60,11 @@ public class Fishing : MonoBehaviour
 
         if (PlayerMovement.CanFish && Input.GetMouseButton(0))
         {
+            DropBug.SetActive(false);
+            FishingSlider.SetActive(true);
+
+            Slider.GetComponent<RectTransform>().sizeDelta = new Vector2(_counter*400/220, 40);
+
             if (_counter >= 220)
             {
                 _counter = 220;
@@ -68,6 +79,7 @@ public class Fishing : MonoBehaviour
         {
             _counter = 0;
             _isFishing = false;
+            FishingSlider.gameObject.SetActive(false);
         }
 
         if(PlayerMovement.IsFishing && (Input.GetKey(KeyCode.Escape) || Input.GetMouseButton(0)))
