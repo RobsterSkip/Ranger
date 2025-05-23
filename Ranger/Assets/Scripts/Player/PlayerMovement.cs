@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsCrouching;
 
     public bool CanFish;
+    public bool CanThrowRod;
+
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
 
@@ -86,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
             
             if (dotProd > 0.1 && dotProd < 0.95) //is facing water
             {
+                CanThrowRod = true;
                 Collider[] hitColliders = Physics.OverlapSphere(_fishingCollider.transform.position, 
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
@@ -105,11 +108,13 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                CanThrowRod = false;
                Manager.CanFish.gameObject.SetActive(false);
             }
         }
         else
         {
+            CanThrowRod = false;
             Manager.CanFish.gameObject.SetActive(false);
         }
     }
