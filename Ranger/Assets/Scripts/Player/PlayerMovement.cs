@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public InventoryManager Manager;
 
     private Vector3 _scaleDefault;
-    private Vector3 _scaleCrouch = new Vector3(100, 90, 100);
+    private Vector3 _scaleCrouch = new Vector3(1, 0.9f, 1);
     public GameObject _model;
 
     private void Start()

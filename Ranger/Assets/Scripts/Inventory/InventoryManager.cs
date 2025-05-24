@@ -31,11 +31,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (InventoryScript.InventoryFull)
         {
-            _pickupPanelText.text = "Press E to pick up";
+            _pickupPanelText.text = "-Press E to Pickup-";
         }
         else
         {
-            _pickupPanelText.text = "Inventory full!";
+            _pickupPanelText.text = "-Inventory full!-";
         }
     }
 }
