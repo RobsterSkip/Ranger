@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 
 public class MouseHover : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    private RectTransform _tipWindow;
+
+    public static Action<string, Vector2> OnMouseHover;
+    public static Action OnMouseLoseFocus;
     void Start()
     {
         
