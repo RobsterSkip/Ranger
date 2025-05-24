@@ -164,9 +164,7 @@ public class FishMovement : MonoBehaviour
                 PlayerMovement.IsFishing = false;
                 Agent.speed = 0;
 
-                //transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
-                 Vector3 firstLerp = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
-                 transform.position = Vector3.Lerp(firstLerp, new Vector3(0,10,0), 1f * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
 
                 PlayerMovement.CanFish = false;
                 _box.size = new Vector3(6f, 1.85f, 6f);
