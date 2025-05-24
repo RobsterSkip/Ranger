@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class CollectionPercentage : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI _percentageText;
+    [SerializeField] private TextMeshProUGUI _percentageText;
 
-    public float _currentCollected;
-    private float _collectionCalculation;
+    private float _currentCollected = 0;
     private float _totalCollection = 9;
 
     private void Start()
     {
-        _currentCollected = 0;
-        _collectionCalculation = (_currentCollected / _totalCollection) * 100;
+        UpdatePercentageText();
     }
 
-    void Update()
+    public void AddNewEntry()
     {
-       _percentageText.text = "Collected: " + _collectionCalculation + "%";
-
+        _currentCollected++;
+        UpdatePercentageText();
         CollectionCompleted();
+    }
+
+    private void UpdatePercentageText()
+    {
+        float percentage = (_currentCollected / _totalCollection) * 100f;
+        _percentageText.text = "Collected: " + percentage.ToString("F1") + "%";
     }
 
     private void CollectionCompleted()
     {
-        if(_currentCollected >= _totalCollection)
+        if (_currentCollected >= _totalCollection)
         {
             _percentageText.text = "JOURNAL COMPLETE!!!!";
         }

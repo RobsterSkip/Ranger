@@ -47,7 +47,7 @@ public class ChatBubble : MonoBehaviour
     public bool _itemGiven;
     public bool _inventoryNPCExited;
 
-    private float _chatRandomTimer = 3.5f;
+    private float _chatRandomTimer = 2.5f;
     private float _chatRandomTimerCounter;
 
     private void Awake()
@@ -166,6 +166,7 @@ public class ChatBubble : MonoBehaviour
                     Manager.Inventory.SetActive(false);
                     _cameraMovement._inventoryOpen = false;
                     _npcInventory = false;
+                    _dialogueChanged = true;
 
                     SetUp(IconType.Fish, "Thank you for the fish!");
                     _bubbleText.ForceMeshUpdate();
@@ -197,8 +198,9 @@ public class ChatBubble : MonoBehaviour
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
+                    _dialogueChanged = true;
 
-                   SetUp(IconType.Bug, "Thank you for the bug!");
+                    SetUp(IconType.Bug, "Thank you for the bug!");
                    _bubbleText.ForceMeshUpdate();
                     if(droppedName == collectibleNameMoth)
                     {
@@ -227,8 +229,9 @@ public class ChatBubble : MonoBehaviour
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
                    _npcInventory = false;
+                    _dialogueChanged = true;
 
-                   SetUp(IconType.Plant, "Thank you for the plant!");
+                    SetUp(IconType.Plant, "Thank you for the plant!");
                    _bubbleText.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameWildflower)

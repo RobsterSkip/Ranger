@@ -26,6 +26,7 @@ public class JournalEntries : MonoBehaviour
     private GameObject _journal;
 
     public bool _enable1, _enable2, _enable3, _enable4, _enable5, _enable6, _enable7, _enable8, _enable9;
+    public bool _added1;
 
     private void Start()
     {
@@ -91,8 +92,11 @@ public class JournalEntries : MonoBehaviour
         {
             case 0:
                 _pageNumber.SetText("1/9");
-                if(_enable1 == true) 
-                { 
+                if(_enable1 == true && !_added1) 
+                {
+                    _collectionPercentage.AddNewEntry();
+                    _added1 = true;
+
                     color = Color.magenta;
                     color.a = 0.75f;
 
@@ -210,8 +214,6 @@ public class JournalEntries : MonoBehaviour
                     _panelImage.sprite = _sprites[3];
 
                     _journalColour.GetComponent<Image>().color = color;
-
-                    _collectionPercentage._currentCollected += 1;
                 }
                 else
                 {
