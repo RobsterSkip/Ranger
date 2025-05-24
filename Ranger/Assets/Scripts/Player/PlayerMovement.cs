@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Inventory;
     public InventoryManager Manager;
 
+    private Vector3 _controllerScaleDefault = new Vector3(0, 2.3f, 0);
+    private Vector3 _controllerScaleCrouch = new Vector3(0, 3f, 0);
+
     private Vector3 _scaleDefault;
     private Vector3 _scaleCrouch = new Vector3(1.288253f, 1f, 1.288253f);
     public GameObject _model;
@@ -129,12 +132,14 @@ public class PlayerMovement : MonoBehaviour
         {
             IsCrouching = true;
             _model.transform.localScale = _scaleCrouch;
+            Controller.center = _controllerScaleCrouch;
             _currentSpeed = _crouchingSpeed;
         }
         else
         {
             IsCrouching = false;
             _model.transform.localScale = _scaleDefault;
+            Controller.center = _controllerScaleDefault;
             _currentSpeed = _defaultSpeed;
         }
     }

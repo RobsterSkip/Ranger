@@ -38,6 +38,13 @@ public class FishMovement : MonoBehaviour
 
     private GameObject areaWater;
 
+    //Fish caught in curve
+    private bool _isArcTowardsPlayer;
+    private float _arcTime;
+    private float _arcDuration = 1f;
+    private Vector3 _startPosition;
+    private Vector3 _targetPosition;
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -67,6 +74,25 @@ public class FishMovement : MonoBehaviour
         {
             Agent.SetDestination(new Vector3(GameObject.FindGameObjectWithTag("bait").transform.position.x, transform.position.y, 
                                              GameObject.FindGameObjectWithTag("bait").transform.position.z));
+        }
+
+        if(_isArcTowardsPlayer)
+        {
+            _arcTime += Time.deltaTime;
+            float time = Mathf.Clamp01(_arcTime / _arcDuration);
+
+            Vector3 horizontalLerp = Vector3.Lerp(_startPosition, _targetPosition, time);
+            float arcHeight = 2f;
+            float arc = 4 * arcHeight * time * (1-time);
+
+            Vector3 positionWithinArc = new Vector3(horizontalLerp.x, horizontalLerp.y + arc, horizontalLerp.z);
+            transform.position = positionWithinArc;
+
+            if(time > 1)
+            {
+                transform.position = _targetPosition;
+                _isArcTowardsPlayer = false;
+            }
         }
     }
 
@@ -158,16 +184,19 @@ public class FishMovement : MonoBehaviour
                 return;
             }
 
-            if (_counter == 0)
+            if (_counter == 0 && !_isArcTowardsPlayer)
             {
                 Fishing.DisableQuickTimeUI();
                 PlayerMovement.IsFishing = false;
                 Agent.speed = 0;
 
-                transform.position = Vector3.Lerp(transform.position, Player.transform.position, 1f * Time.deltaTime);
+                _startPosition = transform.position;
+                _targetPosition = Player.transform.position;
+                _arcTime = 0f;
+                _isArcTowardsPlayer = true;
 
                 PlayerMovement.CanFish = false;
-                _box.size = new Vector3(6f, 1.85f, 6f);
+                _box.size = new Vector3(3f, 1.85f, 3f);
             }
         }
     }
