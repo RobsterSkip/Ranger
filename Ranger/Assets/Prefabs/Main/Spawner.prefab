@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1169534565318723104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157354658026204024}
+  - component: {fileID: 2643414480003085765}
+  m_Layer: 5
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4157354658026204024
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169534565318723104}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2643414480003085765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169534565318723104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0190df3fb608a43499d70a9bef6315bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FishArea: {fileID: 6813756225855736080, guid: 5c54879a7e676574b8e649c392ded781, type: 3}
+  Ground: {fileID: 8074392640498967339, guid: 45ad1f4cdf815884db09217a842f7969, type: 3}
+  CampArea: {fileID: 0}
+  FishPrefab1: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+  FishPrefab2: {fileID: 5698201278719751853, guid: d2c7e9959b20fc8438e100b43b39106f, type: 3}
+  FishPrefab3: {fileID: 5698201278719751853, guid: 9546020b317b2684dbf4949a1a6e21b1, type: 3}
+  BugPrefab1: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+  BugPrefab2: {fileID: 5967984084064161190, guid: 2fe8507329c8e634cac0d20dce5ed360, type: 3}
+  BugPrefab3: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+  PlantPrefab1: {fileID: 3541265546410487635, guid: 49fb6ea87a5d3624eaa5290c14e732f2, type: 3}
+  PlantPrefab2: {fileID: 3541265546410487635, guid: e8074ab3514ca2f4db0c72dcf949e216, type: 3}
+  PlantPrefab3: {fileID: 3541265546410487635, guid: 35f1f9adf7e2998448bd0ba211a8e677, type: 3}
+  DayNight: {fileID: 0}
+  TimeManager: {fileID: 0}
+  BoundsGroundX: {x: -20, y: 20}
+  BoundsGroundZ: {x: -30, y: 30}
+  BoundsWaterX: {x: -33, y: -26}
+  BoundsWaterZ: {x: -30, y: 30}
