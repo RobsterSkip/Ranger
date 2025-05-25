@@ -93,6 +93,7 @@ public class BugMovement : MonoBehaviour
             _isSet = false;
         }
 
+
         if (!_isSet)
         {
             SearchForDestination();

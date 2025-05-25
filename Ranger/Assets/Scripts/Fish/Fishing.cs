@@ -63,11 +63,11 @@ public class Fishing : MonoBehaviour
             DropBug.SetActive(false);
             FishingSlider.SetActive(true);
 
-            Slider.GetComponent<RectTransform>().sizeDelta = new Vector2(_counter*400/220, 40);
+            Slider.GetComponent<RectTransform>().sizeDelta = new Vector2(_counter*400/300, 40);
 
-            if (_counter >= 220)
+            if (_counter >= 300)
             {
-                _counter = 220;
+                _counter = 300;
             }
             else
             {

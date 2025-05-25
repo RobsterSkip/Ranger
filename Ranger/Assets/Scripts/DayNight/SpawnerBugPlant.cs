@@ -2,16 +2,9 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Spawner : MonoBehaviour
+public class SpawnerBugPlant : MonoBehaviour
 {
-    public GameObject FishArea;
-    public GameObject Ground;
-
     public GameObject CampArea;
-
-    public GameObject FishPrefab1;
-    public GameObject FishPrefab2;
-    public GameObject FishPrefab3;
 
     public GameObject BugPrefab1;
     public GameObject BugPrefab2;
@@ -24,14 +17,13 @@ public class Spawner : MonoBehaviour
     public GameObject DayNight;
     public TimeManager TimeManager;
 
-    private readonly int _maxFish = 5;
-    private readonly int _maxBug = 5;
-    private readonly int _maxPlant = 15;
+    private readonly int _maxBug = 30;
+    private readonly int _maxPlant = 40;
 
-    public Vector2 BoundsGroundX;
-    public Vector2 BoundsGroundZ;
-    public Vector2 BoundsWaterX;
-    public Vector2 BoundsWaterZ;
+    private readonly int _maxBugPerSpawner = 5;
+    private readonly int _maxPlantPerSpawner = 10;
+
+    public Vector2 Bounds;
 
     void Start()
     {
@@ -40,33 +32,25 @@ public class Spawner : MonoBehaviour
 
         DayNight = GameObject.FindGameObjectWithTag("NPC");
 
-        SpawnPlants(_maxPlant);
-        SpawnBugs(_maxBug);
-        SpawnFish(_maxFish);
+        SpawnPlants(_maxPlantPerSpawner);
+        SpawnBugs(_maxBugPerSpawner);
     }
 
     void Update()
     {
         GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
-        GameObject[] fish = GameObject.FindGameObjectsWithTag("fish");
-
 
         if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "06:00") == 0))
         {
             if (plants.Length < _maxPlant)
             {
-                SpawnPlants(_maxPlant - plants.Length);
+                SpawnPlants((int)((_maxPlant - plants.Length)/_maxPlantPerSpawner));
             }
 
             if (bugs.Length < _maxBug)
             {
-                SpawnBugs(_maxBug - bugs.Length);
-            }
-
-            if (fish.Length < _maxFish)
-            {
-                SpawnFish(_maxFish - fish.Length);
+                SpawnBugs((int)((_maxBug - bugs.Length) / _maxBugPerSpawner));
             }
         }
     }
@@ -75,8 +59,8 @@ public class Spawner : MonoBehaviour
     {
         for(int i = 0; i < plantAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y), 1,
-            Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
+            Vector3 destination = new Vector3(Random.Range(transform.position.x - Bounds.x, transform.position.x + Bounds.x), transform.position.y + 1,
+            Random.Range(transform.position.z - Bounds.y, transform.position.z + Bounds.y));
 
             if (CampArea.GetComponent<Collider>().bounds.Contains(destination))
             {
@@ -106,9 +90,9 @@ public class Spawner : MonoBehaviour
     {
         for (int i = 0; i < bugsAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(BoundsGroundX.x, BoundsGroundX.y),
-                                    0.25f,
-                                    Random.Range(BoundsGroundZ.x, BoundsGroundZ.y));
+            Vector3 destination = new Vector3(Random.Range(transform.position.x - Bounds.x, transform.position.x + Bounds.x),
+                                    transform.position.y + 0.25f,
+                                    Random.Range(transform.position.z - Bounds.y, transform.position.z + Bounds.y));
 
 
             float number = Random.Range(1, 4);
@@ -126,34 +110,6 @@ public class Spawner : MonoBehaviour
             if (number == 3)
             {
                 Instantiate(BugPrefab3, destination, BugPrefab3.transform.rotation);
-            }
-        }
-    }
-
-    void SpawnFish(int fishAmount)
-    {
-        for (int i = 0; i < fishAmount; i++)
-        {
-            Vector3 destination = new Vector3(Random.Range(BoundsWaterX.x, BoundsWaterX.y),
-                                    0.25f,
-                                    Random.Range(BoundsWaterZ.x, BoundsWaterZ.y));
-
-
-            float number = Random.Range(1, 4);
-
-            if (number == 1)
-            {
-                Instantiate(FishPrefab1, destination, FishPrefab1.transform.rotation);
-            }
-
-            if (number == 2)
-            {
-                Instantiate(FishPrefab2, destination, FishPrefab2.transform.rotation);
-            }
-
-            if (number == 3)
-            {
-                Instantiate(FishPrefab3, destination, FishPrefab3.transform.rotation);
             }
         }
     }

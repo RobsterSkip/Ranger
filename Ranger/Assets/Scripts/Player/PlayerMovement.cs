@@ -84,14 +84,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckFishing()
     {
-        if(Physics.CheckSphere(transform.position, 2, waterLayer)) //is in range
+        if(Physics.CheckSphere(transform.position, 6, waterLayer)) //is in range
         {
+            
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
             
-            if (dotProd > 0.1 && dotProd < 0.95) //is facing water
+            if (true)//dotProd > 0.1 && dotProd < 0.95) //is facing water needs a rework
             {
-                CanThrowRod = true;
+                
                 Collider[] hitColliders = Physics.OverlapSphere(_fishingCollider.transform.position, 
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
@@ -108,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
                     GameObject droppedItem = collider.gameObject;
                     if(droppedItem.CompareTag("bugDropped"))
                     {
+                        CanThrowRod = true;
                         CanFish = true;
                         Destroy(droppedItem);
                     }

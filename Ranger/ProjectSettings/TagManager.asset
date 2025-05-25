@@ -35,8 +35,8 @@ TagManager:
   - fishing
   - plantdropped
   - npc
-  - 
-  - 
+  - bug_collider
+  - water_collider
   - 
   - 
   - 
