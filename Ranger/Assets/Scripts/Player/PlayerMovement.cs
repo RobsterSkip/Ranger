@@ -1,14 +1,16 @@
+using System;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController Controller;
     public Transform Cam;
 
-    private readonly float _ySpeed = -0.5f;
     private readonly float _defaultSpeed = 7f;
     private readonly float _crouchingSpeed = 4f;
     private float _currentSpeed;
+    private readonly float _sprintingSpeed = 15f;
 
     private readonly float _turnSmoothTime = 0.1f;
     private float _turnSmoothVelocity;
@@ -44,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _scaleCrouch = new Vector3(1.288253f, 1f, 1.288253f);
     public GameObject _model;
 
+    private Vector3 Velocity;
+    private float _gravity;
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -56,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
         Manager = Inventory.GetComponent<InventoryManager>();
 
         _scaleDefault = _model.transform.localScale;
+        _currentSpeed = _defaultSpeed;
+
+        _gravity = -9.81f;
     }
 
     void Update()
@@ -72,14 +80,34 @@ public class PlayerMovement : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-                Vector3 velocity = moveDir.normalized * _currentSpeed;
-                velocity.y = _ySpeed;  //collider fix
+                Velocity = moveDir.normalized * _currentSpeed;
+                Velocity.y = _gravity;  //collider fix
 
-                Controller.Move(velocity * Time.deltaTime);
+                Controller.Move(Velocity * Time.deltaTime);
+            }
+            CheckCrouching();
+            CheckFishing();
+            CheckSprinting();
+        }
+        AddGravity();
+    }
+
+    private void AddGravity()
+    {
+       Velocity.y = _gravity * Controller.skinWidth;
+    }
+
+    public void CalculateSlope()
+    {
+        if (Physics.Raycast(Controller.transform.localPosition, Vector3.down, out RaycastHit hit, 5f))
+        {
+            if (Vector3.Dot(hit.normal, Vector3.up) < 0.99f)
+            {
+               _gravity = -100f;
+               Velocity.y += _gravity * Controller.skinWidth;
             }
         }
-        CheckCrouching();
-        CheckFishing();
+        _gravity = -9.81f;
     }
 
     private void CheckFishing()
@@ -130,18 +158,33 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckCrouching()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
+            Debug.Log("Yeah!");
             IsCrouching = true;
             _model.transform.localScale = _scaleCrouch;
             Controller.center = _controllerScaleCrouch;
             _currentSpeed = _crouchingSpeed;
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.LeftControl))
         {
+            Debug.Log("Guh");
             IsCrouching = false;
             _model.transform.localScale = _scaleDefault;
             Controller.center = _controllerScaleDefault;
+            _currentSpeed = _defaultSpeed;
+        }
+    }
+
+    void CheckSprinting()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("Buh");
+            _currentSpeed = _sprintingSpeed;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
             _currentSpeed = _defaultSpeed;
         }
     }
