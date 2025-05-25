@@ -8,9 +8,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] _audioClip;
 
-    [SerializeField]
-    private AudioClip _dayAudio;
-
     private float _dayTime = 12f;
     private float _dayTimeCounter;
 
@@ -21,6 +18,11 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
+        if(BooleanManager.IsJournalCompleted)
+        {
+            _audioSource.PlayOneShot(_audioClip[0]);
+
+        }
        //_dayTimeCounter *= Time.deltaTime;
        //
        //if(_dayTimeCounter >= _dayTime)

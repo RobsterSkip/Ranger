@@ -6,6 +6,7 @@ public class CollectionPercentage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _percentageText;
 
+    [SerializeField]
     private float _currentCollected = 0;
     private float _totalCollection = 9;
 

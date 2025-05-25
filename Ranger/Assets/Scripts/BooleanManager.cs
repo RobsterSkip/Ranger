@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class BooleanManager : MonoBehaviour
+public static class BooleanManager
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static bool IsNight;
+    public static bool IsDay;
+    public static bool IsBaitDropped;
+    public static bool IsItemDropped;
+    public static bool IsItemPicked;
+    public static bool IsJournalCompleted;
+    public static bool IsItemAddedJournal;
+    public static bool IsLineCast;
+    public static bool IsFishingMinigame;
 }
