@@ -7,7 +7,7 @@ public class MouseTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField]
     private string _tipToShow;
 
-    private float _timeToWait = 0.5f;
+    private float _timeToWait = 0.1f;
     public void OnPointerEnter(PointerEventData eventData)
     {
         StopAllCoroutines();

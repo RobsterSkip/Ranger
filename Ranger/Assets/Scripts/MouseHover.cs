@@ -12,6 +12,8 @@ public class MouseHover : MonoBehaviour
     public static Action<string, Vector2> OnMouseHover;
     public static Action OnMouseLoseFocus;
 
+    private bool _isTipActive;
+
     private void OnEnable()
     {
         OnMouseHover += ShowTip;
@@ -29,18 +31,32 @@ public class MouseHover : MonoBehaviour
         HideTip();
     }
 
+    private void Update()
+    {
+        if (_isTipActive)
+        {
+            Vector2 mousePos = Input.mousePosition;
+            _tipWindow.position = mousePos + new Vector2(75, 0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Tab) || Input.GetKeyUp(KeyCode.Escape))
+        {
+            _isTipActive = false;
+            _tipWindow.gameObject.SetActive(false);
+        }
+    }
+
     private void ShowTip(string tip, Vector2 mousePos)
     {
         _tipText.text = tip;
-      //  _tipWindow.sizeDelta = new Vector2(_tipText.preferredWidth > 200 ? 200 : _tipText.preferredWidth, _tipText.preferredHeight);
-
         _tipWindow.gameObject.SetActive(true);
-        _tipWindow.transform.position = new Vector2(mousePos.x + 75, mousePos.y);
+        _isTipActive = true;
     }
 
     private void HideTip()
     {
         _tipText.text = null;
         _tipWindow.gameObject.SetActive(false);
+        _isTipActive = false;
     }
 }
