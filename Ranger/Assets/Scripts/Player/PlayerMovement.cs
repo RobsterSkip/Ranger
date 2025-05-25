@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController Controller;
     public Transform Cam;
 
-    private readonly float _defaultSpeed = 7f;
-    private readonly float _crouchingSpeed = 4f;
+    private readonly float _defaultSpeed = 10f;
+    private readonly float _crouchingSpeed = 7f;
     private float _currentSpeed;
     private readonly float _sprintingSpeed = 15f;
 
@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float _turnSmoothVelocity;
 
     public bool IsCrouching;
+    private bool IsSprinting;
 
     public bool CanFish;
     public bool CanThrowRod;
@@ -97,19 +98,6 @@ public class PlayerMovement : MonoBehaviour
        Velocity.y = _gravity * Controller.skinWidth;
     }
 
-    public void CalculateSlope()
-    {
-        if (Physics.Raycast(Controller.transform.localPosition, Vector3.down, out RaycastHit hit, 5f))
-        {
-            if (Vector3.Dot(hit.normal, Vector3.up) < 0.99f)
-            {
-               _gravity = -100f;
-               Velocity.y += _gravity * Controller.skinWidth;
-            }
-        }
-        _gravity = -9.81f;
-    }
-
     private void CheckFishing()
     {
         if(Physics.CheckSphere(transform.position, 6, waterLayer)) //is in range
@@ -158,9 +146,8 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckCrouching()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !IsSprinting)
         {
-            Debug.Log("Yeah!");
             IsCrouching = true;
             _model.transform.localScale = _scaleCrouch;
             Controller.center = _controllerScaleCrouch;
@@ -168,7 +155,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.LeftControl))
         {
-            Debug.Log("Guh");
             IsCrouching = false;
             _model.transform.localScale = _scaleDefault;
             Controller.center = _controllerScaleDefault;
@@ -178,9 +164,8 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckSprinting()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKeyDown(KeyCode.LeftShift) && !IsCrouching)
         {
-            Debug.Log("Buh");
             _currentSpeed = _sprintingSpeed;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))

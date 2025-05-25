@@ -92,10 +92,9 @@ public class JournalEntries : MonoBehaviour
         {
             case 0:
                 _pageNumber.SetText("1/9");
-                if(_enable1 == true && !_added1) 
+                if(_enable1 == true) 
                 {
                     _collectionPercentage.AddNewEntry();
-                    _added1 = true;
 
                     color = Color.magenta;
                     color.a = 0.75f;

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.XR;
 
 public class BugMovement : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class BugMovement : MonoBehaviour
 
     public GameObject DayNight;
     public TimeManager TimeManager;
+
+    private Vector3 Velocity;
+    private float _gravity;
 
     void Start()
     {
@@ -84,6 +88,11 @@ public class BugMovement : MonoBehaviour
                 PlantLure();
             }
         }
+        AddGravity();
+    }
+    private void AddGravity()
+    {
+        Velocity.y = _gravity * Time.deltaTime;
     }
 
     void WalkAround()

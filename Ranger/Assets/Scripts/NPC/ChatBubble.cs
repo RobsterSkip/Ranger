@@ -119,7 +119,6 @@ public class ChatBubble : MonoBehaviour
         if (_chatRandomTimerCounter >= _chatRandomTimer && _itemGiven == false && _inventoryNPCExited == false)
         {
             _dialogueChanged = true;
-            Debug.Log("Dialogue changed");
             SetUp(IconType.Question, result);
             _chatRandomTimerCounter = 0;
             _bubbleText.ForceMeshUpdate();
