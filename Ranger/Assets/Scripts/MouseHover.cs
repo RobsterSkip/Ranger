@@ -5,6 +5,9 @@ using UnityEngine;
 public class MouseHover : MonoBehaviour
 {
     [SerializeField]
+    private InventoryInput _inventoryInput;
+
+    [SerializeField]
     private TextMeshProUGUI _tipText;
     [SerializeField]
     private RectTransform _tipWindow;
@@ -29,6 +32,7 @@ public class MouseHover : MonoBehaviour
     void Start()
     {
         HideTip();
+
     }
 
     private void Update()
@@ -39,11 +43,11 @@ public class MouseHover : MonoBehaviour
             _tipWindow.position = mousePos + new Vector2(75, 0);
         }
 
-        if (Input.GetKeyUp(KeyCode.Tab) || Input.GetKeyUp(KeyCode.Escape))
-        {
+       if(_inventoryInput._inventoryOpen == false)
+       {
             _isTipActive = false;
             _tipWindow.gameObject.SetActive(false);
-        }
+       }
     }
 
     private void ShowTip(string tip, Vector2 mousePos)

@@ -669,7 +669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24, y: -350}
+  m_AnchoredPosition: {x: -29, y: -350}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468602974
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Collect all journal entries to win!
+  m_text: Unlock all journal entries to win!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f12cd0927b8a31842bd124cb0947740f, type: 2}
   m_sharedMaterial: {fileID: -1284740899409806242, guid: f12cd0927b8a31842bd124cb0947740f, type: 2}

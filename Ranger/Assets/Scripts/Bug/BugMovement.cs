@@ -14,13 +14,13 @@ public class BugMovement : MonoBehaviour
     private readonly float _range = 15;
 
     private readonly float _defaultSpeed = 5f;
-    private readonly float _runningSpeed = 15f;
+    private readonly float _runningSpeed = 20f;
     
     private readonly float _daySpeedMultiplier = 1f;
     private readonly float _nightSpeedMultiplier = 5f;
     private float _currentMultiplier;
 
-    private readonly float _sightRange = 12f;
+    private readonly float _sightRange = 17f;
     private bool _playerSpotted;
     private bool _plantSpotted;
 

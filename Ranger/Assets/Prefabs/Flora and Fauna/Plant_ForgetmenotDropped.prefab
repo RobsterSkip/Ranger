@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -4824630025118648828}
   - component: {fileID: -478677031573648014}
   m_Layer: 10
-  m_Name: Plant_Wildflower
-  m_TagString: plant
+  m_Name: Plant_ForgetmenotDropped
+  m_TagString: PlantDropped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c54035fb3011b54db4250001055b7dd, type: 2}
+  - {fileID: 2100000, guid: 5300a3ce1faa0834dbdb32edbac575a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 70b0cf21142ebbc418b7905cbcabd638, type: 2}
+  _item: {fileID: 11400000, guid: 93c519b4581b0cf4a973ae490d137fa6, type: 2}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}

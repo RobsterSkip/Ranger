@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -478677031573648014}
   m_Layer: 10
   m_Name: Plant_Forgetmenot
-  m_TagString: PlantDropped
+  m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

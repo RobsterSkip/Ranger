@@ -92,7 +92,7 @@ public class Fishing : MonoBehaviour
 
     public bool FishOnce(int num)
     {
-        Debug.Log(num);
+       // Debug.Log(num);
         QuickTimeUI.SetActive(true);
         
         if (num == 0)

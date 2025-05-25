@@ -26,7 +26,7 @@ public class JournalEntries : MonoBehaviour
     private GameObject _journal;
 
     public bool _enable1, _enable2, _enable3, _enable4, _enable5, _enable6, _enable7, _enable8, _enable9;
-    public bool _added1;
+    public bool _added1, _added2, _added3, _added4, _added5, _added6, _added7, _added8, _added9;
 
     private void Start()
     {
@@ -99,6 +99,12 @@ public class JournalEntries : MonoBehaviour
                     color = Color.magenta;
                     color.a = 0.75f;
 
+                    if (!_added1)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added1 = true;
+                    }
+
                     _title.enabled = true;
                     _entry.enabled = true;
 
@@ -125,7 +131,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Moth");
-                _entry.SetText("There is more-th where that came from");
+                _entry.SetText("It was no flyby.");
                 break;
             case 1:
                 _pageNumber.SetText("2/9");
@@ -133,6 +139,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.magenta;
                     color.a = 0.75f;
+
+                    if (!_added2)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added2 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;
@@ -169,6 +181,12 @@ public class JournalEntries : MonoBehaviour
                     color = Color.magenta;
                     color.a = 0.75f;
 
+                    if (!_added3)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added3 = true;
+                    }
+
                     _title.enabled = true;
                     _entry.enabled = true;
 
@@ -195,7 +213,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Catterpillar");
-                _entry.SetText("There is a catter-pile of them");
+                _entry.SetText("There is a catter-pile of them.");
                 break;
             case 3:
                 _pageNumber.SetText("4/9");
@@ -203,6 +221,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.yellow;
                     color.a = 0.75f;
+
+                    if (!_added4)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added4 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;
@@ -240,6 +264,12 @@ public class JournalEntries : MonoBehaviour
                     color = Color.yellow;
                     color.a = 0.75f;
 
+                    if (!_added5)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added5 = true;
+                    }
+
                     _title.enabled = true;
                     _entry.enabled = true;
 
@@ -266,7 +296,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Sunflower");
-                _entry.SetText("The sunshine of flowers");
+                _entry.SetText("The brightest of them all.");
                 break;
             case 5:
                 _pageNumber.SetText("6/9");
@@ -274,6 +304,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.yellow;
                     color.a = 0.75f;
+
+                    if (!_added6)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added6 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;
@@ -301,7 +337,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Forget-me-not");
-                _entry.SetText("I forgot");
+                _entry.SetText("I forgot.");
                 break;
             case 6:
                 _pageNumber.SetText("7/9");
@@ -309,6 +345,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.blue;
                     color.a = 0.75f;
+
+                    if (!_added7)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added7 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;
@@ -336,7 +378,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Carp");
-                _entry.SetText("It is not that bad");
+                _entry.SetText("It is not that bad.");
                 break;
             case 7:
                 _pageNumber.SetText("8/9");
@@ -344,6 +386,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.blue;
                     color.a = 0.75f;
+
+                    if (!_added8)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added8 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;
@@ -371,7 +419,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Perch");
-                _entry.SetText("It was not a long search");
+                _entry.SetText("It was not a long search.");
                 break;
             case 8:
                 _pageNumber.SetText("9/9");
@@ -379,6 +427,12 @@ public class JournalEntries : MonoBehaviour
                 {
                     color = Color.blue;
                     color.a = 0.75f;
+
+                    if (!_added9)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added9 = true;
+                    }
 
                     _title.enabled = true;
                     _entry.enabled = true;

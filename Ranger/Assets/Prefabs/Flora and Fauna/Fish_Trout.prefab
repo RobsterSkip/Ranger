@@ -50,11 +50,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937620190599643108, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: m_Size.x
-      value: 1.85
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937620190599643108, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4937620190599643108, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: m_Size.z
-      value: 1.85
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 5490963166290680338, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
       propertyPath: groundLayer.m_Bits

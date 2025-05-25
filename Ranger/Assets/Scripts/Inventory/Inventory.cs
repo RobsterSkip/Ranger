@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private InventoryInput _inventoryInput;
     [SerializeField] private List<Items> _items;
     [SerializeField] private Transform _itemsParent;
     [SerializeField] private ItemSlots[] _itemSlots;
@@ -78,6 +79,7 @@ public class Inventory : MonoBehaviour
         Destroy(item);     
         RefreshUI();
 
+        _inventoryInput._inventoryOpen = false;
         _journalClass._journalOpen = false;
         _cameraMovement._inventoryOpen = false;
         gameObject.SetActive(false);

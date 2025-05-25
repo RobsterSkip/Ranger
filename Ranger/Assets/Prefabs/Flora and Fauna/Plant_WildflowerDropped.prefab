@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -4824630025118648828}
   - component: {fileID: -478677031573648014}
   m_Layer: 10
-  m_Name: Plant_Wildflower
-  m_TagString: plant
+  m_Name: Plant_WildflowerDropped
+  m_TagString: PlantDropped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
