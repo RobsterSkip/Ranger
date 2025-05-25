@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController Controller;
     public Transform Cam;
 
-    private readonly float _ySpeed = -0.5f;
     private readonly float _defaultSpeed = 7f;
     private readonly float _crouchingSpeed = 4f;
     private float _currentSpeed;
@@ -157,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckCrouching()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Debug.Log("Yeah!");
             IsCrouching = true;
@@ -165,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
             Controller.center = _controllerScaleCrouch;
             _currentSpeed = _crouchingSpeed;
         }
-        else if(Input.GetKeyUp(KeyCode.LeftShift))
+        else if(Input.GetKeyUp(KeyCode.LeftControl))
         {
             Debug.Log("Guh");
             IsCrouching = false;
@@ -177,12 +176,12 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckSprinting()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             Debug.Log("Buh");
             _currentSpeed = _sprintingSpeed;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             _currentSpeed = _defaultSpeed;
         }

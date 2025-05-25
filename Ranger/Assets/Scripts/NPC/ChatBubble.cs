@@ -168,7 +168,7 @@ public class ChatBubble : MonoBehaviour
                     _npcInventory = false;
                     _dialogueChanged = true;
 
-                    SetUp(IconType.Fish, "Thank you for the fish!");
+                    SetUp(IconType.Fish, "Thank you for the fish!\nDon't forget to check the journal!");
                     _bubbleText.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameCarp)
@@ -200,7 +200,7 @@ public class ChatBubble : MonoBehaviour
                    _npcInventory = false;
                     _dialogueChanged = true;
 
-                    SetUp(IconType.Bug, "Thank you for the bug!");
+                    SetUp(IconType.Bug, "Thank you for the bug!\nDon't forget to check the journal!");
                    _bubbleText.ForceMeshUpdate();
                     if(droppedName == collectibleNameMoth)
                     {
@@ -231,7 +231,7 @@ public class ChatBubble : MonoBehaviour
                    _npcInventory = false;
                     _dialogueChanged = true;
 
-                    SetUp(IconType.Plant, "Thank you for the plant!");
+                    SetUp(IconType.Plant, "Thank you for the plant!\nDon't forget to check the journal!");
                    _bubbleText.ForceMeshUpdate();
 
                     if (droppedName == collectibleNameWildflower)
