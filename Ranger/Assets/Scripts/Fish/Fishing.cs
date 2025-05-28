@@ -45,9 +45,6 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(PlayerMovement.CanFish + "CanFish");
-        Debug.Log(PlayerMovement.CanThrowRod + "ThrowRod");
-        Debug.Log(_isFishing + "IsFishing");
         if (_isFishing && Input.GetMouseButtonUp(0) && PlayerMovement.CanThrowRod == true)
         {
             if (_bait != null)

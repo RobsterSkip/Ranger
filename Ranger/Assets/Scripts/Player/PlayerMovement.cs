@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsCrouching;
     private bool IsSprinting;
 
-    public bool CanFish;
-    public bool CanThrowRod;
+    public bool CanFish = false;
+    public bool CanThrowRod = false;
 
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
@@ -102,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Physics.CheckSphere(transform.position, 6, waterLayer)) //is in range
         {
-            
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
             
@@ -112,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
                 {
-                    if(Input.GetMouseButton(0) && !IsFishing && CanFish)
+                    if(Input.GetMouseButton(0) && IsFishing && CanFish)
                     {
                         Manager.CanFish.gameObject.SetActive(true);
                     }
