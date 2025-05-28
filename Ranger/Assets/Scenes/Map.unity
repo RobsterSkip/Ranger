@@ -1431,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bug_CatterpillarDropped
       objectReference: {fileID: 0}
+    - target: {fileID: 5967984084064161190, guid: eca81ee1d5eff76478683f13262aa069, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: -8900612930985073044, guid: eca81ee1d5eff76478683f13262aa069, type: 3}
@@ -16299,7 +16303,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -20880,7 +20884,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -27573,59 +27577,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4868149718031402743, guid: f4d963073fb07cc4a8cab5d3b01e9e8d, type: 3}
   m_PrefabInstance: {fileID: 902517268}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &904708817
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 904708818}
-  - component: {fileID: 904708819}
-  m_Layer: 6
-  m_Name: CampArea
-  m_TagString: CampArea
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &904708818
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904708817}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 333, y: 32.3, z: 282}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 918095408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &904708819
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904708817}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 69.19, y: 14.78, z: 52.71}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &906032548
 GameObject:
   m_ObjectHideFlags: 0
@@ -27785,7 +27736,6 @@ Transform:
   - {fileID: 1617027276}
   - {fileID: 2127354854}
   - {fileID: 1761734678}
-  - {fileID: 904708818}
   - {fileID: 1404260650}
   - {fileID: 438953983}
   - {fileID: 875573941}
@@ -28930,7 +28880,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32746,7 +32696,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -34044,6 +33994,10 @@ PrefabInstance:
     - target: {fileID: 5967984084064161190, guid: 487e3601fb09adc4fb26c39b464a391a, type: 3}
       propertyPath: m_Name
       value: Bug_LadybugDropped
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967984084064161190, guid: 487e3601fb09adc4fb26c39b464a391a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -39071,7 +39025,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -41117,6 +41071,10 @@ PrefabInstance:
       propertyPath: PlayerMovement
       value: 
       objectReference: {fileID: 1225474669}
+    - target: {fileID: 2583117827133332306, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3994098683008645121, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
       propertyPath: m_Height
       value: 1.3
@@ -41185,8 +41143,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4553357067468991781, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960317025980061697, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7523202929714554223, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523202929714554223, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8933424799278064591, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
@@ -43254,7 +43224,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -43591,7 +43561,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -46147,7 +46117,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -49388,7 +49358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1088128876645041288, guid: 1ef4f674a64922d4ba6fb79cb8e2f8df, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7039260977158700079, guid: 1ef4f674a64922d4ba6fb79cb8e2f8df, type: 3}
       propertyPath: m_LocalScale.x
@@ -50151,6 +50121,10 @@ PrefabInstance:
     - target: {fileID: 5967984084064161190, guid: 582fa45823e8a194fa336c92aedbd44c, type: 3}
       propertyPath: m_Name
       value: Bug_MothDropped
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967984084064161190, guid: 582fa45823e8a194fa336c92aedbd44c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -55285,7 +55259,7 @@ PrefabInstance:
     - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: CampArea
       value: 
-      objectReference: {fileID: 904708817}
+      objectReference: {fileID: 0}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

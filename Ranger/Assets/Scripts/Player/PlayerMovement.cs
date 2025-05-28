@@ -111,7 +111,15 @@ public class PlayerMovement : MonoBehaviour
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
                 {
-                    if(Input.GetMouseButton(0) && IsFishing && CanFish)
+                    if (collider.gameObject.tag == "bugDropped")
+                    {
+                        Debug.Log("Yes that is correct");
+                        CanThrowRod = true;
+                        CanFish = true;
+                        Destroy(collider.gameObject);
+                    }
+
+                    if (Input.GetMouseButton(0) && IsFishing && CanFish)
                     {
                         Manager.CanFish.gameObject.SetActive(true);
                     }
@@ -119,21 +127,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         Manager.CanFish.gameObject.SetActive(false);
                     }
-
-                    GameObject droppedItem = collider.gameObject;
-                    if(droppedItem.CompareTag("bugDropped"))
-                    {
-                        Debug.Log("Yes that is correct");
-                        CanThrowRod = true;
-                        CanFish = true;
-                        Destroy(droppedItem);
-                    }
                 }
-            }
-            else
-            {
-               CanThrowRod = false;
-               Manager.CanFish.gameObject.SetActive(false);
             }
         }
         else

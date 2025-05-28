@@ -71,7 +71,7 @@ public class Fishing : MonoBehaviour
             }
             else
             {
-                _counter++;
+                _counter += 1;
             }
             _isFishing = true;
         }

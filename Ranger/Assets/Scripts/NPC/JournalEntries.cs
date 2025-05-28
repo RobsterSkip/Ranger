@@ -94,8 +94,6 @@ public class JournalEntries : MonoBehaviour
                 _pageNumber.SetText("1/9");
                 if(_enable1 == true) 
                 {
-                    _collectionPercentage.AddNewEntry();
-
                     color = Color.magenta;
                     color.a = 0.75f;
 
