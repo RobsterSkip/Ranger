@@ -45,6 +45,9 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(PlayerMovement.CanFish + "CanFish");
+        Debug.Log(PlayerMovement.CanThrowRod + "ThrowRod");
+        Debug.Log(_isFishing + "IsFishing");
         if (_isFishing && Input.GetMouseButtonUp(0) && PlayerMovement.CanThrowRod == true)
         {
             if (_bait != null)
@@ -58,7 +61,7 @@ public class Fishing : MonoBehaviour
             _baitRB.AddForce(_bait.transform.forward * _counter * 1f);
         }
 
-        if (PlayerMovement.CanFish && Input.GetMouseButton(0))
+        if (PlayerMovement.CanFish == true && Input.GetMouseButton(0))
         {
             DropBug.SetActive(false);
             FishingSlider.SetActive(true);

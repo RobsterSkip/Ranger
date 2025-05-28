@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2641627246576021938}
   - component: {fileID: 6611802256767566194}
   - component: {fileID: 4937620190599643108}
-  - component: {fileID: -3150650422762739517}
   - component: {fileID: -8900612930985073044}
   m_Layer: 0
   m_Name: Bug_LadybugDropped
@@ -110,28 +109,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.85, z: 1}
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!195 &-3150650422762739517
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5967984084064161190}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &-8900612930985073044
 MonoBehaviour:
   m_ObjectHideFlags: 0

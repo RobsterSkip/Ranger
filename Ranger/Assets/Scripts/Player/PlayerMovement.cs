@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 Velocity;
     private float _gravity;
 
+
     private void Start()
     {
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -107,12 +108,11 @@ public class PlayerMovement : MonoBehaviour
             
             if (true)//dotProd > 0.1 && dotProd < 0.95) //is facing water needs a rework
             {
-                
                 Collider[] hitColliders = Physics.OverlapSphere(_fishingCollider.transform.position, 
                     _fishingCollider.bounds.extents.magnitude);
                 foreach (Collider collider in hitColliders)
                 {
-                    if(Input.GetMouseButton(0) && !IsFishing && !CanFish)
+                    if(Input.GetMouseButton(0) && !IsFishing && CanFish)
                     {
                         Manager.CanFish.gameObject.SetActive(true);
                     }
@@ -124,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
                     GameObject droppedItem = collider.gameObject;
                     if(droppedItem.CompareTag("bugDropped"))
                     {
+                        Debug.Log("Yes that is correct");
                         CanThrowRod = true;
                         CanFish = true;
                         Destroy(droppedItem);
@@ -132,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                CanThrowRod = false;
+               CanThrowRod = false;
                Manager.CanFish.gameObject.SetActive(false);
             }
         }

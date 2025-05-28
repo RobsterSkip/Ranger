@@ -22,7 +22,7 @@ public class FishMovement : MonoBehaviour
 
     private readonly float _defaultSpeed = 1f;
 
-    private readonly float _sightRange = 4f;
+    private readonly float _sightRange = 8f;
     private bool _baitSpotted;
 
     public bool IsCaught;
