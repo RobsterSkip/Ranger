@@ -17,7 +17,7 @@ public class InventoryInput : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_inventoryOpen);
+      //  Debug.Log(_inventoryOpen);
         if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
         {
             _inventory.SetActive(true);

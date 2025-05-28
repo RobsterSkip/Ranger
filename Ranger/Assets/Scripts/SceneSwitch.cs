@@ -14,7 +14,7 @@ public class SceneSwitch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("spawnerFIX");
+            SceneManager.LoadScene("Map");
         }
     }
 }

@@ -17,8 +17,8 @@ public class SpawnerBugPlant : MonoBehaviour
     public GameObject DayNight;
     public TimeManager TimeManager;
 
-    private readonly int _maxBug = 40;
-    private readonly int _maxPlant = 50;
+    private readonly int _maxBug = 30;
+    private readonly int _maxPlant = 40;
 
     private readonly int _maxBugPerSpawner = 5;
     private readonly int _maxPlantPerSpawner = 10;
