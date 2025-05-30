@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class InventoryInput : MonoBehaviour
@@ -6,6 +7,7 @@ public class InventoryInput : MonoBehaviour
 
     Journal _journalClass;
     [SerializeField] private GameObject _journal;
+    [SerializeField] private TextMeshProUGUI _escapeText;
 
     public bool _inventoryOpen;
 
@@ -13,6 +15,7 @@ public class InventoryInput : MonoBehaviour
     {
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
+        _escapeText.enabled = false;
     }
 
     private void Update()
@@ -23,12 +26,14 @@ public class InventoryInput : MonoBehaviour
             _inventory.SetActive(true);
             _inventoryOpen = true;
             _journalClass._journalOpen = true;
+            _escapeText.enabled = true;
         }
         else if(_inventoryOpen == true && (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)))
         {
            _inventory.SetActive(false);
             _inventoryOpen = false;
             _journalClass._journalOpen = false;
+            _escapeText.enabled = false;
         }
     }
 }

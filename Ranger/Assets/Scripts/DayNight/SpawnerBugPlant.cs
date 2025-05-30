@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -25,6 +26,10 @@ public class SpawnerBugPlant : MonoBehaviour
 
     public Vector2 Bounds;
 
+    [SerializeField] private TextMeshProUGUI timeText;
+
+    float currentTime;
+
     void Start()
     {
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
@@ -38,6 +43,18 @@ public class SpawnerBugPlant : MonoBehaviour
 
     void Update()
     {
+        currentTime = 12 + Time.deltaTime;
+        Debug.Log(currentTime);
+
+        if (currentTime > 12)
+        {
+            Debug.Log("It is now day");
+        }
+        else
+        {
+            Debug.Log("It is now night");
+        }
+
         GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
 

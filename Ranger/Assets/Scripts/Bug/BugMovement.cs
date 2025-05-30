@@ -20,7 +20,7 @@ public class BugMovement : MonoBehaviour
     private readonly float _nightSpeedMultiplier = 5f;
     private float _currentMultiplier;
 
-    private readonly float _sightRange = 17f;
+    private readonly float _sightRange = 25f;
     private bool _playerSpotted;
     private bool _plantSpotted;
 
