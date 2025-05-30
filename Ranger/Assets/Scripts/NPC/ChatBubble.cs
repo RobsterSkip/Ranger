@@ -22,8 +22,11 @@ public class ChatBubble : MonoBehaviour
 
     [SerializeField] private GameObject[] _collectibles;
 
+    [SerializeField]
     private SpriteRenderer _backgroundSpriteRenderer;
+    [SerializeField]
     private SpriteRenderer _iconSpriteRenderer;
+    [SerializeField]
     private TextMeshPro _bubbleText;
     private Vector2 padding = new Vector2(-1f, 7f);
 
@@ -52,10 +55,6 @@ public class ChatBubble : MonoBehaviour
 
     private void Awake()
     {
-        _backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
-        _iconSpriteRenderer = transform.Find("Icon").GetComponent<SpriteRenderer>();
-        _bubbleText = transform.Find("Text").GetComponent<TextMeshPro>();
-
         _backgroundSpriteRenderer.enabled = false;
         _iconSpriteRenderer.enabled = false;
         _bubbleText.enabled = false;
