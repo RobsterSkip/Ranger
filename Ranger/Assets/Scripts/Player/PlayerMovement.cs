@@ -113,7 +113,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (collider.gameObject.tag == "bugDropped")
                     {
-                        Debug.Log("Yes that is correct");
                         CanThrowRod = true;
                         CanFish = true;
                         Destroy(collider.gameObject);

@@ -35,30 +35,31 @@ public class SpawnerBugPlant : MonoBehaviour
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
 
-        DayNight = GameObject.FindGameObjectWithTag("NPC");
-
         SpawnPlants(_maxPlantPerSpawner);
         SpawnBugs(_maxBugPerSpawner);
+
+        TimeManager.service.isDayTime.ValueChanged += OnDayNightChanged;
     }
 
     void Update()
     {
-        currentTime = 12 + Time.deltaTime;
-        Debug.Log(currentTime);
 
-        if (currentTime > 12)
+        // Spawn initial plants and bugs
+        if (TimeManager.service.isDayTime.Value)
         {
-            Debug.Log("It is now day");
+            Debug.Log("Day?");
+            //  SpawnDayContent();
         }
         else
         {
-            Debug.Log("It is now night");
+            Debug.Log("Night");
+            // SpawnNightContent();
         }
 
         GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
 
-        if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "06:00") == 0))
+        if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "12:00") == 0))
         {
             if (plants.Length < _maxPlant)
             {
@@ -69,6 +70,38 @@ public class SpawnerBugPlant : MonoBehaviour
             {
                 SpawnBugs((int)((_maxBug - bugs.Length) / _maxBugPerSpawner));
             }
+        }
+    }
+
+    void OnDayNightChanged(bool isDay)
+    {
+        if (isDay)
+        {
+            SpawnDayContent();
+        }
+        else
+        {
+            SpawnNightContent();
+        }
+    }
+
+    void SpawnDayContent()
+    {
+        SpawnPlants(_maxPlantPerSpawner);  
+        SpawnBugs(_maxBugPerSpawner);      
+    }
+
+    void SpawnNightContent()
+    {
+        SpawnPlants(_maxPlantPerSpawner); 
+        SpawnBugs(_maxBugPerSpawner);    
+    }
+
+    void OnDestroy()
+    {
+        if (TimeManager != null)
+        {
+            TimeManager.service.isDayTime.ValueChanged -= OnDayNightChanged;
         }
     }
 
@@ -130,4 +163,5 @@ public class SpawnerBugPlant : MonoBehaviour
             }
         }
     }
+
 }

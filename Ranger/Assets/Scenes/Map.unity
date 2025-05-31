@@ -2014,6 +2014,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2457,6 +2465,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7169,6 +7185,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 61.42, y: 9.98, z: 3.42}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &211771005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4107517580733641767, guid: 304b67f193df26948a53f5c19ca6f9c7, type: 3}
+  m_PrefabInstance: {fileID: 665893765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &212846948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8557,6 +8578,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16578,6 +16607,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18761,6 +18798,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -19118,107 +19163,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3305719233014938344, guid: 9929c368445f4fb4bbbc1c8bf10dba25, type: 3}
   m_PrefabInstance: {fileID: 581966316}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &584060505
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1822093784}
-    m_Modifications:
-    - target: {fileID: 1967846742906334481, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_Name
-      value: SpawnerBug&Plant (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: CampArea
-      value: 
-      objectReference: {fileID: 1085793866}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 332.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 340.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 25.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
 --- !u!1001 &599097653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25654,6 +25598,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -27214,6 +27166,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32099,6 +32059,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32890,6 +32858,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -36334,6 +36310,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38433,6 +38417,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38726,11 +38718,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3305719233014938344, guid: 9929c368445f4fb4bbbc1c8bf10dba25, type: 3}
   m_PrefabInstance: {fileID: 1409731554}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1411076984 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
-  m_PrefabInstance: {fileID: 584060505}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414097928 stripped
 GameObject:
@@ -40955,6 +40942,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -43388,6 +43383,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -47690,7 +47693,6 @@ Transform:
   - {fileID: 874926258}
   - {fileID: 684560995}
   - {fileID: 325246353}
-  - {fileID: 1411076984}
   - {fileID: 1064591483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47942,6 +47944,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -49780,7 +49790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7039260977158700079, guid: 1ef4f674a64922d4ba6fb79cb8e2f8df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.3816442
+      value: 4.9545593
       objectReference: {fileID: 0}
     - target: {fileID: 7039260977158700079, guid: 1ef4f674a64922d4ba6fb79cb8e2f8df, type: 3}
       propertyPath: m_LocalScale.y
@@ -53797,6 +53807,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -55343,6 +55361,14 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 1085793866}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: DayNight
+      value: 
+      objectReference: {fileID: 211771005}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: TimeManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -55405,7 +55431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 291.87
+      value: 272.2
       objectReference: {fileID: 0}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_AnchoredPosition.y
