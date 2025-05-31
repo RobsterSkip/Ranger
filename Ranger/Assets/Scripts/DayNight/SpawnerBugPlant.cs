@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -7,13 +8,15 @@ public class SpawnerBugPlant : MonoBehaviour
 {
     public GameObject CampArea;
 
-    public GameObject BugPrefab1;
-    public GameObject BugPrefab2;
-    public GameObject BugPrefab3;
-
+    public GameObject[] DayBugPrefabs;
+    public GameObject[] NightBugPrefabs;
+   
     public GameObject PlantPrefab1;
     public GameObject PlantPrefab2;
     public GameObject PlantPrefab3;
+  // public GameObject PlantPrefab4;
+  // public GameObject PlantPrefab5;
+  // public GameObject PlantPrefab6;
 
     public GameObject DayNight;
     public TimeManager TimeManager;
@@ -26,51 +29,27 @@ public class SpawnerBugPlant : MonoBehaviour
 
     public Vector2 Bounds;
 
-    [SerializeField] private TextMeshProUGUI timeText;
-
     float currentTime;
+
+    IEnumerator WaitForTimeService()
+    {
+        while (TimeManager.service == null || TimeManager.service.isDayTime == null)
+        {
+            yield return null;
+        }
+
+        TimeManager.service.isDayTime.ValueChanged += OnDayNightChanged;
+
+        SpawnPlants(_maxPlantPerSpawner);
+        SpawnBugs(DayBugPrefabs, _maxBugPerSpawner, "BugDay");
+    }
 
     void Start()
     {
         DayNight = GameObject.FindGameObjectWithTag("TimeManager");
         TimeManager = DayNight.GetComponent<TimeManager>();
 
-        SpawnPlants(_maxPlantPerSpawner);
-        SpawnBugs(_maxBugPerSpawner);
-
-        TimeManager.service.isDayTime.ValueChanged += OnDayNightChanged;
-    }
-
-    void Update()
-    {
-
-        // Spawn initial plants and bugs
-        if (TimeManager.service.isDayTime.Value)
-        {
-            Debug.Log("Day?");
-            //  SpawnDayContent();
-        }
-        else
-        {
-            Debug.Log("Night");
-            // SpawnNightContent();
-        }
-
-        GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
-        GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
-
-        if ((String.Compare(TimeManager.service.CurrentTime.ToString("hh:mm"), "12:00") == 0))
-        {
-            if (plants.Length < _maxPlant)
-            {
-                SpawnPlants((int)((_maxPlant - plants.Length)/_maxPlantPerSpawner));
-            }
-
-            if (bugs.Length < _maxBug)
-            {
-                SpawnBugs((int)((_maxBug - bugs.Length) / _maxBugPerSpawner));
-            }
-        }
+        StartCoroutine(WaitForTimeService());
     }
 
     void OnDayNightChanged(bool isDay)
@@ -78,23 +57,55 @@ public class SpawnerBugPlant : MonoBehaviour
         if (isDay)
         {
             SpawnDayContent();
+            DestroyBugsWithTag("BugNight");
         }
         else
         {
             SpawnNightContent();
+            DestroyBugsWithTag("BugDay");
         }
     }
 
     void SpawnDayContent()
     {
-        SpawnPlants(_maxPlantPerSpawner);  
-        SpawnBugs(_maxBugPerSpawner);      
+        GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
+        GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
+
+        int plantShortage = _maxPlant - plants.Length;
+        int bugShortage = _maxBug - bugs.Length;
+
+
+        if (plantShortage > 0)
+        {
+            SpawnPlants(Mathf.Min(_maxPlantPerSpawner, plantShortage));
+        }
+        Debug.Log($"[Spawner] Current plant count: {plants.Length}, max: {_maxPlant}");
+
+        if (bugShortage > 0)
+        {
+            SpawnBugs(DayBugPrefabs, Mathf.Min(bugShortage, _maxBugPerSpawner), "BugDay");
+        }
     }
 
     void SpawnNightContent()
     {
-        SpawnPlants(_maxPlantPerSpawner); 
-        SpawnBugs(_maxBugPerSpawner);    
+        GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
+        GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
+
+        int plantShortage = _maxPlant - plants.Length;
+        int bugShortage = _maxBug - bugs.Length;
+
+        if (plantShortage > 0)
+        {
+            SpawnPlants(Mathf.Min(_maxPlantPerSpawner, plantShortage));
+        }
+
+        Debug.Log($"[Spawner] Current plant count: {plants.Length}, max: {_maxPlant}");
+
+        if (bugShortage > 0)
+        {
+           SpawnBugs(NightBugPrefabs, Mathf.Min(bugShortage, _maxBugPerSpawner), "BugNight");
+        }
     }
 
     void OnDestroy()
@@ -119,7 +130,7 @@ public class SpawnerBugPlant : MonoBehaviour
 
             float number = Random.Range(1, 4);
 
-            if(number == 1)
+            if (number == 1)
             {
                 Instantiate(PlantPrefab1, destination, PlantPrefab1.transform.rotation);
             }
@@ -136,31 +147,28 @@ public class SpawnerBugPlant : MonoBehaviour
         }
     }
 
-    void SpawnBugs(int bugsAmount)
+    void SpawnBugs(GameObject[] bugPrefabs, int bugsAmount, string bugTag)
     {
         for (int i = 0; i < bugsAmount; i++)
         {
-            Vector3 destination = new Vector3(Random.Range(transform.position.x - Bounds.x, transform.position.x + Bounds.x),
-                                    transform.position.y + 0.25f,
-                                    Random.Range(transform.position.z - Bounds.y, transform.position.z + Bounds.y));
+            Vector3 destination = new Vector3(
+                Random.Range(transform.position.x - Bounds.x, transform.position.x + Bounds.x),
+                transform.position.y + 0.25f,
+                Random.Range(transform.position.z - Bounds.y, transform.position.z + Bounds.y)
+            );
 
+            int index = Random.Range(0, bugPrefabs.Length);
+            GameObject bug = Instantiate(bugPrefabs[index], destination, bugPrefabs[index].transform.rotation);
+            bug.tag = bugTag; 
+        }
+    }
 
-            float number = Random.Range(1, 4);
-
-            if (number == 1)
-            {
-                Instantiate(BugPrefab1, destination, BugPrefab1.transform.rotation);
-            }
-
-            if (number == 2)
-            {
-                Instantiate(BugPrefab2, destination, BugPrefab2.transform.rotation);
-            }
-
-            if (number == 3)
-            {
-                Instantiate(BugPrefab3, destination, BugPrefab3.transform.rotation);
-            }
+    void DestroyBugsWithTag(string tag)
+    {
+        GameObject[] bugs = GameObject.FindGameObjectsWithTag(tag);
+        foreach (var bug in bugs)
+        {
+            Destroy(bug);
         }
     }
 

@@ -22,6 +22,8 @@ TagManager:
   - CampArea
   - FishingSlider
   - Slider
+  - BugDay
+  - BugNight
   layers:
   - Default
   - TransparentFX
