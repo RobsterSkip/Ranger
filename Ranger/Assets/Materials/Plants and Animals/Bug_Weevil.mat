@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ladybug
+  m_Name: Bug_Weevil
   m_Shader: {fileID: -6465566751694194690, guid: e208d8eefbc872d4fb305aa89c17a1f1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -82,7 +82,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 829e173d1ac58294eb88b08a65f739e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7627ae012c984e440bf1a7e1f368b05e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:

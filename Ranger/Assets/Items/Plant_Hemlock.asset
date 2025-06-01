@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
+  m_Name: Plant_Hemlock
+  m_EditorClassIdentifier: 
+  _id: e8491f88200591342b9968570d480bfc
+  _itemName: Hemlock
+  ItemIcon: {fileID: 21300000, guid: 3a5672376f6d57b408785c06289a8d14, type: 3}
+  _itemPrefab: {fileID: 3541265546410487635, guid: 51a24dde6eed2ec4c892e6f5857964ab, type: 3}

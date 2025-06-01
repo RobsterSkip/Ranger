@@ -2023,12 +2023,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -2039,9 +2051,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2494,12 +2518,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -2510,9 +2546,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8627,12 +8675,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -8643,9 +8703,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16403,6 +16475,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16676,12 +16760,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -16692,9 +16788,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18887,12 +18995,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -18903,9 +19023,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -20939,6 +21071,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -25707,12 +25851,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -25723,9 +25879,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -27295,12 +27463,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -27311,9 +27491,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -28991,6 +29183,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32208,12 +32412,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -32226,11 +32442,19 @@ PrefabInstance:
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -32844,6 +33068,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -33031,12 +33267,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -33047,9 +33295,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -36503,12 +36763,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -36519,9 +36791,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -38630,12 +38914,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -38646,9 +38942,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -39362,6 +39670,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -41175,12 +41495,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -41191,9 +41523,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -43636,12 +43980,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -43652,9 +44008,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -43764,6 +44132,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -44101,6 +44481,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -46657,6 +47049,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -48217,12 +48621,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -48233,9 +48649,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -54100,12 +54528,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -54116,9 +54556,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -55674,12 +56126,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab4
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab5
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: PlantPrefab6
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: DayBugPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: NightBugPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'DayBugPrefabs.Array.data[0]'
@@ -55690,9 +56154,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
     - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'DayBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: 'NightBugPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3160060496248116680, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
+      propertyPath: 'NightBugPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
     - target: {fileID: 4489764301990942478, guid: a63d90846e0a2bb45b82195270b83186, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -56032,6 +56508,18 @@ PrefabInstance:
       propertyPath: CampArea
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab4
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab5
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3374235635494895443, guid: 03d0f2e333542d44b84333537419543b, type: 3}
+      propertyPath: FishPrefab6
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
     - target: {fileID: 9170625645406622967, guid: 03d0f2e333542d44b84333537419543b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

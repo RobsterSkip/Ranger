@@ -14,9 +14,9 @@ public class SpawnerBugPlant : MonoBehaviour
     public GameObject PlantPrefab1;
     public GameObject PlantPrefab2;
     public GameObject PlantPrefab3;
-  // public GameObject PlantPrefab4;
-  // public GameObject PlantPrefab5;
-  // public GameObject PlantPrefab6;
+    public GameObject PlantPrefab4;
+    public GameObject PlantPrefab5;
+    public GameObject PlantPrefab6;
 
     public GameObject DayNight;
     public TimeManager TimeManager;

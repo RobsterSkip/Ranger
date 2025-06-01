@@ -9,6 +9,9 @@ public class Spawner : MonoBehaviour
     public GameObject FishPrefab1;
     public GameObject FishPrefab2;
     public GameObject FishPrefab3;
+    public GameObject FishPrefab4;
+    public GameObject FishPrefab5;
+    public GameObject FishPrefab6;
 
     public GameObject DayNight;
     public TimeManager TimeManager;

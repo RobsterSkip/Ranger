@@ -20,13 +20,15 @@ public class JournalEntries : MonoBehaviour
 
     private int _entryIndex = 0;
     
-    private readonly int _maxEntries = 9;
+    private readonly int _maxEntries = 18;
 
     Journal _journalClass;
     private GameObject _journal;
 
-    public bool _enable1, _enable2, _enable3, _enable4, _enable5, _enable6, _enable7, _enable8, _enable9;
-    public bool _added1, _added2, _added3, _added4, _added5, _added6, _added7, _added8, _added9;
+    public bool _enable1, _enable2, _enable3, _enable4, _enable5, _enable6, _enable7, _enable8, _enable9, 
+        _enable10, _enable11, _enable12, _enable13, _enable14, _enable15, _enable16, _enable17, _enable18;
+    public bool _added1, _added2, _added3, _added4, _added5, _added6, _added7, _added8, _added9,
+        _added10, _added11, _added12, _added13, _added14, _added15, _added16, _added17, _added18;
 
     private void Start()
     {
@@ -91,7 +93,7 @@ public class JournalEntries : MonoBehaviour
         switch (_entryIndex)
         {
             case 0:
-                _pageNumber.SetText("1/9");
+                _pageNumber.SetText("1/18");
                 if(_enable1 == true) 
                 {
                     color = Color.magenta;
@@ -132,7 +134,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It was no flyby.");
                 break;
             case 1:
-                _pageNumber.SetText("2/9");
+                _pageNumber.SetText("2/18");
                 if (_enable2 == true)
                 {
                     color = Color.magenta;
@@ -173,7 +175,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("A distinguished gentleman!");
                 break;
             case 2:
-                _pageNumber.SetText("3/9");
+                _pageNumber.SetText("3/18");
                 if (_enable3 == true)
                 {
                     color = Color.magenta;
@@ -214,7 +216,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("There is a catter-pile of them.");
                 break;
             case 3:
-                _pageNumber.SetText("4/9");
+                _pageNumber.SetText("4/18");
                 if (_enable4 == true)
                 {
                     color = Color.yellow;
@@ -256,7 +258,7 @@ public class JournalEntries : MonoBehaviour
                 break;
 
             case 4:
-                _pageNumber.SetText("5/9");
+                _pageNumber.SetText("5/18");
                 if (_enable5 == true)
                 {
                     color = Color.yellow;
@@ -297,7 +299,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("The brightest of them all.");
                 break;
             case 5:
-                _pageNumber.SetText("6/9");
+                _pageNumber.SetText("6/18");
                 if (_enable6 == true)
                 {
                     color = Color.yellow;
@@ -338,7 +340,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("I forgot.");
                 break;
             case 6:
-                _pageNumber.SetText("7/9");
+                _pageNumber.SetText("7/18");
                 if (_enable7 == true)
                 {
                     color = Color.blue;
@@ -379,7 +381,7 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It is not that bad.");
                 break;
             case 7:
-                _pageNumber.SetText("8/9");
+                _pageNumber.SetText("8/18");
                 if (_enable8 == true)
                 {
                     color = Color.blue;
@@ -420,13 +422,54 @@ public class JournalEntries : MonoBehaviour
                 _entry.SetText("It was not a long search.");
                 break;
             case 8:
-                _pageNumber.SetText("9/9");
+                _pageNumber.SetText("9/18");
                 if (_enable9 == true)
                 {
                     color = Color.blue;
                     color.a = 0.75f;
 
                     if (!_added9)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added9 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Trout");
+                _entry.SetText("Proud of this trout!");
+                break;
+            case 9:
+                _pageNumber.SetText("10/18");
+                if (_enable10 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added10)
                     {
                         _collectionPercentage.AddNewEntry();
                         _added9 = true;

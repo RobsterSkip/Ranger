@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf17298d419d60f4c85a6788c0f5fae2, type: 3}
+  m_Name: Plant_Marigold
+  m_EditorClassIdentifier: 
+  _id: 77be611ca6baad04cbe28d85a0cf088a
+  _itemName: Marigold
+  ItemIcon: {fileID: 21300000, guid: b372a280ead33c941975a3bca59b472d, type: 3}
+  _itemPrefab: {fileID: 3541265546410487635, guid: 80b536febb5d4584ca76936560f95348, type: 3}
