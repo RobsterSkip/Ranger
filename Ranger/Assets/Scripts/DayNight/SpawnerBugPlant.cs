@@ -128,7 +128,7 @@ public class SpawnerBugPlant : MonoBehaviour
                 continue;
             }
 
-            float number = Random.Range(1, 4);
+            float number = Random.Range(1, 7);
 
             if (number == 1)
             {
@@ -143,6 +143,21 @@ public class SpawnerBugPlant : MonoBehaviour
             if (number == 3)
             {
                 Instantiate(PlantPrefab3, destination, PlantPrefab3.transform.rotation);
+            }
+
+            if (number == 4)
+            {
+                Instantiate(PlantPrefab4, destination, PlantPrefab3.transform.rotation);
+            }
+
+            if (number == 5)
+            {
+                Instantiate(PlantPrefab5, destination, PlantPrefab3.transform.rotation);
+            }
+
+            if (number == 6)
+            {
+                Instantiate(PlantPrefab6, destination, PlantPrefab3.transform.rotation);
             }
         }
     }

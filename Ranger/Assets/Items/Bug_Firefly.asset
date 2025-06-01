@@ -16,3 +16,4 @@ MonoBehaviour:
   _itemName: Firefly
   ItemIcon: {fileID: 21300000, guid: b99a597ea66755147bcac3b9f3f44b0a, type: 3}
   _itemPrefab: {fileID: 5967984084064161190, guid: 2f1bc3505054af145a638989516b7acb, type: 3}
+  _itemType: 1

@@ -53,7 +53,7 @@ public class Spawner : MonoBehaviour
                                     Random.Range(transform.position.z - Bounds.y, transform.position.z + Bounds.y));
 
 
-            float number = Random.Range(1, 4);
+            float number = Random.Range(1, 7);
 
             if (number == 1)
             {
@@ -68,6 +68,21 @@ public class Spawner : MonoBehaviour
             if (number == 3)
             {
                 Instantiate(FishPrefab3, destination, FishPrefab3.transform.rotation);
+            }
+
+            if (number == 4)
+            {
+                Instantiate(FishPrefab4, destination, FishPrefab3.transform.rotation);
+            }
+
+            if (number == 5)
+            {
+                Instantiate(FishPrefab5, destination, FishPrefab3.transform.rotation);
+            }
+
+            if (number == 6)
+            {
+                Instantiate(FishPrefab6, destination, FishPrefab3.transform.rotation);
             }
         }
     }

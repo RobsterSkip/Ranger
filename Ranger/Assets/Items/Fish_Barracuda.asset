@@ -16,3 +16,4 @@ MonoBehaviour:
   _itemName: Barracuda
   ItemIcon: {fileID: 21300000, guid: ac27cd8695d86e04cb3d2bdc24b08acc, type: 3}
   _itemPrefab: {fileID: 5698201278719751853, guid: 08d42d5a5755b2f46a352d76eae8cdb1, type: 3}
+  _itemType: 2

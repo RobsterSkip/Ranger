@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -29,6 +30,12 @@ public class Inventory : MonoBehaviour
 
     public bool InventoryFull;
 
+    private const int MaxWeight = 15;
+    private int _currentWeight = 0;
+
+    [SerializeField]
+    private TextMeshProUGUI _weightText;
+    
     private void Start()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
@@ -41,11 +48,27 @@ public class Inventory : MonoBehaviour
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
+
+        _weightText.enabled = false;
     }
 
     private void Update()
     {
         RefreshUI();
+        WeightText();
+    }
+
+    private void WeightText()
+    {
+        _weightText.text = "Space left: " + (15 - _currentWeight) + "/ 15";
+        if (_inventoryInput._inventoryOpen == true)
+        {
+            _weightText.enabled = true;
+        }
+        else
+        {
+            _weightText.enabled = false;
+        }
     }
 
     private void OnValidate()
@@ -76,15 +99,14 @@ public class Inventory : MonoBehaviour
         _isDropped = true;
 
         _items.Remove(item);
-        Destroy(item);     
+        _currentWeight -= item.Weight; // Reduce weight
+        Destroy(item);
         RefreshUI();
 
         _inventoryInput._inventoryOpen = false;
         _journalClass._journalOpen = false;
         _cameraMovement._inventoryOpen = false;
         gameObject.SetActive(false);
-
-        //ItemDroppedText();
     }
 
     private void ItemDroppedText()
@@ -100,12 +122,16 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Items item)
     {
-        if (IsFull() && InventoryFull == true)
+        if (_currentWeight + item.Weight >= MaxWeight)
         {
+            InventoryFull = true;
             return false;
         }
 
         _items.Add(item);
+        _currentWeight += item.Weight;
+        InventoryFull = false;
+
         RefreshUI();
         return true;
     }

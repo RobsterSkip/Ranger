@@ -16,3 +16,4 @@ MonoBehaviour:
   _itemName: Catfish
   ItemIcon: {fileID: 21300000, guid: 2f9dd6d4fadabd74faa6e4b24aa6fe60, type: 3}
   _itemPrefab: {fileID: 5698201278719751853, guid: 0d1b08acc54b22346807475713670358, type: 3}
+  _itemType: 2
