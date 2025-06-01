@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4948c0ad35b71e4abdcbc2633594b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: 739f847d50849514a8ad5451c056b729, type: 2}
+  _item: {fileID: 11400000, guid: 23a1536edf481d7429069632b3f6127f, type: 2}
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   Manager: {fileID: 0}

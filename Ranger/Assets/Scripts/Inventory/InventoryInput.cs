@@ -8,6 +8,7 @@ public class InventoryInput : MonoBehaviour
     Journal _journalClass;
     [SerializeField] private GameObject _journal;
     [SerializeField] private TextMeshProUGUI _escapeText;
+    [SerializeField] private TextMeshProUGUI _weightText;
 
     public bool _inventoryOpen;
 
@@ -16,17 +17,24 @@ public class InventoryInput : MonoBehaviour
         _journal = GameObject.FindGameObjectWithTag("Journal");
         _journalClass = _journal.GetComponent<Journal>();
         _escapeText.enabled = false;
+        _weightText.enabled = false;
     }
 
     private void Update()
     {
-      //  Debug.Log(_inventoryOpen);
+        if(_inventoryOpen == true)
+        {
+            _escapeText.enabled = true;
+            _weightText.enabled = true;
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
         {
             _inventory.SetActive(true);
             _inventoryOpen = true;
             _journalClass._journalOpen = true;
             _escapeText.enabled = true;
+            _weightText.enabled = true;
         }
         else if(_inventoryOpen == true && (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)))
         {
@@ -34,6 +42,12 @@ public class InventoryInput : MonoBehaviour
             _inventoryOpen = false;
             _journalClass._journalOpen = false;
             _escapeText.enabled = false;
+            _weightText.enabled = false;
+        }
+        else if (_inventoryOpen == true && Input.GetMouseButtonUp(0))
+        {
+            _escapeText.enabled = false;
+            _weightText.enabled = false;
         }
     }
 }

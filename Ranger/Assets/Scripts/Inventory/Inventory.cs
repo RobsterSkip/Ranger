@@ -48,8 +48,6 @@ public class Inventory : MonoBehaviour
 
         _camera = GameObject.FindGameObjectWithTag("MainCamera");
         _cameraMovement = _camera.GetComponent<CameraMovement>();
-
-        _weightText.enabled = false;
     }
 
     private void Update()
@@ -61,14 +59,6 @@ public class Inventory : MonoBehaviour
     private void WeightText()
     {
         _weightText.text = "Space left: " + (15 - _currentWeight) + "/ 15";
-        if (_inventoryInput._inventoryOpen == true)
-        {
-            _weightText.enabled = true;
-        }
-        else
-        {
-            _weightText.enabled = false;
-        }
     }
 
     private void OnValidate()
@@ -122,9 +112,8 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Items item)
     {
-        if (_currentWeight + item.Weight >= MaxWeight)
+        if (_currentWeight + item.Weight > MaxWeight && IsFull() && InventoryFull == true)
         {
-            InventoryFull = true;
             return false;
         }
 
