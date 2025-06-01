@@ -112,47 +112,6 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[0];
-
-                    _journalColour.GetComponent<Image>().color = color;
-                }
-                else
-                {
-                    color = Color.magenta;
-                    color.a = 0.75f;
-
-                    _title.enabled = false;
-                    _entry.enabled = false;
-
-                    _missingEntry.enabled = true;
-                    _talkToRanger.enabled = true;
-
-                    _panelImage.sprite = _sprites[9];
-
-                    _journalColour.GetComponent<Image>().color = color;
-                }
-                _title.SetText("Ladybug");
-                _entry.SetText("A distinguished gentleman.");
-                break;
-            case 1:
-                _pageNumber.SetText("2/18");
-                if (_enable2 == true)
-                {
-                    color = Color.magenta;
-                    color.a = 0.75f;
-
-                    if (!_added2)
-                    {
-                        _collectionPercentage.AddNewEntry();
-                        _added2 = true;
-                    }
-
-                    _title.enabled = true;
-                    _entry.enabled = true;
-
-                    _missingEntry.enabled = false;
-                    _talkToRanger.enabled = false;
-
                     _panelImage.sprite = _sprites[1];
 
                     _journalColour.GetComponent<Image>().color = color;
@@ -172,20 +131,20 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Catterpillar");
-                _entry.SetText("There is a catter-pile of them.");
+                _title.SetText("Ladybug");
+                _entry.SetText("A distinguished gentleman.");
                 break;
-            case 2:
-                _pageNumber.SetText("3/18");
-                if (_enable3 == true)
+            case 1:
+                _pageNumber.SetText("2/18");
+                if (_enable2 == true)
                 {
                     color = Color.magenta;
                     color.a = 0.75f;
 
-                    if (!_added3)
+                    if (!_added2)
                     {
                         _collectionPercentage.AddNewEntry();
-                        _added3 = true;
+                        _added2 = true;
                     }
 
                     _title.enabled = true;
@@ -213,8 +172,49 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
+                _title.SetText("Catterpillar");
+                _entry.SetText("There is a catter-pile of them.");
+                break;
+            case 2:
+                _pageNumber.SetText("3/18");
+                if (_enable3 == true)
+                {
+                    color = Color.magenta;
+                    color.a = 0.75f;
+
+                    if (!_added3)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added3 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[20];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.magenta;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[29];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
                 _title.SetText("Weevil");
-                _entry.SetText("We will bug you.");
+                _entry.SetText("We will bug you."); 
                 break;
             case 3:
                 _pageNumber.SetText("4/18");
@@ -235,7 +235,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[3];
+                    _panelImage.sprite = _sprites[0];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -250,14 +250,13 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[12];
+                    _panelImage.sprite = _sprites[9];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Moth");
                 _entry.SetText("It was no flyby.");
                 break;
-
             case 4:
                 _pageNumber.SetText("5/18");
                 if (_enable5 == true)
@@ -277,7 +276,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[4];
+                    _panelImage.sprite = _sprites[19];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -292,7 +291,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[13];
+                    _panelImage.sprite = _sprites[28];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -318,7 +317,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[5];
+                    _panelImage.sprite = _sprites[18];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -333,7 +332,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[14];
+                    _panelImage.sprite = _sprites[27];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -360,7 +359,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[6];
+                    _panelImage.sprite = _sprites[3];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -375,7 +374,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[15];
+                    _panelImage.sprite = _sprites[12];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -401,7 +400,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[7];
+                    _panelImage.sprite = _sprites[4];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -416,7 +415,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[16];
+                    _panelImage.sprite = _sprites[13];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -442,7 +441,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[5];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -457,7 +456,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[14];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -483,7 +482,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[21];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -498,7 +497,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[30];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -524,7 +523,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[22];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -539,7 +538,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[31];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -565,7 +564,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[23];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -580,7 +579,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[32];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -607,7 +606,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[6];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -622,7 +621,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[15];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -648,7 +647,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[7];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -663,7 +662,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[16];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -730,7 +729,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[24];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -745,7 +744,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[33];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -771,7 +770,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[26];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -786,7 +785,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[35];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -812,7 +811,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
-                    _panelImage.sprite = _sprites[8];
+                    _panelImage.sprite = _sprites[25];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
@@ -827,7 +826,7 @@ public class JournalEntries : MonoBehaviour
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
-                    _panelImage.sprite = _sprites[17];
+                    _panelImage.sprite = _sprites[34];
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
