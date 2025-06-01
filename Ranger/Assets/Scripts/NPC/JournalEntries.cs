@@ -92,6 +92,7 @@ public class JournalEntries : MonoBehaviour
         var color = _journalColour.GetComponent<Image>().color;
         switch (_entryIndex)
         {
+            //BUGS
             case 0:
                 _pageNumber.SetText("1/18");
                 if(_enable1 == true) 
@@ -130,8 +131,8 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Moth");
-                _entry.SetText("It was no flyby.");
+                _title.SetText("Ladybug");
+                _entry.SetText("A distinguished gentleman.");
                 break;
             case 1:
                 _pageNumber.SetText("2/18");
@@ -171,8 +172,8 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Ladybug");
-                _entry.SetText("A distinguished gentleman!");
+                _title.SetText("Catterpillar");
+                _entry.SetText("There is a catter-pile of them.");
                 break;
             case 2:
                 _pageNumber.SetText("3/18");
@@ -212,14 +213,14 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Catterpillar");
-                _entry.SetText("There is a catter-pile of them.");
+                _title.SetText("Weevil");
+                _entry.SetText("We will bug you.");
                 break;
             case 3:
                 _pageNumber.SetText("4/18");
                 if (_enable4 == true)
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     if (!_added4)
@@ -240,7 +241,7 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     _title.enabled = false;
@@ -253,15 +254,15 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Wildflower");
-                _entry.SetText("This is wild!");
+                _title.SetText("Moth");
+                _entry.SetText("It was no flyby.");
                 break;
 
             case 4:
                 _pageNumber.SetText("5/18");
                 if (_enable5 == true)
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     if (!_added5)
@@ -282,7 +283,7 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     _title.enabled = false;
@@ -295,14 +296,14 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Sunflower");
-                _entry.SetText("The brightest of them all.");
+                _title.SetText("Firefly");
+                _entry.SetText("Does: fly, doesn't: fire");
                 break;
             case 5:
                 _pageNumber.SetText("6/18");
                 if (_enable6 == true)
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     if (!_added6)
@@ -323,7 +324,7 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
-                    color = Color.yellow;
+                    color = Color.magenta;
                     color.a = 0.75f;
 
                     _title.enabled = false;
@@ -336,14 +337,15 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Forget-me-not");
-                _entry.SetText("I forgot.");
+                _title.SetText("Cricket");
+                _entry.SetText("#1 cricketer in the forest.");
                 break;
+    //PLANTS
             case 6:
                 _pageNumber.SetText("7/18");
                 if (_enable7 == true)
                 {
-                    color = Color.blue;
+                    color = Color.yellow;
                     color.a = 0.75f;
 
                     if (!_added7)
@@ -364,7 +366,7 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
-                    color = Color.blue;
+                    color = Color.yellow;
                     color.a = 0.75f;
 
                     _title.enabled = false;
@@ -377,14 +379,14 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Carp");
-                _entry.SetText("It is not that bad.");
+                _title.SetText("Wildflower");
+                _entry.SetText("This is wild!");
                 break;
             case 7:
                 _pageNumber.SetText("8/18");
                 if (_enable8 == true)
                 {
-                    color = Color.blue;
+                    color = Color.yellow;
                     color.a = 0.75f;
 
                     if (!_added8)
@@ -405,7 +407,7 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
-                    color = Color.blue;
+                    color = Color.yellow;
                     color.a = 0.75f;
 
                     _title.enabled = false;
@@ -418,14 +420,14 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Perch");
-                _entry.SetText("It was not a long search.");
+                _title.SetText("Sunflower");
+                _entry.SetText("The brightest of them all.");
                 break;
             case 8:
                 _pageNumber.SetText("9/18");
                 if (_enable9 == true)
                 {
-                    color = Color.blue;
+                    color = Color.yellow;
                     color.a = 0.75f;
 
                     if (!_added9)
@@ -446,6 +448,171 @@ public class JournalEntries : MonoBehaviour
                 }
                 else
                 {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Forget-me-not");
+                _entry.SetText("I forgot.");
+                break;
+            case 9:
+                _pageNumber.SetText("10/18");
+                if (_enable10 == true)
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    if (!_added10)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added10 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Hemlock");
+                _entry.SetText("Can you hem-lock in?");
+                break;
+            case 10:
+                _pageNumber.SetText("11/18");
+                if (_enable11 == true)
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    if (!_added11)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added11 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Marigold");
+                _entry.SetText("You struck mari-gold.");
+                break;
+            case 11:
+                _pageNumber.SetText("12/18");
+                if (_enable12 == true)
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    if (!_added12)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added12 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.yellow;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Rose");
+                _entry.SetText("Rise to the occasion!");
+                break;
+    //FISH
+            case 12:
+                _pageNumber.SetText("13/18");
+                if (_enable13 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added13)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added13 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
                     color = Color.blue;
                     color.a = 0.75f;
 
@@ -459,20 +626,61 @@ public class JournalEntries : MonoBehaviour
 
                     _journalColour.GetComponent<Image>().color = color;
                 }
-                _title.SetText("Trout");
-                _entry.SetText("Proud of this trout!");
+                _title.SetText("Carp");
+                _entry.SetText("It is not that bad.");
                 break;
-            case 9:
-                _pageNumber.SetText("10/18");
-                if (_enable10 == true)
+            case 13:
+                _pageNumber.SetText("14/18");
+                if (_enable14 == true)
                 {
                     color = Color.blue;
                     color.a = 0.75f;
 
-                    if (!_added10)
+                    if (!_added14)
                     {
                         _collectionPercentage.AddNewEntry();
-                        _added9 = true;
+                        _added14 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Perch");
+                _entry.SetText("It was not a long search.");
+                break;
+            case 14:
+                _pageNumber.SetText("15/18");
+                if (_enable15 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added15)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added15 = true;
                     }
 
                     _title.enabled = true;
@@ -502,6 +710,129 @@ public class JournalEntries : MonoBehaviour
                 }
                 _title.SetText("Trout");
                 _entry.SetText("Proud of this trout!");
+                break;
+            case 15:
+                _pageNumber.SetText("16/18");
+                if (_enable16 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added16)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added16 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Barracuda");
+                _entry.SetText("The fish that barra-could.");
+                break;
+            case 16:
+                _pageNumber.SetText("17/18");
+                if (_enable17 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added17)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added17 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Catfish");
+                _entry.SetText("Only 1 of the 2 animals.");
+                break;
+            case 17:
+                _pageNumber.SetText("18/18");
+                if (_enable18 == true)
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    if (!_added18)
+                    {
+                        _collectionPercentage.AddNewEntry();
+                        _added18 = true;
+                    }
+
+                    _title.enabled = true;
+                    _entry.enabled = true;
+
+                    _missingEntry.enabled = false;
+                    _talkToRanger.enabled = false;
+
+                    _panelImage.sprite = _sprites[8];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                else
+                {
+                    color = Color.blue;
+                    color.a = 0.75f;
+
+                    _title.enabled = false;
+                    _entry.enabled = false;
+
+                    _missingEntry.enabled = true;
+                    _talkToRanger.enabled = true;
+
+                    _panelImage.sprite = _sprites[17];
+
+                    _journalColour.GetComponent<Image>().color = color;
+                }
+                _title.SetText("Tuna");
+                _entry.SetText("How for-tuna-d!");
                 break;
         }
     }
