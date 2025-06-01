@@ -22,12 +22,6 @@ public class InventoryInput : MonoBehaviour
 
     private void Update()
     {
-        if(_inventoryOpen == true)
-        {
-            _escapeText.enabled = true;
-            _weightText.enabled = true;
-        }
-
         if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
         {
             _inventory.SetActive(true);
@@ -45,6 +39,12 @@ public class InventoryInput : MonoBehaviour
             _weightText.enabled = false;
         }
         else if (_inventoryOpen == true && Input.GetMouseButtonUp(0))
+        {
+            _escapeText.enabled = false;
+            _weightText.enabled = false;
+        }
+
+        if(_inventoryOpen == false)
         {
             _escapeText.enabled = false;
             _weightText.enabled = false;

@@ -112,8 +112,9 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Items item)
     {
-        if (_currentWeight + item.Weight > MaxWeight && IsFull() && InventoryFull == true)
+        if (_currentWeight + item.Weight > MaxWeight)
         {
+            InventoryFull = true;
             return false;
         }
 
@@ -125,23 +126,16 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public bool IsFull()
+    public bool IsSlotFull()
     {
         for (int i = 0; i < _itemSlots.Length; i++)
         {
             if (_itemSlots[i].Item == null)
-            {
-                InventoryFull = true;
                 return false;
-            }
-            else
-            {
-                InventoryFull = false;
-            }
         }
-
         return true;
     }
+
 
     public bool RemoveItem(Items item)
     {

@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        InventoryScript.IsFull();
+        InventoryScript.IsSlotFull();
         SetPickupText();
     }
 
@@ -31,11 +31,11 @@ public class InventoryManager : MonoBehaviour
     {
         if (InventoryScript.InventoryFull)
         {
-            _pickupPanelText.text = "-Press E to Pickup-";
+            _pickupPanelText.text = "-Inventory full!-";
         }
         else
         {
-            _pickupPanelText.text = "-Inventory full!-";
+            _pickupPanelText.text = "-Press E to Pickup-";
         }
     }
 }

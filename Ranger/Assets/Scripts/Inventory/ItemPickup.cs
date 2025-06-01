@@ -24,11 +24,15 @@ public class ItemPickup : MonoBehaviour
     {
         if (_isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (Manager.InventoryScript.IsFull() == false)
+            Items newItem = Instantiate(_item);
+            if (Manager.InventoryScript.AddItem(newItem))
             {
-                Manager.InventoryScript.AddItem(Instantiate(_item));
                 Destroy(gameObject);
                 Manager.PickupPanel.SetActive(false);
+            }
+            else
+            {
+                Destroy(newItem);
             }
         }
     }
