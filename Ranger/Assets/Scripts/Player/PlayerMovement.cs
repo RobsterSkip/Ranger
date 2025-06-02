@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool CanFish = false;
     public bool CanThrowRod = false;
+    public bool NearWater = false;
 
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
@@ -69,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false)
+        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false && BooleanManager.MovementDisabled == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;
@@ -102,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Physics.CheckSphere(transform.position, 6, waterLayer)) //is in range
         {
+            NearWater = true;
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
             
@@ -131,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            CanThrowRod = false;
+            NearWater = false;
             Manager.CanFish.gameObject.SetActive(false);
         }
     }

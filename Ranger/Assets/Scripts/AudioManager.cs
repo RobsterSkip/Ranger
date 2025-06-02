@@ -54,11 +54,6 @@ public class AudioManager : MonoBehaviour
             _journalCompletePlayed = true;
         }
 
-        if (BooleanManager.IsBaitDropped)
-        {
-
-        }
-
         if (BooleanManager.IsItemPicked)
         {
             _audioSourceSoundEffects.volume = 0.2f;
@@ -68,18 +63,31 @@ public class AudioManager : MonoBehaviour
 
         if (BooleanManager.IsItemAddedJournal && !BooleanManager.IsJournalCompleted)
         {
+            _audioSourceSoundEffects.volume = 2f;
             _audioSourceSoundEffects.PlayOneShot(_audioClip[2]);
             BooleanManager.IsItemAddedJournal = false;
         }
 
         if (BooleanManager.IsLineCast)
         {
-
+            _audioSourceSoundEffects.volume = 0.1f;
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[3]);
+            BooleanManager.IsLineCast = false; 
         }
 
-        if (BooleanManager.IsFishingMinigame)
+        if (BooleanManager.IsFishCaught && !BooleanManager._isFishCaughtPlayed)
         {
+            _audioSourceSoundEffects.volume = 0.2f;
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[4]);
+            BooleanManager.IsFishCaught = false;
+            BooleanManager._isFishCaughtPlayed = true;
+        }
 
+        if (BooleanManager.IsItemDropped)
+        {
+            _audioSourceSoundEffects.volume = 0.2f;
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[5]);
+            BooleanManager.IsItemDropped = false;
         }
     }
 }

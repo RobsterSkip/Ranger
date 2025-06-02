@@ -162,6 +162,7 @@ public class FishMovement : MonoBehaviour
     {
         if (IsCaught)
         {
+            BooleanManager.IsFishCaught = true;
             _isSet = true;
 
             if (_counter != 0)
@@ -181,6 +182,7 @@ public class FishMovement : MonoBehaviour
                 Fishing.DisableQuickTimeUI();
                 PlayerMovement.IsFishing = false;
                 IsCaught = false;
+                BooleanManager._isFishCaughtPlayed = false;
                 return;
             }
 
@@ -197,6 +199,7 @@ public class FishMovement : MonoBehaviour
 
                 PlayerMovement.CanFish = false;
                 _box.size = new Vector3(3f, 1.85f, 3f);
+                BooleanManager._isFishCaughtPlayed = false;
             }
         }
     }

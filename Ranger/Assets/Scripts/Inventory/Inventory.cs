@@ -85,6 +85,7 @@ public class Inventory : MonoBehaviour
 
     private void ItemDropped(Items item)
     {
+        BooleanManager.IsItemDropped = true;
         Instantiate(item.ItemPrefab, _player.transform.position + _player.transform.forward * 2 + _player.transform.up, Quaternion.identity);
         _isDropped = true;
 

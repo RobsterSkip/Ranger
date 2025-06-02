@@ -45,12 +45,13 @@ public class Fishing : MonoBehaviour
 
     void Update()
     {
-        if (_isFishing && Input.GetMouseButtonUp(0) && PlayerMovement.CanThrowRod == true)
+        if (_isFishing && Input.GetMouseButtonUp(0) && PlayerMovement.CanThrowRod && PlayerMovement.NearWater)
         {
             if (_bait != null)
             {
                 Destroy(_bait);
             }
+            BooleanManager.IsLineCast = true;
 
             PlayerMovement.IsFishing = true;
             _bait = Instantiate(BaitPrefab,new Vector3(transform.position.x, transform.position.y+8, transform.position.z) + transform.forward*3, transform.rotation);
@@ -58,8 +59,9 @@ public class Fishing : MonoBehaviour
             _baitRB.AddForce(_bait.transform.forward * _counter * 1f);
         }
 
-        if (PlayerMovement.CanFish == true && Input.GetMouseButton(0))
+        if (PlayerMovement.CanFish == true && Input.GetMouseButton(0) && PlayerMovement.NearWater)
         {
+            BooleanManager.MovementDisabled = true;
             DropBug.SetActive(false);
             FishingSlider.SetActive(true);
 
@@ -80,6 +82,7 @@ public class Fishing : MonoBehaviour
             _counter = 0;
             _isFishing = false;
             FishingSlider.gameObject.SetActive(false);
+            BooleanManager.MovementDisabled = false;
         }
 
         if(PlayerMovement.IsFishing && (Input.GetKey(KeyCode.Escape) || Input.GetMouseButton(0)))
