@@ -27,6 +27,7 @@ public class ItemPickup : MonoBehaviour
             Items newItem = Instantiate(_item);
             if (Manager.InventoryScript.AddItem(newItem))
             {
+                BooleanManager.IsItemPicked = true;
                 Destroy(gameObject);
                 Manager.PickupPanel.SetActive(false);
             }

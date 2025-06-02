@@ -32,6 +32,7 @@ public class CollectionPercentage : MonoBehaviour
     {
         if (_currentCollected >= _totalCollection)
         {
+            BooleanManager.IsJournalCompleted = true;
             _percentageText.text = "JOURNAL COMPLETE!!!!";
         }
     }

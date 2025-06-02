@@ -58,11 +58,15 @@ public class SpawnerBugPlant : MonoBehaviour
         {
             SpawnDayContent();
             DestroyBugsWithTag("BugNight");
+            BooleanManager.IsDay = true;
+            BooleanManager.IsNight = false;
         }
         else
         {
             SpawnNightContent();
             DestroyBugsWithTag("BugDay");
+            BooleanManager.IsDay = false;
+            BooleanManager.IsNight = true;
         }
     }
 
@@ -99,8 +103,6 @@ public class SpawnerBugPlant : MonoBehaviour
         {
             SpawnPlants(Mathf.Min(_maxPlantPerSpawner, plantShortage));
         }
-
-        Debug.Log($"[Spawner] Current plant count: {plants.Length}, max: {_maxPlant}");
 
         if (bugShortage > 0)
         {

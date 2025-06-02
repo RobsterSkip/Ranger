@@ -160,6 +160,9 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameCarp = _collectibles[6].name.Trim().ToLower();
                     string collectibleNamePerch = _collectibles[7].name.Trim().ToLower();
                     string collectibleNameTrout = _collectibles[8].name.Trim().ToLower();
+                    string collectibleNameBarracuda = _collectibles[9].name.Trim().ToLower();
+                    string collectibleNameCatfish = _collectibles[10].name.Trim().ToLower();
+                    string collectibleNameTuna = _collectibles[11].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
                     _cameraMovement._inventoryOpen = false;
@@ -171,15 +174,27 @@ public class ChatBubble : MonoBehaviour
 
                     if (droppedName == collectibleNameCarp)
                     {
-                        _journalEntries._enable7 = true;
+                        _journalEntries._enable13 = true;
                     }
                     else if (droppedName == collectibleNamePerch)
                     {
-                        _journalEntries._enable8 = true;
+                        _journalEntries._enable14 = true;
                     }
                     else if (droppedName == collectibleNameTrout)
                     {
-                        _journalEntries._enable9 = true;
+                        _journalEntries._enable15 = true;
+                    }
+                    else if (droppedName == collectibleNameBarracuda)
+                    {
+                        _journalEntries._enable16 = true;
+                    }
+                    else if (droppedName == collectibleNameCatfish)
+                    {
+                        _journalEntries._enable17 = true;
+                    }
+                    else if (droppedName == collectibleNameTuna)
+                    {
+                        _journalEntries._enable18 = true;
                     }
 
                     Destroy(droppedItem.gameObject);
@@ -192,6 +207,9 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameMoth = _collectibles[0].name.Trim().ToLower();
                     string collectibleNameCatterpillar = _collectibles[1].name.Trim().ToLower();
                     string collectibleNameLadybug = _collectibles[2].name.Trim().ToLower();
+                    string collectibleNameWeevil = _collectibles[12].name.Trim().ToLower();
+                    string collectibleNameFirefly = _collectibles[13].name.Trim().ToLower();
+                    string collectibleNameCricket = _collectibles[14].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
@@ -202,15 +220,27 @@ public class ChatBubble : MonoBehaviour
                    _bubbleText.ForceMeshUpdate();
                     if(droppedName == collectibleNameMoth)
                     {
-                        _journalEntries._enable1 = true;
+                        _journalEntries._enable4 = true;
                     }
                     else if (droppedName == collectibleNameLadybug)
                     {
-                        _journalEntries._enable2 = true;
+                        _journalEntries._enable1 = true;
                     }
                     else if(droppedName == collectibleNameCatterpillar)
                     {
+                        _journalEntries._enable2 = true;
+                    }
+                    else if (droppedName == collectibleNameWeevil)
+                    {
                         _journalEntries._enable3 = true;
+                    }
+                    else if (droppedName == collectibleNameFirefly)
+                    {
+                        _journalEntries._enable5 = true;
+                    }
+                    else if (droppedName == collectibleNameCricket)
+                    {
+                        _journalEntries._enable6 = true;
                     }
 
                     Destroy(droppedItem.gameObject);
@@ -223,6 +253,9 @@ public class ChatBubble : MonoBehaviour
                     string collectibleNameWildflower = _collectibles[3].name.Trim().ToLower();
                     string collectibleNameSunflower = _collectibles[4].name.Trim().ToLower();
                     string collectibleNameForgetmenot = _collectibles[5].name.Trim().ToLower();
+                    string collectibleNameRose = _collectibles[15].name.Trim().ToLower();
+                    string collectibleNameMarigold = _collectibles[16].name.Trim().ToLower();
+                    string collectibleNameHemlock = _collectibles[17].name.Trim().ToLower();
 
                     Manager.Inventory.SetActive(false);
                    _cameraMovement._inventoryOpen = false;
@@ -234,15 +267,27 @@ public class ChatBubble : MonoBehaviour
 
                     if (droppedName == collectibleNameWildflower)
                     {
-                        _journalEntries._enable4 = true;
+                        _journalEntries._enable7 = true;
                     }
                     else if (droppedName == collectibleNameSunflower)
                     {
-                        _journalEntries._enable5 = true;
+                        _journalEntries._enable8 = true;
                     }
                     else if (droppedName == collectibleNameForgetmenot)
                     {
-                        _journalEntries._enable6 = true;
+                        _journalEntries._enable9 = true;
+                    }
+                    else if (droppedName == collectibleNameRose)
+                    {
+                        _journalEntries._enable12 = true;
+                    }
+                    else if (droppedName == collectibleNameMarigold)
+                    {
+                        _journalEntries._enable11 = true;
+                    }
+                    else if (droppedName == collectibleNameHemlock)
+                    {
+                        _journalEntries._enable10 = true;
                     }
 
                     Destroy(droppedItem.gameObject);

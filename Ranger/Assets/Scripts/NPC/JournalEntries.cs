@@ -103,6 +103,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added1)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added1 = true;
                     }
 
@@ -144,6 +145,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added2)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added2 = true;
                     }
 
@@ -185,6 +187,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added3)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added3 = true;
                     }
 
@@ -226,6 +229,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added4)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added4 = true;
                     }
 
@@ -267,6 +271,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added5)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added5 = true;
                     }
 
@@ -308,6 +313,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added6)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added6 = true;
                     }
 
@@ -350,6 +356,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added7)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added7 = true;
                     }
 
@@ -391,6 +398,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added8)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added8 = true;
                     }
 
@@ -432,6 +440,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added9)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added9 = true;
                     }
 
@@ -473,6 +482,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added10)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added10 = true;
                     }
 
@@ -514,6 +524,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added11)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added11 = true;
                     }
 
@@ -555,6 +566,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added12)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added12 = true;
                     }
 
@@ -597,6 +609,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added13)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added13 = true;
                     }
 
@@ -638,6 +651,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added14)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added14 = true;
                     }
 
@@ -679,6 +693,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added15)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added15 = true;
                     }
 
@@ -720,6 +735,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added16)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added16 = true;
                     }
 
@@ -761,6 +777,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added17)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added17 = true;
                     }
 
@@ -802,6 +819,7 @@ public class JournalEntries : MonoBehaviour
                     if (!_added18)
                     {
                         _collectionPercentage.AddNewEntry();
+                        BooleanManager.IsItemAddedJournal = true;
                         _added18 = true;
                     }
 

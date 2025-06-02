@@ -11,4 +11,8 @@ public static class BooleanManager
     public static bool IsItemAddedJournal;
     public static bool IsLineCast;
     public static bool IsFishingMinigame;
+
+    public static bool IsItemPickedPlayed;
+    public static bool IsLineCastPlayed;
+    public static bool IsFishingMinigamePlayed;
 }

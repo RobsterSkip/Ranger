@@ -3,49 +3,83 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource _audioSource;
+    private AudioSource _audioSourceDay;
+    [SerializeField]
+    private AudioSource _audioSourceNight;
+    [SerializeField]
+    private AudioSource _audioSourceSoundEffects;
 
     [SerializeField]
     private AudioClip[] _audioClip;
+    [SerializeField]
+    private AudioClip _audioClipDay;
+    [SerializeField]
+    private AudioClip _audioClipNight;
 
-    private float _dayTime = 12f;
-    private float _dayTimeCounter;
-
-    private bool _isDay;
+    private bool _isDayPlayed;
+    private bool _isNightPlayed;
+    private bool _journalCompletePlayed;
     private void Start()
     {
+        _audioSourceDay.volume = 0.2f;
+        _audioSourceDay.clip = _audioClipDay;
+        _audioSourceNight.clip = _audioClipNight;
 
+        _audioSourceDay.Play();
     }
     private void Update()
     {
-        if(BooleanManager.IsJournalCompleted)
+        if (BooleanManager.IsDay && !_isDayPlayed)
         {
-            _audioSource.PlayOneShot(_audioClip[0]);
+            _audioSourceNight.Stop();
+            _audioSourceDay.volume = 0.2f;
+            _audioSourceDay.Play();
+            _isDayPlayed = true;
+            _isNightPlayed = false;
+        }
+
+        if (BooleanManager.IsNight && !_isNightPlayed)
+        {
+            _audioSourceDay.Stop();
+            _audioSourceNight.volume = 0.2f;
+            _audioSourceNight.Play();
+            _isDayPlayed = false;
+            _isNightPlayed = true;
+        }
+
+        if (BooleanManager.IsJournalCompleted && !_journalCompletePlayed)
+        {
+            _audioSourceSoundEffects.volume = 0.2f;
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[0]);
+            _journalCompletePlayed = true;
+        }
+
+        if (BooleanManager.IsBaitDropped)
+        {
 
         }
-       //_dayTimeCounter *= Time.deltaTime;
-       //
-       //if(_dayTimeCounter >= _dayTime)
-       //{
-       //    _isDay = true;
-       //}
-       //
-       //if (_isDay == false)
-       //{
-       //    _audioSource.PlayOneShot(_audioClip[0]);
-       //}
-       //else
-       //{
-       //    _audioSource.PlayOneShot(_audioClip[1]);
-       //}
 
+        if (BooleanManager.IsItemPicked)
+        {
+            _audioSourceSoundEffects.volume = 0.2f;
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[1]);
+            BooleanManager.IsItemPicked = false;
+        }
 
-        /*
-         *  _audioSourceGeneral.clip = _audioClipsGeneral[0];
-        _audioSourceGeneral.volume = 0.05f;
-        _audioSourceGeneral.Play();
-        */
+        if (BooleanManager.IsItemAddedJournal && !BooleanManager.IsJournalCompleted)
+        {
+            _audioSourceSoundEffects.PlayOneShot(_audioClip[2]);
+            BooleanManager.IsItemAddedJournal = false;
+        }
 
-        //_audioSourceGeneral.PlayOneShot(_audioClipsGeneral[5]);
+        if (BooleanManager.IsLineCast)
+        {
+
+        }
+
+        if (BooleanManager.IsFishingMinigame)
+        {
+
+        }
     }
 }
