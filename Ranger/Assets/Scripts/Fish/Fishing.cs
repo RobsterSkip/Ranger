@@ -60,8 +60,6 @@ public class Fishing : MonoBehaviour
             _bait = Instantiate(BaitPrefab,new Vector3(transform.position.x, transform.position.y+8, transform.position.z) + transform.forward*3, transform.rotation);
             _baitRB = _bait.GetComponent<Rigidbody>();
             _baitRB.AddForce(_bait.transform.forward * _counter * 2f);
-
-            _dropBugEnabled = false;
         }
 
         if (PlayerMovement.CanFish == true && Input.GetMouseButton(0) && PlayerMovement.NearWater)
@@ -81,8 +79,6 @@ public class Fishing : MonoBehaviour
                 _counter += 1;
             }
             _isFishing = true;
-
-            _dropBugEnabled = false;
         }
         else
         {
@@ -103,10 +99,19 @@ public class Fishing : MonoBehaviour
             _dropBugEnabled = true;
         }
 
-        if (_dropBugEnabled && Input.GetMouseButton(0) && PlayerMovement.NearWater)
+        if (PlayerMovement.OutsideWater && PlayerMovement.CanFish || PlayerMovement.OutsideWater && PlayerMovement.IsFishing  )
         {
-            Debug.Log("Yes");
+            _dropBugEnabled = false;
+            DropBug.SetActive(false);
+        }
+
+        if (_dropBugEnabled && Input.GetMouseButtonDown(0) && PlayerMovement.NearWater)
+        {
             DropBug.SetActive(true);
+        }
+        else if (PlayerMovement.OutsideWater)
+        {
+            DropBug.SetActive(false);
         }
     }
 

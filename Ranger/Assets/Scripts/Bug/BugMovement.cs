@@ -125,8 +125,9 @@ public class BugMovement : MonoBehaviour
                                     transform.position.y,
                                     transform.position.z + Random.Range(-_range, _range));
 
-        if (Physics.Raycast(_destination, Vector3.down, groundLayer))
+        if (Physics.Raycast(_destination + Vector3.up * 3, Vector3.down, out RaycastHit hit, 5f, groundLayer))
         {
+            _destination = hit.point;
             _isSet = true;
         }
     }

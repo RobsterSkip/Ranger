@@ -21,8 +21,8 @@ public class SpawnerBugPlant : MonoBehaviour
     public GameObject DayNight;
     public TimeManager TimeManager;
 
-    private readonly int _maxBug = 30;
-    private readonly int _maxPlant = 40;
+    private readonly int _maxBug = 20;
+    private readonly int _maxPlant = 15;
 
     private readonly int _maxBugPerSpawner = 5;
     private readonly int _maxPlantPerSpawner = 10;
@@ -72,7 +72,7 @@ public class SpawnerBugPlant : MonoBehaviour
 
     void SpawnDayContent()
     {
-        GameObject[] plants = GameObject.FindGameObjectsWithTag("PlantDropped");
+        GameObject[] plants = GameObject.FindGameObjectsWithTag("plant");
         GameObject[] bugs = GameObject.FindGameObjectsWithTag("bug");
 
         int plantShortage = _maxPlant - plants.Length;
@@ -83,7 +83,6 @@ public class SpawnerBugPlant : MonoBehaviour
         {
             SpawnPlants(Mathf.Min(_maxPlantPerSpawner, plantShortage));
         }
-        Debug.Log($"[Spawner] Current plant count: {plants.Length}, max: {_maxPlant}");
 
         if (bugShortage > 0)
         {

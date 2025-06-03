@@ -12,6 +12,7 @@ public class JournalEntries : MonoBehaviour
     [SerializeField] Sprite[] _sprites;
     [SerializeField] Image _panelImage;
     [SerializeField] GameObject _journalColour;
+    [SerializeField] TextMeshProUGUI _dayOrNightBug;
 
     [SerializeField]
     private GameObject _ui;
@@ -47,6 +48,7 @@ public class JournalEntries : MonoBehaviour
         _pages.SetActive(false);
         _panelImage.enabled = false;
         _ui.SetActive(false);
+        _dayOrNightBug.enabled = false;
     }
     void Update()
     {
@@ -87,6 +89,16 @@ public class JournalEntries : MonoBehaviour
         SetPages();
     }
 
+    public void NextPage()
+    {
+        _entryIndex++;
+    }
+
+    public void PreviousPage()
+    {
+        _entryIndex--;
+    }
+
     private void SetPages()
     {
         var color = _journalColour.GetComponent<Image>().color;
@@ -110,6 +122,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -124,6 +138,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the day";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -152,6 +169,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -166,6 +185,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the day";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -194,6 +216,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -208,6 +232,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the day";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -236,6 +263,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -250,6 +279,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the night";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -278,6 +310,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -292,6 +326,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the night";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -320,6 +357,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -334,6 +373,9 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = true;
+                    _dayOrNightBug.text = "Found during the night";
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -554,7 +596,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Marigold");
-                _entry.SetText("You struck mari-gold.");
+                _entry.SetText("You struck mari-gold!");
                 break;
             case 11:
                 _pageNumber.SetText("12/18");
@@ -841,6 +883,7 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = false;
                     _entry.enabled = false;
 
+                   
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 

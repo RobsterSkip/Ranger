@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public bool CanFish = false;
     public bool CanThrowRod = false;
     public bool NearWater = false;
+    public bool OutsideWater = false;
 
     [SerializeField] LayerMask waterLayer;
     public GameObject WaterSurface;
@@ -50,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 Velocity;
     private float _gravity;
 
+    [SerializeField] MeshRenderer[] _meshes;
+    private bool _modelSwitched;
 
     private void Start()
     {
@@ -66,10 +69,12 @@ public class PlayerMovement : MonoBehaviour
         _currentSpeed = _defaultSpeed;
 
         _gravity = -9.81f;
+        _meshes[1].enabled = false;
     }
 
     void Update()
     {
+        SwitchModel();
         if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false && BooleanManager.MovementDisabled == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
@@ -94,6 +99,28 @@ public class PlayerMovement : MonoBehaviour
         AddGravity();
     }
 
+    private void SwitchModel()
+    {
+        if(Input.GetKey(KeyCode.B) && Input.GetKey(KeyCode.O) && Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Called");
+            _modelSwitched = !_modelSwitched;
+        }
+
+        if(_modelSwitched == false)
+        {
+            _meshes[0].enabled = true;
+            _meshes[1].enabled = true;
+            _meshes[2].enabled = false;
+        }
+        if(_modelSwitched == true)
+        {
+            _meshes[2].enabled = true;
+            _meshes[0].enabled = false;
+            _meshes[1].enabled = false;
+        }
+    }
+
     private void AddGravity()
     {
        Velocity.y = _gravity * Controller.skinWidth;
@@ -104,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
         if(Physics.CheckSphere(transform.position, 6, waterLayer)) //is in range
         {
             NearWater = true;
+            OutsideWater = false;
             Vector3 direction= (new Vector3(WaterSurface.transform.position.x, 0 , WaterSurface.transform.position.x) - new Vector3(transform.position.x, 0, transform.position.x)).normalized;
             float dotProd = Vector3.Dot(direction, transform.forward);
             
@@ -119,22 +147,13 @@ public class PlayerMovement : MonoBehaviour
                         CanFish = true;
                         Destroy(collider.gameObject);
                     }
-
-                   // if (Input.GetMouseButton(0) && IsFishing && CanFish)
-                   // {
-                   //     Manager.CanFish.gameObject.SetActive(true);
-                   // }
-                   // else
-                   // {
-                   //     Manager.CanFish.gameObject.SetActive(false);
-                   // }
                 }
             }
         }
         else
         {
             NearWater = false;
-           // Manager.CanFish.gameObject.SetActive(false);
+            OutsideWater = true;
         }
     }
 

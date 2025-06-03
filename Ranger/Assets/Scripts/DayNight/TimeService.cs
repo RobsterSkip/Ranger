@@ -33,7 +33,7 @@ public class TimeService
 
     public void UpdateTime(float deltaTime)
     {
-        currentTime = currentTime.AddSeconds(deltaTime * settings.timeMultiplier);
+        currentTime = currentTime.AddSeconds(deltaTime / 1.5f * settings.timeMultiplier);
         isDayTime.Value = IsDayTime();
         currentHour.Value = currentTime.Hour;
     }
