@@ -14,6 +14,7 @@ public class Fishing : MonoBehaviour
 
     private float _counter;
     private bool _isFishing;
+    private bool _dropBugEnabled;
 
     public GameObject QuickTimeUI;
     public GameObject Right;
@@ -41,6 +42,8 @@ public class Fishing : MonoBehaviour
         _counter = 0;
         _isFishing = false;
         PlayerMovement.IsFishing = false;
+
+        DropBug.SetActive(false);
     }
 
     void Update()
@@ -56,7 +59,9 @@ public class Fishing : MonoBehaviour
             PlayerMovement.IsFishing = true;
             _bait = Instantiate(BaitPrefab,new Vector3(transform.position.x, transform.position.y+8, transform.position.z) + transform.forward*3, transform.rotation);
             _baitRB = _bait.GetComponent<Rigidbody>();
-            _baitRB.AddForce(_bait.transform.forward * _counter * 1f);
+            _baitRB.AddForce(_bait.transform.forward * _counter * 2f);
+
+            _dropBugEnabled = false;
         }
 
         if (PlayerMovement.CanFish == true && Input.GetMouseButton(0) && PlayerMovement.NearWater)
@@ -76,6 +81,8 @@ public class Fishing : MonoBehaviour
                 _counter += 1;
             }
             _isFishing = true;
+
+            _dropBugEnabled = false;
         }
         else
         {
@@ -83,6 +90,8 @@ public class Fishing : MonoBehaviour
             _isFishing = false;
             FishingSlider.gameObject.SetActive(false);
             BooleanManager.MovementDisabled = false;
+
+            _dropBugEnabled = true;
         }
 
         if(PlayerMovement.IsFishing && (Input.GetKey(KeyCode.Escape) || Input.GetMouseButton(0)))
@@ -90,12 +99,19 @@ public class Fishing : MonoBehaviour
             _isFishing = false;
             PlayerMovement.IsFishing = false;
             Destroy(_bait);
+
+            _dropBugEnabled = true;
+        }
+
+        if (_dropBugEnabled && Input.GetMouseButton(0) && PlayerMovement.NearWater)
+        {
+            Debug.Log("Yes");
+            DropBug.SetActive(true);
         }
     }
 
     public bool FishOnce(int num)
     {
-       // Debug.Log(num);
         QuickTimeUI.SetActive(true);
         
         if (num == 0)

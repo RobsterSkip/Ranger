@@ -19,6 +19,7 @@ public class InventoryManager : MonoBehaviour
         InventoryScript = Inventory.GetComponent<Inventory>();
         SetPickupText();
         Inventory.SetActive(false);
+        //CanFish.enabled = false;
     }
 
     private void Update()

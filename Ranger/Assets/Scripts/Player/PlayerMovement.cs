@@ -120,21 +120,21 @@ public class PlayerMovement : MonoBehaviour
                         Destroy(collider.gameObject);
                     }
 
-                    if (Input.GetMouseButton(0) && IsFishing && CanFish)
-                    {
-                        Manager.CanFish.gameObject.SetActive(true);
-                    }
-                    else
-                    {
-                        Manager.CanFish.gameObject.SetActive(false);
-                    }
+                   // if (Input.GetMouseButton(0) && IsFishing && CanFish)
+                   // {
+                   //     Manager.CanFish.gameObject.SetActive(true);
+                   // }
+                   // else
+                   // {
+                   //     Manager.CanFish.gameObject.SetActive(false);
+                   // }
                 }
             }
         }
         else
         {
             NearWater = false;
-            Manager.CanFish.gameObject.SetActive(false);
+           // Manager.CanFish.gameObject.SetActive(false);
         }
     }
 
