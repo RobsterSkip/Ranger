@@ -22,18 +22,21 @@ public class ItemPickup : MonoBehaviour
 
     private void Update()
     {
-        if (_isInRange && Input.GetKeyDown(KeyCode.E))
+        if(BooleanManager._everythingCollected == false)
         {
-            Items newItem = Instantiate(_item);
-            if (Manager.InventoryScript.AddItem(newItem))
+            if (_isInRange && Input.GetKeyDown(KeyCode.E))
             {
-                BooleanManager.IsItemPicked = true;
-                Destroy(gameObject);
-                Manager.PickupPanel.SetActive(false);
-            }
-            else
-            {
-                Destroy(newItem);
+                Items newItem = Instantiate(_item);
+                if (Manager.InventoryScript.AddItem(newItem))
+                {
+                    BooleanManager.IsItemPicked = true;
+                    Destroy(gameObject);
+                    Manager.PickupPanel.SetActive(false);
+                }
+                else
+                {
+                    Destroy(newItem);
+                }
             }
         }
     }

@@ -74,8 +74,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        BooleanManager._totalTimePlayed += Time.deltaTime;
+
         SwitchModel();
-        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false && BooleanManager.MovementDisabled == false)
+        if (_cameraMovement._inventoryOpen == false && _journalClass._journalOpen == false
+            && BooleanManager.MovementDisabled == false && BooleanManager._everythingCollected == false)
         {
             Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal") * _currentSpeed * Time.deltaTime,
                                         0f, Input.GetAxisRaw("Vertical") * _currentSpeed * Time.deltaTime).normalized;

@@ -87,6 +87,18 @@ public class JournalEntries : MonoBehaviour
             _panelImage.enabled=false;
         }
         SetPages();
+
+        if(BooleanManager._everythingCollected)
+        {
+            _title.enabled = false;
+            _entry.enabled = false;
+            _missingEntry.enabled = false;
+            _talkToRanger.enabled = false;
+            _pages.SetActive(false);
+            _panelImage.enabled = false;
+            _ui.SetActive(false);
+            _dayOrNightBug.enabled = false;
+        }
     }
 
     public void NextPage()

@@ -14,4 +14,8 @@ public static class BooleanManager
 
     public static bool _isFishCaughtPlayed;
     public static bool MovementDisabled;
+
+    public static float _totalTimePlayed;
+
+    public static bool _everythingCollected;
 }

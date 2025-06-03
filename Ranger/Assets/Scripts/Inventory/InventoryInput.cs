@@ -22,32 +22,35 @@ public class InventoryInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
+        if (BooleanManager._everythingCollected == false)
         {
-            _inventory.SetActive(true);
-            _inventoryOpen = true;
-            _journalClass._journalOpen = true;
-            _escapeText.enabled = true;
-            _weightText.enabled = true;
-        }
-        else if(_inventoryOpen == true && (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)))
-        {
-           _inventory.SetActive(false);
-            _inventoryOpen = false;
-            _journalClass._journalOpen = false;
-            _escapeText.enabled = false;
-            _weightText.enabled = false;
-        }
-        else if (_inventoryOpen == true && Input.GetMouseButtonUp(0))
-        {
-            _escapeText.enabled = false;
-            _weightText.enabled = false;
-        }
+            if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
+            {
+                _inventory.SetActive(true);
+                _inventoryOpen = true;
+                _journalClass._journalOpen = true;
+                _escapeText.enabled = true;
+                _weightText.enabled = true;
+            }
+            else if (_inventoryOpen == true && (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape)))
+            {
+                _inventory.SetActive(false);
+                _inventoryOpen = false;
+                _journalClass._journalOpen = false;
+                _escapeText.enabled = false;
+                _weightText.enabled = false;
+            }
+            else if (_inventoryOpen == true && Input.GetMouseButtonUp(0))
+            {
+                _escapeText.enabled = false;
+                _weightText.enabled = false;
+            }
 
-        if(_inventoryOpen == false)
-        {
-            _escapeText.enabled = false;
-            _weightText.enabled = false;
+            if (_inventoryOpen == false)
+            {
+                _escapeText.enabled = false;
+                _weightText.enabled = false;
+            }
         }
     }
 }
