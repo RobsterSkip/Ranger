@@ -38,13 +38,16 @@ public class CameraMovement : MonoBehaviour
     {
         if(!BooleanManager._everythingCollected)
         {
-            if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
+            if(!BooleanManager._baitCast)
             {
-                _inventoryOpen = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
-            {
-                _inventoryOpen = false;
+                if (Input.GetKeyDown(KeyCode.Tab) && _journalClass._journalOpen == false)
+                {
+                    _inventoryOpen = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
+                {
+                    _inventoryOpen = false;
+                }
             }
 
             if (_inventoryOpen == false && _journalClass._journalOpen == false)

@@ -414,6 +414,8 @@ public class JournalEntries : MonoBehaviour
                         _added7 = true;
                     }
 
+                    _dayOrNightBug.enabled = false;
+
                     _title.enabled = true;
                     _entry.enabled = true;
 
@@ -431,6 +433,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -459,6 +463,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -473,6 +479,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -501,6 +509,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -515,6 +525,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -543,6 +555,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -557,6 +571,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -585,6 +601,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -599,6 +617,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -627,6 +647,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -642,6 +664,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = false;
                     _entry.enabled = false;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
@@ -650,7 +674,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Rose");
-                _entry.SetText("Rise to the occasion!");
+                _entry.SetText("Rose to the occasion.");
                 break;
     //FISH
             case 12:
@@ -670,6 +694,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -684,6 +710,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -712,6 +740,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -726,6 +756,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -754,6 +786,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -768,6 +802,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -796,6 +832,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -810,6 +848,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -838,6 +878,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -852,6 +894,8 @@ public class JournalEntries : MonoBehaviour
 
                     _title.enabled = false;
                     _entry.enabled = false;
+
+                    _dayOrNightBug.enabled = false;
 
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
@@ -880,6 +924,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = true;
                     _entry.enabled = true;
 
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = false;
                     _talkToRanger.enabled = false;
 
@@ -895,7 +941,8 @@ public class JournalEntries : MonoBehaviour
                     _title.enabled = false;
                     _entry.enabled = false;
 
-                   
+                    _dayOrNightBug.enabled = false;
+
                     _missingEntry.enabled = true;
                     _talkToRanger.enabled = true;
 
@@ -904,7 +951,7 @@ public class JournalEntries : MonoBehaviour
                     _journalColour.GetComponent<Image>().color = color;
                 }
                 _title.SetText("Tuna");
-                _entry.SetText("How for-tuna-d!");
+                _entry.SetText("How for-tuna-te!");
                 break;
         }
     }

@@ -200,6 +200,8 @@ public class FishMovement : MonoBehaviour
                 PlayerMovement.CanFish = false;
                 _box.size = new Vector3(3f, 1.85f, 3f);
                 BooleanManager._isFishCaughtPlayed = false;
+
+                BooleanManager._baitCast = false;
             }
         }
     }

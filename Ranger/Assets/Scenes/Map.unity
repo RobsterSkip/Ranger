@@ -9450,6 +9450,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289242402}
   m_CullTransparentMesh: 1
+--- !u!1 &291299775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6540423292882553017, guid: a79b3c0c32b5670498960731bd7d9774, type: 3}
+  m_PrefabInstance: {fileID: 1784028041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &291783046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14352,6 +14357,10 @@ PrefabInstance:
     - target: {fileID: 3885138702309974635, guid: 498e640bcdf0ba9418e337425f011276, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064152406734384185, guid: 498e640bcdf0ba9418e337425f011276, type: 3}
+      propertyPath: m_text
+      value: Drop a bug to fish!
       objectReference: {fileID: 0}
     - target: {fileID: 4064152406734384185, guid: 498e640bcdf0ba9418e337425f011276, type: 3}
       propertyPath: m_sharedMaterial
@@ -44187,6 +44196,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1200981427}
     - target: {fileID: 762363790949914678, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
+      propertyPath: Inventory
+      value: 
+      objectReference: {fileID: 291299775}
+    - target: {fileID: 762363790949914678, guid: 0896bca37a151d54989a62d2a4ebbbf7, type: 3}
       propertyPath: QuickTimeUI
       value: 
       objectReference: {fileID: 1069925391}
@@ -57388,7 +57401,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8580871903362453139, guid: a79b3c0c32b5670498960731bd7d9774, type: 3}
   m_PrefabInstance: {fileID: 1784028041}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 291299775}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c67fc4d99d0dbe94f86bc24903038d38, type: 3}

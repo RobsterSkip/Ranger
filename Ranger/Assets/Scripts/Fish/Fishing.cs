@@ -6,6 +6,9 @@ using UnityEngine.Rendering.UI;
 
 public class Fishing : MonoBehaviour
 {
+    public GameObject Inventory;
+    public InventoryInput Manager;
+
     public PlayerMovement PlayerMovement;
     public GameObject BaitPrefab;
 
@@ -44,6 +47,8 @@ public class Fishing : MonoBehaviour
         PlayerMovement.IsFishing = false;
 
         DropBug.SetActive(false);
+
+        Manager = Inventory.GetComponent<InventoryInput>();
     }
 
     void Update()
@@ -60,6 +65,8 @@ public class Fishing : MonoBehaviour
             _bait = Instantiate(BaitPrefab,new Vector3(transform.position.x, transform.position.y+8, transform.position.z) + transform.forward*3, transform.rotation);
             _baitRB = _bait.GetComponent<Rigidbody>();
             _baitRB.AddForce(_bait.transform.forward * _counter * 2f);
+
+            BooleanManager._baitCast = true;
         }
 
         if (PlayerMovement.CanFish == true && Input.GetMouseButton(0) && PlayerMovement.NearWater)
@@ -97,6 +104,8 @@ public class Fishing : MonoBehaviour
             Destroy(_bait);
 
             _dropBugEnabled = true;
+
+            BooleanManager._baitCast = false;
         }
 
         if (PlayerMovement.OutsideWater && PlayerMovement.CanFish || PlayerMovement.OutsideWater && PlayerMovement.IsFishing  )

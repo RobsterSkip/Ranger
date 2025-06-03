@@ -18,4 +18,6 @@ public static class BooleanManager
     public static float _totalTimePlayed;
 
     public static bool _everythingCollected;
+
+    public static bool _baitCast;
 }

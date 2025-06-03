@@ -22,7 +22,7 @@ public class InventoryInput : MonoBehaviour
 
     private void Update()
     {
-        if (BooleanManager._everythingCollected == false)
+        if (BooleanManager._everythingCollected == false && !BooleanManager._baitCast)
         {
             if (Input.GetKeyDown(KeyCode.Tab) && _inventoryOpen == false && _journalClass._journalOpen == false)
             {
