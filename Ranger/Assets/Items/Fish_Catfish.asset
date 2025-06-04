@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 753776f631375aa4db7b09ae8645b2c7
   _itemName: Catfish
-  ItemIcon: {fileID: 21300000, guid: 2f9dd6d4fadabd74faa6e4b24aa6fe60, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 8c7757da5414b734ca1f1e14194b8611, type: 3}
   _itemPrefab: {fileID: 5698201278719751853, guid: 0d1b08acc54b22346807475713670358, type: 3}
   _itemType: 2

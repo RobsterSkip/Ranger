@@ -71,6 +71,7 @@ public class Fishing : MonoBehaviour
 
         if (PlayerMovement.CanFish == true && Input.GetMouseButton(0) && PlayerMovement.NearWater)
         {
+            BooleanManager._baitCast = true;
             BooleanManager.MovementDisabled = true;
             DropBug.SetActive(false);
             FishingSlider.SetActive(true);

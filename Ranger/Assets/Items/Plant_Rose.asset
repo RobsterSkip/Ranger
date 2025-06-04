@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 292b4da11cea95e448e8f7aeda70305e
   _itemName: Rose
-  ItemIcon: {fileID: 21300000, guid: 07bb0f4590f994d48af2674a05f2d116, type: 3}
+  ItemIcon: {fileID: 21300000, guid: a7c9361d01cb5f84fa01b6b645290a6f, type: 3}
   _itemPrefab: {fileID: 3541265546410487635, guid: 652493b8e3a5f664f80a62cf855ec3a2, type: 3}
+  _itemType: 0

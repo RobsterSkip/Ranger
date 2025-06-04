@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 9c5b19987e559bd4897fce5fe9d6a5aa
   _itemName: Weevil
-  ItemIcon: {fileID: 21300000, guid: 7627ae012c984e440bf1a7e1f368b05e, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 99b12cf9246b9f841b9660ff0a23870c, type: 3}
   _itemPrefab: {fileID: 5967984084064161190, guid: d4ccf1e1f2e8dde479c9b679a62526af, type: 3}
   _itemType: 1

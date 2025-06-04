@@ -11,6 +11,7 @@ public class CollectionPercentage : MonoBehaviour
     [SerializeField] private GameObject _closeMenuButton;
     [SerializeField] private TextMeshProUGUI _endText;
     [SerializeField] private TextMeshProUGUI _thanks;
+    [SerializeField] private TextMeshProUGUI _timeText;
     [SerializeField] private GameObject _overlay;
     [SerializeField] private Image[] _collectibleImages;
 
@@ -18,6 +19,7 @@ public class CollectionPercentage : MonoBehaviour
     private float _currentCollected = 0;
     private float _totalCollection = 18;
 
+    private float _totalTime;
     private void Start()
     {
         UpdatePercentageText();
@@ -25,6 +27,7 @@ public class CollectionPercentage : MonoBehaviour
         _overlay.SetActive(false);
         _endText.enabled = false;
         _thanks.enabled = false;
+        _timeText.enabled = false;
         _closeMenuButton.SetActive(false);
 
         foreach (Image sprite in _collectibleImages)
@@ -53,10 +56,15 @@ public class CollectionPercentage : MonoBehaviour
             BooleanManager.IsJournalCompleted = true;
             _percentageText.text = "JOURNAL COMPLETE!!!!";
 
+            _totalTime = BooleanManager._totalTimePlayed;
+
             _closeMenuButton.SetActive(true);
             _overlay.SetActive(true);
             _endText.enabled = true;
             _thanks.enabled = true;
+            _timeText.enabled = true;
+            _timeText.text = "Time: " + (_totalTime / 60).ToString().Substring(0,4) + " minutes!";
+
 
             foreach (Image sprite in _collectibleImages)
             {
@@ -72,6 +80,7 @@ public class CollectionPercentage : MonoBehaviour
         _overlay.SetActive(false);
         _endText.enabled = false;
         _thanks.enabled = false;
+        _timeText.enabled = false;
         _closeMenuButton.SetActive(false);
 
         foreach (Image sprite in _collectibleImages)

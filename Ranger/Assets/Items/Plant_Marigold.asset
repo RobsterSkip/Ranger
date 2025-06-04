@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 77be611ca6baad04cbe28d85a0cf088a
   _itemName: Marigold
-  ItemIcon: {fileID: 21300000, guid: b372a280ead33c941975a3bca59b472d, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 4e1ecd493ed551942a54ec4dc392e768, type: 3}
   _itemPrefab: {fileID: 3541265546410487635, guid: 80b536febb5d4584ca76936560f95348, type: 3}
+  _itemType: 0
