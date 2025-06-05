@@ -30,7 +30,7 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer _iconSpriteRenderer;
     [SerializeField]
     private TextMeshPro _bubbleText;
-    private Vector2 padding = new Vector2(-1f, 7f);
+    private Vector2 padding = new Vector2(-1f, 10f);
 
     public GameObject Inventory;
     public InventoryManager Manager; 
