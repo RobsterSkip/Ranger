@@ -51933,9 +51933,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 731733171}
     - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: _collectibles.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
       propertyPath: _backgroundSpriteRenderer
       value: 
       objectReference: {fileID: 2087173458}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 27fcc0e8d4300ff4dbdbd6b036b48f43, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 3f4e5af9ae43a4c4ea570dc4bbf4b468, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 2fe8507329c8e634cac0d20dce5ed360, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[3]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 35f1f9adf7e2998448bd0ba211a8e677, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: e8074ab3514ca2f4db0c72dcf949e216, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[5]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 49fb6ea87a5d3624eaa5290c14e732f2, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 001042dc933a2e245b241d58fd9f2c32, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[7]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: d2c7e9959b20fc8438e100b43b39106f, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[8]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 9546020b317b2684dbf4949a1a6e21b1, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[9]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 97978ce3fa9b8b04d8948f3f706a4d0d, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[10]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 176600f3499a45a49a38cad908f99e1a, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[11]'
+      value: 
+      objectReference: {fileID: 5698201278719751853, guid: 8839f621e00af954d9a86b55d0624cc8, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[12]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 493d1a41c4e303d4cbda6df5c50fd73a, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[13]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: cc8836e4126acc14eb5d725085309236, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[14]'
+      value: 
+      objectReference: {fileID: 5967984084064161190, guid: 4c4f65316ad131441836e19dccc16e6d, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 84178cf5ae682b94a82e3ff1f66a94af, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[16]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: 9c6cdcddd9d00ab4990b7710ea44b589, type: 3}
+    - target: {fileID: 3084890178494254199, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
+      propertyPath: '_collectibles.Array.data[17]'
+      value: 
+      objectReference: {fileID: 3541265546410487635, guid: f28e68c9a067d4a4c9583aa9c3b37ff1, type: 3}
     - target: {fileID: 4738651579340175683, guid: 33e75c0a82e29294ebbeb1cae57960a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 324.92

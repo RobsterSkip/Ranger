@@ -51,8 +51,8 @@ public class InventoryInput : MonoBehaviour
                 _escapeText.enabled = false;
                 _weightText.enabled = false;
 
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
             }
             else
             {
