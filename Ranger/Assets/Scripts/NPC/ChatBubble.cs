@@ -22,6 +22,8 @@ public class ChatBubble : MonoBehaviour
 
     [SerializeField] private GameObject[] _collectibles;
 
+    public GameObject NPC;
+
     [SerializeField]
     private SpriteRenderer _backgroundSpriteRenderer;
     [SerializeField]
@@ -70,6 +72,11 @@ public class ChatBubble : MonoBehaviour
         
         Inventory = GameObject.FindGameObjectWithTag("InventoryManager");
         Manager = Inventory.GetComponent<InventoryManager>();
+    }
+
+    private void Update()
+    {
+        transform.LookAt(Camera.main.transform.position);
     }
 
     private void SetUp(IconType icon, string text)
@@ -146,9 +153,9 @@ public class ChatBubble : MonoBehaviour
             _itemGiving = false;
         }
 
-        if (Physics.CheckSphere(transform.parent.transform.position, 5f, _playerMask) && _itemGiving == true)
+        if (Physics.CheckSphere(NPC.transform.position, 5f, _playerMask) && _itemGiving == true)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.parent.position, 5f);
+            Collider[] hitColliders = Physics.OverlapSphere(NPC.transform.position, 5f);
 
             foreach (Collider col in hitColliders)
             {
