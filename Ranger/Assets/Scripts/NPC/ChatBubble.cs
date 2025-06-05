@@ -76,7 +76,9 @@ public class ChatBubble : MonoBehaviour
 
     private void Update()
     {
+        Vector3 rot = transform.eulerAngles;
         transform.LookAt(Camera.main.transform.position);
+        transform.eulerAngles = new Vector3(rot.x, transform.eulerAngles.y, rot.z);
     }
 
     private void SetUp(IconType icon, string text)
